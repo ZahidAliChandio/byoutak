@@ -7,7 +7,7 @@ const DropdownPage = (props) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full border">
+    <div className="flex flex-col items-center w-full">
       <div className="text-white text-center w-full">
         <div className="flex flex-col gap-4 w-full items-center">
           <h2 className="font-bold text-2xl lg:text-3xl">{props.item.title}</h2>
@@ -16,7 +16,7 @@ const DropdownPage = (props) => {
               <input
                 type="text"
                 id="visitors"
-                className="block w-full p-2.5 text-sm md:text-base bg-gray-50 border border-gray-300 text-gray-900 rounded-l-full"
+                className="block w-full px-3 md:px-4 py-2.5 text-sm md:text-base bg-gray-50 outline-none  border-gray-300 text-gray-900 rounded-l-full"
                 placeholder=""
                 required
               />
