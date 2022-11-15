@@ -67,9 +67,9 @@ const DropdownPage = (props) => {
             {props.item.links.map((item, index) => {
               return (
                 <li key={index} className="my-2">
-                  <a href="/" className="block py-2 px-4 hover:text-red-600 ">
+                  <span className="block py-2 px-4 hover:text-red-600 cursor-pointer">
                     {item}
-                  </a>
+                  </span>
                 </li>
               );
             })}

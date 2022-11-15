@@ -7,9 +7,8 @@ const Footer = () => {
         </span>
         <span className="font-semibold text-white">Call Us</span>
       </div>
-      <div className="flex flex-col items-center">
-        {/* <span><i className="fas fa-user text-xl text-gray-400"></i></span> */}
-        <span><i className="text-gray-400">m</i></span>
+      <div className="flex flex-col items-center">        
+        <i className="fas fa-comment-dots text-xl text-gray-400"></i>
         <span className="font-semibold text-white">Message Us</span>
       </div>
       <div className="flex flex-col items-center">
