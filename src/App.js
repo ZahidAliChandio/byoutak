@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import DropdownPage from "./components/UI/DropdownPage";
+import DropdownPage from "./pages/DropdownPage/DropdownPage";
+import Projects from "./pages/Projects/Projects";
 
 const App = () => {
   const [pageIndex,setPageIndex]=useState(1);
@@ -33,10 +34,11 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        {pageIndex===1 && <DropdownPage item={linksPage1} setPageIndex={setPageIndex}/>}
+        {/* {pageIndex===1 && <DropdownPage item={linksPage1} setPageIndex={setPageIndex}/>}
         {pageIndex===2 && <DropdownPage item={linksPage2} setPageIndex={setPageIndex}/>}
         {pageIndex===3 && <DropdownPage item={linksPage3} setPageIndex={setPageIndex}/>}
-        {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>}
+        {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>} */}
+        <Projects/>
       </main>
       <footer>
         <Footer />
