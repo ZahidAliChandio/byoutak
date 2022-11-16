@@ -7,12 +7,16 @@ const DropdownPage = (props) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="relative flex flex-col items-center w-full md:w-11/12 lg:w-10/12 pt-12">
+      <svg className="absolute left-0 top-0">
+        <polygon fill="red" points="0,0 0,270 40,270 40,40 160,40 160,0" />
+      </svg>
       <div className="text-white text-center w-full">
         <div className="flex flex-col gap-4 w-full items-center">
           <h2 className="font-bold text-2xl lg:text-3xl">{props.item.title}</h2>
           {props.item.input && (
-            <div className="flex items-center w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2">
+            // <div className="grid grid-cols-[2fr,1fr] border-2  w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2">
+            <div className="grid grid-cols-[4fr,1fr] justify-center w-11/12 sm:w-10/12 md:w-[70%] lg:w-[60%]">
               <input
                 type="text"
                 id="visitors"
@@ -20,7 +24,7 @@ const DropdownPage = (props) => {
                 placeholder=""
                 required
               />
-              <span className="p-2.5 bg-red-600 rounded-r-full h-12 w-20 md:w-24"></span>
+              <span className="p-2.5 bg-[red] rounded-r-full w-full"></span>
             </div>
           )}
         </div>
