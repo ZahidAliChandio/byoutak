@@ -5,19 +5,31 @@ const DropdownPage = (props) => {
   const toggleContent = () => {
     setIsVisible((prev) => !prev);
   };
-  const blurHandler=()=>{
+  const togglePage = () => {
+    console.log("jjj");
+    props.setPageIndex((prev) => prev + 1);
+  };
+  const blurHandler = () => {
     console.log("blured");
     setIsVisible(false);
-  }
+  };
 
   return (
     <div className="relative flex flex-col items-center m-auto w-full mx-3 sm:m-auto xl:mt-6 xl:pt-20 sm:w-11/12 md:w-10/12">
-      <svg className="absolute left-0 top-0 sm:top-0 xl:top-0" viewBox="0 0 500 500">
+      {/* <svg className="absolute left-0 top-0 sm:top-0 xl:top-0 border">
         <polygon fill="red" points="0,0 0,70 18,70 18,18 70,18 70,0" />
-      </svg>
+      </svg> */}
+      <div className="absolute top-0 left-0">
+        <div className="relative">
+          <div className="absolute left-0 top-0 h-4 w-20 bg-[red]"></div>
+          <div className="absolute left-0 top-0 w-4 h-20 bg-[red]"></div>
+        </div>
+      </div>
       <div className="text-white text-center w-full">
         <div className="flex flex-col gap-4 w-full items-center">
-          <h2 className="font-bold text-xl md:text-2xl lg:text-3xl">{props.item.title}</h2>
+          <h2 className="font-bold text-xl md:text-2xl lg:text-3xl">
+            {props.item.title}
+          </h2>
           {props.item.input && (
             // <div className="grid grid-cols-[2fr,1fr] border-2  w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2">
             <div className="grid grid-cols-[4fr,1fr] justify-center w-[70%] lg:w-[60%]">
@@ -33,7 +45,9 @@ const DropdownPage = (props) => {
           )}
         </div>
         {props.item.subtitle && (
-          <p className=" my-6 lg:my-8 text-gray-300 text-lg md:text-xl">{props.item.subtitle}</p>
+          <p className=" my-6 lg:my-8 text-gray-300 text-lg md:text-xl">
+            {props.item.subtitle}
+          </p>
         )}
       </div>
       <div className="w-1/2 sm:w-1/2 md:w-5/12 lg:w-1/4">
@@ -65,9 +79,9 @@ const DropdownPage = (props) => {
         <div
           id="dropdown"
           className={`${
-            isVisible ? "opacity-100" : "opacity-0"
+            isVisible ? "visible" : "invisible"
           } font-bold mt-2 z-10 bg-white overflow-hidden rounded-xl divide-y divide-gray-100 w-full`}
-          onBlur={()=>blurHandler()}
+          onBlur={() => blurHandler()}
         >
           <ul
             className="py-1 text-sm text-gray-700"
@@ -76,9 +90,12 @@ const DropdownPage = (props) => {
             {props.item.links.map((item, index) => {
               return (
                 <li key={index} className="my-1 md:my-2">
-                  <span className="block py-1 md:py-2 px-4 hover:text-red-600 cursor-pointer">
+                  <button
+                    className="block py-1 md:py-2 px-4 hover:text-red-600 cursor-pointer"
+                    onClick={() => togglePage()}
+                  >
                     {item}
-                  </span>
+                  </button>
                 </li>
               );
             })}
