@@ -28,7 +28,7 @@ const App = () => {
     links: ["3 Million", "4Million", "5 Million"],
   };
   return (
-    <div className="relative w-full h-screen bg-[#1F1C1C]">
+    <div className="relative w-full h-screen bg-[#1F1C1C] border-red-800  ">
       <header className="App-header">
         <Navbar />
       </header>

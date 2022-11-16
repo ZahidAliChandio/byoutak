@@ -15,14 +15,14 @@ const DropdownPage = (props) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center m-auto w-full mx-3 sm:m-auto xl:mt-6 xl:pt-20 sm:w-11/12 md:w-10/12">
+    <div className="relative flex flex-col items-center w-full ml-3 sm:m-auto lg:mt-9 pt-10 lg:pt-16 sm:w-11/12 md:w-10/12 border">
       {/* <svg className="absolute left-0 top-0 sm:top-0 xl:top-0 border">
         <polygon fill="red" points="0,0 0,70 18,70 18,18 70,18 70,0" />
       </svg> */}
       <div className="absolute top-0 left-0">
         <div className="relative">
-          <div className="absolute left-0 top-0 h-4 w-20 bg-[red]"></div>
-          <div className="absolute left-0 top-0 w-4 h-20 bg-[red]"></div>
+          <div className="absolute left-0 top-0 h-5 w-20 sm:w-24 bg-[red]"></div>
+          <div className="absolute left-0 top-0 w-5 h-20 sm:h-24 bg-[red]"></div>
         </div>
       </div>
       <div className="text-white text-center w-full">
