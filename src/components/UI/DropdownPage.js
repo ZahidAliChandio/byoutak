@@ -11,8 +11,8 @@ const DropdownPage = (props) => {
   }
 
   return (
-    <div className="relative flex flex-col items-center w-11/12 lg:w-10/12 pt-12">
-      <svg className="absolute left-0 top-16 sm:top-12 xl:top-0" viewBox="0 0 500 500">
+    <div className="relative flex flex-col items-center m-auto w-full mx-3 sm:m-auto xl:mt-6 xl:pt-20 sm:w-11/12 md:w-10/12">
+      <svg className="absolute left-0 top-0 sm:top-0 xl:top-0" viewBox="0 0 500 500">
         <polygon fill="red" points="0,0 0,70 18,70 18,18 70,18 70,0" />
       </svg>
       <div className="text-white text-center w-full">
@@ -33,7 +33,7 @@ const DropdownPage = (props) => {
           )}
         </div>
         {props.item.subtitle && (
-          <p className="my-8 text-gray-300 text-lg md:text-xl">{props.item.subtitle}</p>
+          <p className=" my-6 lg:my-8 text-gray-300 text-lg md:text-xl">{props.item.subtitle}</p>
         )}
       </div>
       <div className="w-1/2 sm:w-1/2 md:w-5/12 lg:w-1/4">
@@ -75,8 +75,8 @@ const DropdownPage = (props) => {
           >
             {props.item.links.map((item, index) => {
               return (
-                <li key={index} className="my-2">
-                  <span className="block py-2 px-4 hover:text-red-600 cursor-pointer">
+                <li key={index} className="my-1 md:my-2">
+                  <span className="block py-1 md:py-2 px-4 hover:text-red-600 cursor-pointer">
                     {item}
                   </span>
                 </li>

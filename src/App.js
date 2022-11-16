@@ -30,7 +30,7 @@ const App = () => {
       <header className="App-header">
         <Navbar />
       </header>
-      <main className="flex flex-col absolute left-0 top-1/2 w-full items-center px-3 m-auto -translate-y-1/2">
+      <main>
         <DropdownPage item={linksPage1} />
       </main>
       <footer>
