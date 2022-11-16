@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-center">
         <span>
-          <i className="fas fa-user text-xl text-gray-400"></i>
+          <i className="fas fa-user text-xl text-gray-400"></i>          
         </span>
         <span className="font-semibold text-white text-sm sm:text-base">Schedule a Meeting</span>
       </div>

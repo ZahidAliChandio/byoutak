@@ -1,3 +1,4 @@
+import {ReactComponent as Bed} from "../../static/icons/bed.svg"
 const SliderCard = ({ data }) => {
   return (
     <div className="bg-white px-6 py-7 rounded-md accordian-shadow font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
@@ -6,7 +7,20 @@ const SliderCard = ({ data }) => {
         <div className="flex flex-col w-full mt-4 gap-0">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-bold">{data.title}</h2>
-            <i className="fa fa-heart text-[red] text-2xl"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="red"
+              className="w-7 h-7"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
           </div>
           {/* <span className="text-gray-500 font-bold"><i class="fas fa-cube text-cyan-500"></i>SODIC</span> */}
           <span className="text-gray-500 font-bold">SODIC</span>
@@ -18,13 +32,31 @@ const SliderCard = ({ data }) => {
         </div>
         <div className="flex gap-2 my-4">
           <span>
-            <i className="fas fa-map-marker-alt text-[red]"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.3}
+              stroke="red"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              />
+            </svg>
           </span>
           <span>{data.location}</span>
         </div>
         <div className="flex gap-4 pl-4">
-          <div className="flex items-center gap-2">
-            <i className="fas fa-bed text-lg"></i>
+          <div className="flex items-center gap-2">            
+            <Bed/>
             <span className="text-sm font-semibold">{data.bedrooms}</span>
           </div>
           <div className="flex items-center gap-2">
