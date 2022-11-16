@@ -15,23 +15,19 @@ const DropdownPage = (props) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center w-full ml-3 sm:m-auto lg:mt-9 pt-10 lg:pt-16 sm:w-11/12 md:w-10/12 border">
-      {/* <svg className="absolute left-0 top-0 sm:top-0 xl:top-0 border">
-        <polygon fill="red" points="0,0 0,70 18,70 18,18 70,18 70,0" />
-      </svg> */}
+    <div className="relative flex flex-col items-center w-full m-auto mt-7 lg:mt-9 pt-8 sm:pt-10 lg:pt-16 sm:w-11/12 md:w-10/12 overflow-hidden">      
       <div className="absolute top-0 left-0">
-        <div className="relative">
+        <div className="relative ml-3 sm:m-auto">
           <div className="absolute left-0 top-0 h-5 w-20 sm:w-24 bg-[red]"></div>
           <div className="absolute left-0 top-0 w-5 h-20 sm:h-24 bg-[red]"></div>
         </div>
       </div>
       <div className="text-white text-center w-full">
-        <div className="flex flex-col gap-4 w-full items-center">
+        <div className="flex flex-col gap-8 w-full items-center">
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl">
             {props.item.title}
           </h2>
           {props.item.input && (
-            // <div className="grid grid-cols-[2fr,1fr] border-2  w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2">
             <div className="grid grid-cols-[4fr,1fr] justify-center w-[70%] lg:w-[60%]">
               <input
                 type="text"
@@ -45,12 +41,12 @@ const DropdownPage = (props) => {
           )}
         </div>
         {props.item.subtitle && (
-          <p className=" my-6 lg:my-8 text-gray-300 text-lg md:text-xl">
+          <p className="mt-6 lg:mt-8 text-gray-300 text-lg md:text-xl">
             {props.item.subtitle}
           </p>
         )}
       </div>
-      <div className="w-1/2 sm:w-1/2 md:w-5/12 lg:w-1/4">
+      <div className="w-1/2 sm:w-1/2 md:w-5/12 lg:w-1/4 my-12">
         <button
           id="dropdownDefault"
           data-dropdown-toggle="dropdown"
