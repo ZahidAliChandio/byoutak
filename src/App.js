@@ -3,6 +3,7 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import DropdownPage from "./pages/DropdownPage/DropdownPage";
 import Projects from "./pages/Projects/Projects";
+import Slider from "./pages/Slider/Slider";
 
 const App = () => {
   const [pageIndex,setPageIndex]=useState(1);
@@ -38,7 +39,8 @@ const App = () => {
         {pageIndex===2 && <DropdownPage item={linksPage2} setPageIndex={setPageIndex}/>}
         {pageIndex===3 && <DropdownPage item={linksPage3} setPageIndex={setPageIndex}/>}
         {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>} */}
-        <Projects/>
+        {/* <Projects/> */}
+        <Slider/>
       </main>
       <footer>
         <Footer />
