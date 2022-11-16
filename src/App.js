@@ -39,7 +39,7 @@ const App = () => {
         {pageIndex===2 && <DropdownPage item={linksPage2} setPageIndex={setPageIndex}/>}
         {pageIndex===3 && <DropdownPage item={linksPage3} setPageIndex={setPageIndex}/>}
         {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>}
-        {pageIndex===5 && <Projects setPageIndex={setPageIndex}/>}
+        {pageIndex===5 && <Projects id={5} setPageIndex={setPageIndex}/>}
         {pageIndex===6 && <Slider/>}
       </main>
       <footer>
