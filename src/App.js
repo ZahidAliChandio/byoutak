@@ -35,12 +35,12 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        {/* {pageIndex===1 && <DropdownPage item={linksPage1} setPageIndex={setPageIndex}/>}
+        {pageIndex===1 && <DropdownPage item={linksPage1} setPageIndex={setPageIndex}/>}
         {pageIndex===2 && <DropdownPage item={linksPage2} setPageIndex={setPageIndex}/>}
         {pageIndex===3 && <DropdownPage item={linksPage3} setPageIndex={setPageIndex}/>}
-        {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>} */}
-        {/* <Projects/> */}
-        <Slider/>
+        {pageIndex===4 && <DropdownPage item={linksPage4} setPageIndex={setPageIndex}/>}
+        {pageIndex===5 && <Projects setPageIndex={setPageIndex}/>}
+        {pageIndex===6 && <Slider/>}
       </main>
       <footer>
         <Footer />

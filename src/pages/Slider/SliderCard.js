@@ -1,4 +1,4 @@
-const SliderCard = ({ data, setPageIndex }) => {
+const SliderCard = ({ data }) => {
   return (
     <div className="bg-white px-6 py-7 rounded-md accordian-shadow font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
       <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>

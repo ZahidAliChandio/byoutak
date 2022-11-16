@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Slider = () => {
+const Slider = (props) => {
   const data = [
     {
       id: 1,
@@ -112,7 +112,7 @@ const Slider = () => {
                 className="flex justify-center text-left rounded-xl z-0 w-full mb-6 md:mb-10"
                 key={data.id}
               >
-                <SliderCard data={data} />
+                <SliderCard data={data}/>
               </SwiperSlide>
             );
           })}
