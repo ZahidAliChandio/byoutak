@@ -3,9 +3,23 @@ import { Pagination, Navigation } from "swiper";
 import NextBtn from "../../components/UI/PrevBtn";
 import PrevBtn from "../../components/UI/NextBtn";
 import SliderCard from "./SliderCard";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Slider = () => {
   const itemArray = [
+    {
+      id: 0,
+      img: null,
+      heading: "Cleanup+Rica Wax it+ Brazilian Bikini wax",
+      li1: "a Anti-Tan clean up/Fruit Clean up/Vit-C brightening clean up",
+      li2: "a Rica Waxing - Full arms & Full legs",
+      currentPrice: "₹ 1, 500",
+      oldAmount: "₹ 3,500",
+      save: "₹ 2,000",
+      amount: 1,
+    },
     {
       id: 0,
       img: null,
@@ -55,10 +69,10 @@ const Slider = () => {
           }}
           navigation={true}
           modules={[Navigation]}
-          className="!relative !flex md:!static mySwiper !py-4 !border"
+          className="!relative md:!static mySwiper !py-4"
           breakpoints={{
             1536: {
-              slidesPerView: diffMakeups.length > 4 ? 4 : diffMakeups.length,
+              slidesPerView: diffMakeups.length >= 4 ? 4 : diffMakeups.length,
             },
             1280: {
               slidesPerView: diffMakeups.length >= 3 ? 3 : diffMakeups.length,
@@ -79,7 +93,7 @@ const Slider = () => {
           {itemArray.map((d) => {
             return (
               <SwiperSlide
-                className="flex justify-center text-left rounded-xl z-0"
+                className="flex justify-center text-left rounded-xl z-0 w-full"
                 key={d.id}
               >
                 <SliderCard data={d} />
