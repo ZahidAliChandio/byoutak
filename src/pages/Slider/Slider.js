@@ -3,55 +3,71 @@ import { Pagination, Navigation } from "swiper";
 import NextBtn from "../../components/UI/PrevBtn";
 import PrevBtn from "../../components/UI/NextBtn";
 import SliderCard from "./SliderCard";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Slider = () => {
-  const itemArray = [
+  const data = [
     {
-      id: 0,
+      id: 1,
       img: null,
-      heading: "Cleanup+Rica Wax it+ Brazilian Bikini wax",
-      li1: "a Anti-Tan clean up/Fruit Clean up/Vit-C brightening clean up",
-      li2: "a Rica Waxing - Full arms & Full legs",
-      currentPrice: "₹ 1, 500",
-      oldAmount: "₹ 3,500",
-      save: "₹ 2,000",
-      amount: 1,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
     },
     {
-      id: 0,
+      id: 2,
       img: null,
-      heading: "Cleanup+Rica Wax it+ Brazilian Bikini wax",
-      li1: "a Anti-Tan clean up/Fruit Clean up/Vit-C brightening clean up",
-      li2: "a Rica Waxing - Full arms & Full legs",
-      currentPrice: "₹ 1, 500",
-      oldAmount: "₹ 3,500",
-      save: "₹ 2,000",
-      amount: 1,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
     },
     {
-      id: 0,
+      id: 3,
       img: null,
-      heading: "Cleanup+Rica Wax it+ Brazilian Bikini wax",
-      li1: "a Anti-Tan clean up/Fruit Clean up/Vit-C brightening clean up",
-      li2: "a Rica Waxing - Full arms & Full legs",
-      currentPrice: "₹ 1, 500",
-      oldAmount: "₹ 3,500",
-      save: "₹ 2,000",
-      amount: 1,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
     },
     {
-      id: 0,
+      id: 4,
       img: null,
-      heading: "Cleanup+Rica Wax it+ Brazilian Bikini wax",
-      li1: "a Anti-Tan clean up/Fruit Clean up/Vit-C brightening clean up",
-      li2: "a Rica Waxing - Full arms & Full legs",
-      currentPrice: "₹ 1, 500",
-      oldAmount: "₹ 3,500",
-      save: "₹ 2,000",
-      amount: 1,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
+    },
+    {
+      id: 5,
+      img: null,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
     },
   ];
   const diffMakeups = [
@@ -65,10 +81,10 @@ const Slider = () => {
       <div className="md:relative w-full -bottom-20">
         <Swiper
           pagination={{
-            type: "fraction",
+            clickable: true,
           }}
-          navigation={true}
-          modules={[Navigation]}
+          navigation={false}
+          modules={[Navigation, Pagination]}
           className="!relative md:!static mySwiper !py-4"
           breakpoints={{
             1536: {
@@ -90,13 +106,13 @@ const Slider = () => {
             <NextBtn />
             <PrevBtn />
           </div>
-          {itemArray.map((d) => {
+          {data.map((data) => {
             return (
               <SwiperSlide
-                className="flex justify-center text-left rounded-xl z-0 w-full"
-                key={d.id}
+                className="flex justify-center text-left rounded-xl z-0 w-full mb-6 md:mb-10"
+                key={data.id}
               >
-                <SliderCard data={d} />
+                <SliderCard data={data} />
               </SwiperSlide>
             );
           })}

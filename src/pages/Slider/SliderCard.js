@@ -1,41 +1,43 @@
+const SliderCard = ({ data, setPageIndex }) => {
+  return (
+    <div className="bg-white px-6 py-7 rounded-md accordian-shadow font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
+      <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>
+      <div className="px-6">
+        <div className="flex flex-col w-full mt-4 gap-0">
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-bold">{data.title}</h2>
+            <i className="fa fa-heart text-[red] text-2xl"></i>
+          </div>
+          {/* <span className="text-gray-500 font-bold"><i class="fas fa-cube text-cyan-500"></i>SODIC</span> */}
+          <span className="text-gray-500 font-bold">SODIC</span>
+        </div>
 
-const SliderCard = (props) => {    
-    return (
-      <div className="bg-white p-[14px] rounded-md accordian-shadow font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
-        {/* <img src="" alt="" /> */}
-        <div className="w-full h-[188px] rounded-md bg-[#EFEFEF]"></div>
-        <p className="text-sm font-bold mt-2">Full arms & Underarms</p>
-        <div className="flex justify-between mt-1">
-          <p className="font-bold">₹255</p>
-          {/* <AddButton className={"ml-4"}> */}
-            {false ? (
-              <span
-                // onClick={() => addCartItemHandler(props.data)}
-                className="inline-block cursor-pointer text-center w-full"
-              >
-                ADD TO CART
-              </span>
-            ) : (
-              <div className="inline-flex justify-between items-center w-full cursor-default">
-                <span
-                  className="text-md font-bold pl-3 pr-2 cursor-pointer"
-                //   onClick={() => removeCartItemHandler(props.data)}
-                >
-                  -
-                </span>
-                <span>Amount</span>
-                <span
-                  className="text-md font-bold pr-3 pl-2 cursor-pointer"
-                //   onClick={() => addCartItemHandler(props.data)}
-                >
-                  +
-                </span>
-              </div>
-            )}
-          {/* </AddButton> */}
+        <div className="flex flex-col gap-0 mt-1">
+          <h3 className="text-2xl font-bold text-[red]">{data.price}</h3>
+          <span className="font-semibold">{data.continent}</span>
+        </div>
+        <div className="flex gap-2 my-4">
+          <span>
+            <i className="fas fa-map-marker-alt text-[red]"></i>
+          </span>
+          <span>{data.location}</span>
+        </div>
+        <div className="flex gap-4 pl-4">
+          <div className="flex items-center gap-2">
+            <i className="fas fa-bed text-lg"></i>
+            <span className="text-sm font-semibold">{data.bedrooms}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="fas fa-bath text-lg"></i>
+            <span className="text-sm font-semibold">{data.bathrooms}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <i className="far fa-square-full text-lg"></i>
+            <span className="text-sm font-semibold">{data.area}</span>
+          </div>
         </div>
       </div>
-    );
-  };
-    export default SliderCard;
-  
+    </div>
+  );
+};
+export default SliderCard;
