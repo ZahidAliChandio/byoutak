@@ -56,7 +56,6 @@ const DropdownPage = (props) => {
                 </p>
               )}
             </div>
-
             <div className="w-1/2 sm:w-1/2 md:w-5/12 lg:w-1/4 my-12">
               <button
                 id="dropdownDefault"
