@@ -1,4 +1,18 @@
 import Button from "../../components/UI/Button";
+import DateList from "../../components/UI/DateList";
+const dates = [
+  { id: 0, day: "MON", date: "14 NOV" },
+  { id: 1, day: "TUE", date: " 15 NOV" },
+  { id: 3, day: "WED", date: " 16 NOV" },
+  { id: 4, day: "THU", date: " 17 NOV" },
+  { id: 5, day: "FRI", date: " 18 NOV" },
+  { id: 6, day: "SAT", date: " 19 NOV" },
+  { id: 7, day: "SUN", date: " 20 NOV" },
+  { id: 8, day: "MON", date: " 21 NOV" },
+  { id: 9, day: "TUE", date: " 22 NOV" },
+  { id: 10, day: "WED", date: " 23 NOV" },
+  { id: 11, day: "THU", date: " 24 NOV" },
+];
 
 const MeetingForm = () => {
   return (
@@ -40,7 +54,7 @@ const MeetingForm = () => {
         <h3 className="text-blue-800 text-sm sm:text-base md:text-lg font-semibold">
           Select date
         </h3>
-        <div>salon cards</div>
+        <DateList dates={dates} />
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-sm sm:text-base md:text-lg font-semibold text-blue-800">
@@ -49,19 +63,28 @@ const MeetingForm = () => {
         <div className="flex gap-4">
           <div className="flex items-center gap-2">
             <input type="radio" id="zoom" className="h-4 w-4" />
-            <label htmlFor="zoom" className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800">
+            <label
+              htmlFor="zoom"
+              className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800"
+            >
               Zoom Video
             </label>
           </div>
           <div className="flex items-center gap-2">
             <input type="radio" id="zoom" className="h-4 w-4" />
-            <label htmlFor="zoom" className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800">
+            <label
+              htmlFor="zoom"
+              className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800"
+            >
               New Cairo
             </label>
           </div>
           <div className="flex items-center gap-2">
             <input type="radio" id="zoom" className="h-4 w-4" />
-            <label htmlFor="zoom" className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800">
+            <label
+              htmlFor="zoom"
+              className="text-xs sm:text-sm lg:text-base font-semibold text-blue-800"
+            >
               6th of October
             </label>
           </div>
@@ -73,7 +96,7 @@ const MeetingForm = () => {
       <select
         name="time"
         id="time"
-        className="p-3 pr-6 border-1 border-blue-800 w-fit"
+        className="p-3 pr-8 border-2 w-fit "
       >
         <option value="10:00" selected>
           10:00 AM
@@ -84,7 +107,9 @@ const MeetingForm = () => {
       </select>
       <div className="flex gap-8 justify-end">
         <Button className="bg-gray-700 text-white">Request this time</Button>
-        <Button className="bg-gray-200 border-gray-700 border px-10">Live chat now</Button>
+        <Button className="bg-gray-200 border-gray-700 border px-10">
+          Live chat now
+        </Button>
       </div>
     </div>
   );
