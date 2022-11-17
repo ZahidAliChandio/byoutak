@@ -7,6 +7,7 @@ const Projects = (props) => {
   const togglePage = () => {
     props.setPageIndex((prev) => prev + 1);
   };
+  
 
   return (
     <div className="relative flex flex-col items-center w-full m-auto mt-7 lg:mt-9 pt-8 sm:pt-10 lg:pt-16 sm:w-11/12 md:w-10/12 overflow-hidden">

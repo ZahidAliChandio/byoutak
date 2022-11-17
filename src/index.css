@@ -9,3 +9,17 @@
 .swiper-pagination-bullet-active {
   background: red !important;
 }
+.enter-animation{
+  animation: enter 5s ease-in forwards;
+}
+@keyframes enter {
+  0%{
+    transform: translateX(100px);
+  }  
+  50%{
+    transform: translateX(50px);
+  }  
+  100%{
+    transform: translateX(0px);
+  }  
+}
