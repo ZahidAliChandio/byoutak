@@ -77,8 +77,16 @@ const Slider = (props) => {
     { id: 4, type: "New Facial", amount: 1 },
   ];
   return (
-    <div className="relative  px-2 sm:px-20 md:px-24 lg:px-32 xl:px-40 2xl:px-48 z-0">
-      <div className="md:relative w-full -bottom-20">
+    <div className="relative px-2 sm:px-20 md:px-24 lg:px-32 xl:px-40 2xl:px-48 z-0">
+      <div className="text-white text-center w-full">
+        <h2 className="font-bold text-xl md:text-2xl lg:text-3xl lg:mb-6 px-4 sm:p-0">
+          HERE ARE THE PROJECTS THAT SUIT YOUR NEEDS
+        </h2>
+        <p className="mb-2 lg:mb-4 text-gray-300 text-lg md:text-xl">
+          Select one of the options below
+        </p>
+      </div>
+      <div className="md:relative w-full">
         <Swiper
           pagination={{
             clickable: true,
@@ -112,7 +120,7 @@ const Slider = (props) => {
                 className="flex justify-center text-left rounded-xl z-0 w-full mb-6 md:mb-10"
                 key={data.id}
               >
-                <SliderCard data={data}/>
+                <SliderCard data={data} />
               </SwiperSlide>
             );
           })}

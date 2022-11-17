@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const images = [Image1, Image2, Image3];
 const Projects = (props) => {
-  const togglePage = () => {
-    props.setPageIndex((prev) => prev + 1);
-  };
+
 
   return (
     <div className="relative flex flex-col items-center w-full m-auto mt-7 lg:mt-9 pt-8 sm:pt-10 lg:pt-16 sm:w-11/12 md:w-10/12 overflow-hidden">
@@ -19,29 +17,7 @@ const Projects = (props) => {
           Select one of the options below
         </p>
       </div>
-      <div className=" w-11/12 lg:w-10/12 xl:w-2/3 mt-12">
-        <ul
-          className="grid grid-cols-2 md:grid-cols-3 gap-3 py-1 text-sm text-gray-700"
-          aria-labelledby="dropdownDefault"
-        >
-          {images.map((item, index) => {
-            return (
-              <li
-                key={index}
-                className="my-1 md:my-2 rounded-lg overflow-hidden"
-              >
-                <Link to="slider">
-                  <img
-                    src={item}
-                    className="cursor-pointer rounded-lg"
-                    alt="project"
-                  />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      
     </div>
   );
 };
