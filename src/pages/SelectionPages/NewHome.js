@@ -40,10 +40,10 @@ const NewHome = () => {
                   type="text"
                   id="visitors"
                   className="block w-full px-3 md:px-4 py-2.5 text-sm md:text-base bg-gray-50 outline-none  border-gray-300 text-gray-900 rounded-l-full"
-                  placeholder=""
+                  placeholder="Enter Location,Compound, Developer"
                   required
                 />
-                <span className="p-2.5 bg-[red] rounded-r-full w-full"></span>
+                <span className="p-2.5 bg-[red] rounded-r-full w-full"><i class="fas fa-search"></i></span>
               </div>
             )}
           </div>
