@@ -6,7 +6,7 @@ import Meeting from "./pages/Meeting/Meeting";
 
 const App = () => {
   return (
-    <div className="relative w-full h-screen bg-[#1F1C1C]">
+    <div className="relative w-full h-screen bg-[#212020]">
       <header>
         <Navbar />
       </header>

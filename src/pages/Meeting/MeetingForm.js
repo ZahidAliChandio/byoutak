@@ -1,22 +1,24 @@
+import { useCallback, useEffect, useRef } from "react";
 import Button from "../../components/UI/Button";
 import DateList from "../../components/UI/DateList";
-const dates = [
-  { id: 0, day: "MON", date: "14 NOV" },
-  { id: 1, day: "TUE", date: " 15 NOV" },
-  { id: 3, day: "WED", date: " 16 NOV" },
-  { id: 4, day: "THU", date: " 17 NOV" },
-  { id: 5, day: "FRI", date: " 18 NOV" },
-  { id: 6, day: "SAT", date: " 19 NOV" },
-  { id: 7, day: "SUN", date: " 20 NOV" },
-  { id: 8, day: "MON", date: " 21 NOV" },
-  { id: 9, day: "TUE", date: " 22 NOV" },
-  { id: 10, day: "WED", date: " 23 NOV" },
-  { id: 11, day: "THU", date: " 24 NOV" },
-];
 
 const MeetingForm = () => {
+  const dates = [
+    { id: 0, day: "MON", date: "14 NOV" },
+    { id: 1, day: "TUE", date: " 15 NOV" },
+    { id: 3, day: "WED", date: " 16 NOV" },
+    { id: 4, day: "THU", date: " 17 NOV" },
+    { id: 5, day: "FRI", date: " 18 NOV" },
+    { id: 6, day: "SAT", date: " 19 NOV" },
+    { id: 7, day: "SUN", date: " 20 NOV" },
+    { id: 8, day: "MON", date: " 21 NOV" },
+    { id: 9, day: "TUE", date: " 22 NOV" },
+    { id: 10, day: "WED", date: " 23 NOV" },
+    { id: 11, day: "THU", date: " 24 NOV" },
+  ];
+
   return (
-    <div className="flex flex-col gap-6 bg-blue-50 w-10/12 m-auto p-8 rounded-lg">
+    <div className="flex flex-col gap-6 bg-blue-50 md:w-[98%] 2xl:w-10/12 m-auto p-8 rounded-lg">
       <h2 className="text-lg sm:text-xl md:text-2xl text-blue-800 font-bold">
         Your Information
       </h2>
@@ -42,7 +44,7 @@ const MeetingForm = () => {
           </span>
           <input
             type="tel"
-            id="website-admin"
+            id="phone"
             class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
             placeholder="123-45-678"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
@@ -96,11 +98,9 @@ const MeetingForm = () => {
       <select
         name="time"
         id="time"
-        className="p-3 pr-8 border-2 w-fit "
+        className="p-3 pr-8 border-2 w-fit"
+        defaultValue="9:00 AM"
       >
-        <option value="10:00" selected>
-          10:00 AM
-        </option>
         <option value="11:00">11:00 AM</option>
         <option value="12:00">12:00 AM</option>
         <option value="1:00">1:00 PM</option>
