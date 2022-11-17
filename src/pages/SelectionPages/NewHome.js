@@ -43,7 +43,7 @@ const NewHome = () => {
                   placeholder="Enter Location,Compound, Developer"
                   required
                 />
-                <span className="p-2.5 bg-[red] rounded-r-full w-full"><i class="fas fa-search"></i></span>
+                <span className="p-2.5 bg-[red] rounded-r-full w-full"><i className="fas fa-search"></i></span>
               </div>
             )}
           </div>

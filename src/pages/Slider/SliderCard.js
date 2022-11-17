@@ -22,7 +22,7 @@ const SliderCard = ({ data }) => {
               />
             </svg>
           </div>
-          {/* <span className="text-gray-500 font-bold"><i class="fas fa-cube text-cyan-500"></i>SODIC</span> */}
+          {/* <span className="text-gray-500 font-bold"><i className="fas fa-cube text-cyan-500"></i>SODIC</span> */}
           <span className="text-gray-500 font-bold">SODIC</span>
         </div>
 
