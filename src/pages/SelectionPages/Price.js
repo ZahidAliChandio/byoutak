@@ -5,7 +5,7 @@ const Price = () => {
     id: 2,
     title: "WHERE WOULD YOUR PROPERTY BY?",
     lis: ["NEW CAIRO", "6TH OF OCTOBER", "NEW CAPITAL"],
-    nextLink: "projects",
+    nextLink: "/projects",
   };
   return <SlidingContent content={content}></SlidingContent>;
 };

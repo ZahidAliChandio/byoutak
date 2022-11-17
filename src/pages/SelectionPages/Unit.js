@@ -5,7 +5,7 @@ const Unit = () => {
     id: 4,
     title: "WHAT IS THE PRICE RANGE YOU HAVE IN MIND",
     lis: ["3 Million", "4Million", "5 Million"],
-    nextLink:"price"
+    nextLink:"/price"
   };
   return <SlidingContent content={content}></SlidingContent>;
 };
