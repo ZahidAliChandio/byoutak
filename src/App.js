@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import RightAngle from "./components/UI/RightAngle";
 import Footer from "./components/Footer/Footer";
 import Router from "./routes";
+import Meeting from "./pages/Meeting/Meeting";
 
 const App = () => {
   return (
@@ -10,8 +11,9 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        <RightAngle />
-        <Router />
+        {/* <RightAngle />
+        <Router /> */}
+        <Meeting/>
       </main>
       <footer>
         <Footer />

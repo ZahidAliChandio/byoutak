@@ -1,4 +1,6 @@
+import MeetingForm from "./MeetingForm";
+
 const Meeting = () => {
-  return <div>meeting</div>;
+  return <MeetingForm/>
 };
 export default Meeting;
