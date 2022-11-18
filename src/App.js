@@ -6,18 +6,16 @@ import Meeting from "./pages/Meeting/Meeting";
 
 const App = () => {
   return (
-    <div className="relative w-full h-screen bg-[#212020]">
+    <div className="relative min-h-screen">
       <header>
         <Navbar />
       </header>
       <main>
         {/* <RightAngle />
         <Router /> */}
-        <Meeting/>
+        <Meeting />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 };

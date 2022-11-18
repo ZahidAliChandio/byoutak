@@ -18,34 +18,34 @@ const MeetingForm = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-6 bg-blue-50 md:w-[98%] 2xl:w-10/12 m-auto p-8 rounded-lg">
+    <div className="flex flex-col gap-4 2xl:gap-6 bg-blue-50 w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg m-auto">
       <h2 className="text-lg sm:text-xl md:text-2xl text-blue-800 font-bold">
         Your Information
       </h2>
-      <div className="flex flex-wrap items-end gap-3 sm:gap-8 md:gap-12">
+      <div className="flex flex-wrap lg:items-end gap-3 md:gap-6 lg:gap-8">
         <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
           <label
-            for="first_name"
-            class="block mb-2 text-sm sm:text-base md:text-lg font-medium text-gray-900"
+            htmlFor="first_name"
+            className="block mb-2 text-sm sm:text-base md:text-lg text-blue-800 font-medium"
           >
             Your Name
           </label>
           <input
             type="text"
             id="first_name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             placeholder="John"
             required
           />
         </div>
-        <div class="flex h-fit w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-          <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+        <div className="flex h-fit w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
+          <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
             @
           </span>
           <input
             type="tel"
             id="phone"
-            class="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
+            className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
             placeholder="123-45-678"
             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
             required
@@ -105,9 +105,9 @@ const MeetingForm = () => {
         <option value="12:00">12:00 AM</option>
         <option value="1:00">1:00 PM</option>
       </select>
-      <div className="flex gap-8 justify-end">
+      <div className="flex justify-center gap-4 md:gap-8 md:justify-end">
         <Button className="bg-gray-700 text-white">Request this time</Button>
-        <Button className="bg-gray-200 border-gray-700 border px-10">
+        <Button className="bg-gray-200 border-gray-700 border !px-3 md:!px-10">
           Live chat now
         </Button>
       </div>

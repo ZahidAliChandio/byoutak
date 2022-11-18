@@ -13,7 +13,7 @@ const DateList = (props) => {
         <ul
           className={`${
             activeIndex === index ? "bg-gray-700 text-white" : "bg-white text-gray-800"
-          } px-2 md:px-4 !py-6 rounded-lg text-sm text-center font-semibold cursor-pointer`}
+          } px-2 md:px-4 py-3 sm:py-4 md:py-6 rounded-lg text-sm text-center font-semibold cursor-pointer`}
           onClick={() => onClickHandler(index)}
         >
           <li>{date.day}</li>
