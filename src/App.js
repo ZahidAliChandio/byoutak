@@ -3,19 +3,22 @@ import RightAngle from "./components/UI/RightAngle";
 import Footer from "./components/Footer/Footer";
 import Router from "./routes";
 import Meeting from "./pages/Meeting/Meeting";
+import ContactUs from "./pages/ContactUs/ContactUs";
+
 
 const App = () => {
   return (
-    <div className="relative min-h-screen">
+    <div>
       <header>
         <Navbar />
       </header>
       <main>
         {/* <RightAngle />
         <Router /> */}
-        <Meeting />
+        {/* <Meeting /> */}
+        <ContactUs/>
       </main>
-      <Footer />
+      <Footer />      
     </div>
   );
 };
