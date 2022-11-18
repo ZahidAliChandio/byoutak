@@ -96,9 +96,9 @@ const MeetingForm = () => {
         Select time
       </h2>
       <select
+        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         name="time"
         id="time"
-        className="p-3 pr-8 border-2 w-fit"
         defaultValue="9:00 AM"
       >
         <option value="11:00">11:00 AM</option>
