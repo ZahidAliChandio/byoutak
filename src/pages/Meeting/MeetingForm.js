@@ -1,8 +1,10 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useState } from "react";
 import Button from "../../components/UI/Button";
 import DateList from "../../components/UI/DateList";
+import PhoneInput from "react-phone-number-input";
 
 const MeetingForm = () => {
+  const [phone, setPhone] = useState();
   const dates = [
     { id: 0, day: "MON", date: "14 NOV" },
     { id: 1, day: "TUE", date: " 15 NOV" },
@@ -39,16 +41,11 @@ const MeetingForm = () => {
           />
         </div>
         <div className="flex h-fit w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-          <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-            @
-          </span>
-          <input
-            type="tel"
-            id="phone"
-            className="rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
-            placeholder="123-45-678"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-            required
+          <PhoneInput
+            placeholder="Enter phone number"
+            value={phone}
+            onChange={setPhone}
+            defaultCountry="NL"
           />
         </div>
       </div>

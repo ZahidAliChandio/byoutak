@@ -41,3 +41,17 @@ body {
   align-items: center;
   display: flex;
 }
+.PhoneInput{
+  border:1px solid #015C9A;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.PhoneInputInput {
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  outline: none;
+}

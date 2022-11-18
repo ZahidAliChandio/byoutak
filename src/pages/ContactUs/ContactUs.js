@@ -1,10 +1,14 @@
+import { useState } from "react";
 import ContactUsSvg from "../../static/images/contactUsIllustration.svg";
 import LocationPointer from "../../static/icons/contactlocation.png";
 import Clock from "../../static/icons/clock.png";
 import Phone from "../../static/icons/phone.png";
 import Card from "../../components/UI/Card";
+import PhoneInput from "react-phone-number-input";
 
 const ContactUs = () => {
+  const [phone, setPhone] = useState();
+
   return (
     <div className="">
       <div id="background-container" className="relative h-52">
@@ -14,7 +18,7 @@ const ContactUs = () => {
           </h2>
         </div>
       </div>
-      <div className="flex gap-12 w-4/5 mx-auto mt-12">
+      <div className="flex flex-wrap gap-12 w-4/5 mx-auto mt-12">
         <Card className="!block !w-full !bg-white !py-10 !px-8">
           <div className="flex flex-col gap-3">
             <h2 className="text-2xl text-[#FF5E00] font-bold">
@@ -30,25 +34,18 @@ const ContactUs = () => {
                 <input
                   type="text"
                   id="first_name"
-                  className="relative border-[#015C9A] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 before:content['Name'] before:absolute before:-top-2 before:left-2 before:block before:text-white before:border-red-800 before:border-4"
+                  className="relative border-[#015C9A] bg-gray-50 border text-gray-900 text-sm rounded-lg  block w-full p-2.5 before:content['Name'] before:absolute before:-top-2 before:left-2 before:block before:text-white before:border-red-800 before:border-4"
                   placeholder="Name"
                   required
                 />
-                <div className="flex">
-                  <span className="inline-flex border-[#015C9A] items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-                    @
-                  </span>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="border-[#015C9A] rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
-                    placeholder="123-45-678"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                    required
-                  />
-                </div>
+                <PhoneInput
+                  placeholder="Enter phone number"
+                  value={phone}
+                  onChange={setPhone}
+                  defaultCountry="NL"
+                />
                 <select
-                  className="block w-full bg-gray-50 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500 border-[#015C9A]"
+                  className="block w-full bg-gray-50 border border-[#015C9A] text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   name="time"
                   id="time"
                   defaultValue="9:00 AM"
@@ -68,7 +65,12 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="text-right mt-6">
-            <button type="submit" className="py-2 px-8 bg-[#FF5E00] text-white rounded-lg font-bold">Submit</button>
+              <button
+                type="submit"
+                className="py-2 px-8 bg-[#FF5E00] text-white rounded-lg font-bold"
+              >
+                Submit
+              </button>
             </div>
           </form>
         </Card>
