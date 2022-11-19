@@ -21,8 +21,8 @@ const MeetingForm = () => {
 
   return (
     <Fragment>
-      <div className="flex flex-col gap-4 2xl:gap-6 w-[95%] md:w-11/12 lg:w-10/12 px-12 rounded-lg mx-auto form-shadow">
-        <h2 className="text-lg sm:text-xl md:text-2xl text-gray-100 font-bold">
+      <div className="relative -top-10 md:-top-12 lg:-top-20 sm:left-10 md:left-20 lg:left-16 flex flex-col gap-4 2xl:gap-6 w-[95%] md:w-11/12 lg:w-10/12 px-12 rounded-lg mx-auto form-shadow">
+        <h2 className="text-center font-bold text-white sm:p-0 text-lg sm:text-xl md:text-2xl lg:text-3xl">
           Your Information
         </h2>
         <div className="flex flex-wrap lg:items-end gap-3 md:gap-6 lg:gap-8">
@@ -42,7 +42,6 @@ const MeetingForm = () => {
             />
           </div>
           <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-            {/* <div className="bg-transparent rounded-lg border-gray-300 border"> */}
             <PhoneInput
               placeholder="Enter phone number"
               value={phone}
@@ -51,13 +50,14 @@ const MeetingForm = () => {
               className="!z-9999 input-box"
               style={{ backgroundColor: "white", borderRadius: "8px" }}
             />
-            {/* </div> */}
           </div>
         </div>
         <div>
           <h3 className="text-gray-100 text-sm sm:text-base md:text-lg font-semibold">
             Select date
           </h3>
+
+          {/* Date List */}
           <DateList dates={dates} />
         </div>
         <div className="flex flex-col gap-2">
@@ -107,7 +107,7 @@ const MeetingForm = () => {
           <option value="12:00">12:00 AM</option>
           <option value="1:00">1:00 PM</option>
         </select>
-        <div className="flex justify-center gap-4 md:gap-8 md:justify-end">
+        <div className="flex justify-center gap-4 md:gap-8 md:justify-end mt-4 sm:mt-8 md:m-0">
           <Button className="bg-gray-600 text-gray-100">
             Request this time
           </Button>

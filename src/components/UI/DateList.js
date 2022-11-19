@@ -9,7 +9,7 @@ const DateList = (props) => {
 
   return props.dates.map((date, index) => {
     return (
-      <Card className="!p-0 box-shadow" key={date.id}>
+      <Card className="!p-0 box-shadow !inline-block" key={date.id}>
         <ul
           className={`${
             activeIndex === index ? "bg-gray-700 text-white" : "bg-gray-50 text-gray-800"
