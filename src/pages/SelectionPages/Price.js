@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
+import RightAngle from "../../components/UI/RightAngle";
 
 const Price = () => {
   const content = {
@@ -7,6 +9,11 @@ const Price = () => {
     lis: ["NEW CAIRO", "6TH OF OCTOBER", "NEW CAPITAL"],
     nextLink: "/slider",
   };
-  return <SlidingContent content={content}></SlidingContent>;
+  return (
+    <Fragment>
+      <RightAngle/>
+      <SlidingContent content={content}></SlidingContent>
+    </Fragment>
+  );
 };
 export default Price;

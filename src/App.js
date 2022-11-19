@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <header>
-        {/* <Navbar /> */}
+        <Navbar />
       </header>
       <main>
         {/* <RightAngle /> */}

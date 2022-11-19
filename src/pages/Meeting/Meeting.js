@@ -1,5 +1,4 @@
 import MeetingForm from "./MeetingForm";
-
 const Meeting = () => {
   return <MeetingForm/>
 };

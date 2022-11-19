@@ -2,6 +2,7 @@ import { useState } from "react";
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import RightAngle from "../../components/UI/RightAngle";
 
 const NewHome = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +22,7 @@ const NewHome = () => {
   };
   return (
     <AnimatePresence>
+      <RightAngle/>
       <motion.div
         key="select"
         className={`flex flex-col items-center m-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}

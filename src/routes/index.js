@@ -12,9 +12,8 @@ export default function Router(){
 
     let element=useRoutes([
         {
-      path:"/",
-      element:<ContactUs/>
-    //   element:<NewHome/>
+      path:"/",      
+      element:<NewHome/>
     },
     {path:"property",element:<Property/>},
     {path:"unit",element:<Unit/>},
@@ -22,7 +21,7 @@ export default function Router(){
     {path:"projects",element:<Projects/>},
     {path:"slider",element:<Slider/>},
     {path:"meeting",element:<Meeting /> },
-    // {path:"contactus",element:<ContactUs/> },
+    {path:"contactus",element:<ContactUs/> },
     
 ])
     return element;

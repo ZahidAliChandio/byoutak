@@ -20,7 +20,7 @@ const MeetingForm = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 2xl:gap-6 bg-blue-50 w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg m-auto mt-20">
+    <div className="flex flex-col gap-4 2xl:gap-6 bg-blue-50 w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg mx-auto">
       <h2 className="text-lg sm:text-xl md:text-2xl text-blue-800 font-bold">
         Your Information
       </h2>
