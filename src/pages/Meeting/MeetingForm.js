@@ -47,6 +47,7 @@ const MeetingForm = () => {
               value={phone}
               onChange={setPhone}
               defaultCountry="NL"
+              className="!z-9999 input-box"
               style={{backgroundColor:"white",borderRadius:"8px"}}
             />
           {/* </div> */}
