@@ -20,7 +20,7 @@ const MeetingForm = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 2xl:gap-6 bg-blue-50 w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg m-auto">
+    <div className="flex flex-col gap-4 2xl:gap-6 bg-blue-50 w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg m-auto mt-20">
       <h2 className="text-lg sm:text-xl md:text-2xl text-blue-800 font-bold">
         Your Information
       </h2>
@@ -35,18 +35,20 @@ const MeetingForm = () => {
           <input
             type="text"
             id="first_name"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+            className="bg-white border-gray-300 border text-gray-900 text-sm rounded-lg block w-full p-2.5"
             placeholder="John"
             required
           />
         </div>
-        <div className="flex h-fit w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-          <PhoneInput
-            placeholder="Enter phone number"
-            value={phone}
-            onChange={setPhone}
-            defaultCountry="NL"
-          />
+        <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
+          <div className="bg-white rounded-lg border-gray-300 border">
+            <PhoneInput
+              placeholder="Enter phone number"
+              value={phone}
+              onChange={setPhone}
+              defaultCountry="NL"
+            />
+          </div>
         </div>
       </div>
       <div>
@@ -93,7 +95,7 @@ const MeetingForm = () => {
         Select time
       </h2>
       <select
-        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        class="block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-blue-800 w-fit"
         name="time"
         id="time"
         defaultValue="9:00 AM"

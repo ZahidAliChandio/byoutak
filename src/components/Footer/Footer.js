@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="mt-8 mb-2 flex justify-center w-full gap-4 sm:gap-8 md:gap-12 lg:gap-24 xl:gap-32">
@@ -18,14 +20,14 @@ const Footer = () => {
           Message Us
         </span>
       </a>
-      <div className="flex flex-col items-center">
+      <Link to="/meeting" className="flex flex-col items-center">
         <span>
           <i className="fas fa-user text-xl text-gray-400"></i>
         </span>
         <span className="font-semibold text-white text-sm sm:text-base">
           Schedule a Meeting
         </span>
-      </div>
+      </Link>
     </footer>
   );
 };

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {ReactComponent as ContactUsSvg} from "../../static/images/contactUsIllustration.svg";
+import { ReactComponent as ContactUsSvg } from "../../static/images/contactUsIllustration.svg";
 import LocationPointer from "../../static/icons/contactlocation.png";
 import Clock from "../../static/icons/clock.png";
 import Phone from "../../static/icons/phone.png";
@@ -38,19 +38,23 @@ const ContactUs = () => {
                   placeholder="Name"
                   required
                 />
-                <PhoneInput
-                  placeholder="3012345678"
-                  value={phone}
-                  onChange={setPhone}
-                  defaultCountry="PK"
-                />
+                <div className="border border-[#015C9A] rounded-lg">
+                  <PhoneInput
+                    placeholder="3012345678"
+                    value={phone}
+                    onChange={setPhone}
+                    defaultCountry="PK"
+                  />
+                </div>
                 <select
                   className="block w-full bg-gray-50 border border-[#015C9A] text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   name="time"
                   id="time"
                   defaultValue="9:00 AM"
                 >
-                  <option value="Lahore" className="text-[gray]">Enter Location</option>
+                  <option value="Lahore" className="text-[gray]">
+                    Enter Location
+                  </option>
                   <option value="Rawalpindi">Rawalpindi</option>
                   <option value="Islamabad">Islamabad</option>
                   <option value="Karachi">Karachi</option>
@@ -77,32 +81,28 @@ const ContactUs = () => {
           </form>
         </Card>
         <Card className="!block !bg-white !p-5 lg:-translate-y-28 !w-full md:!w-3/5 lg:!w-3/4 !m-auto">
-          <div className="flex justify-center">            
-            <ContactUsSvg transform="scale(1.2)"/>
+          <div className="flex justify-center">
+            <ContactUsSvg transform="scale(1.2)" />
           </div>
           <h1 className="relative text-[#15314E] text-[1.4rem] font-bold -top-2 left-10">
             How to reach us
           </h1>
           <div className="flex flex-col gap-4 mt-1">
             <div className="flex items-center text-left gap-4">
-              <img src={LocationPointer} alt="location" className="h-10"/>
+              <img src={LocationPointer} alt="location" className="h-10" />
 
               <div>
-                <h2 className="text-lg font-bold text-[#15314E]">
-                  Address
-                </h2>
+                <h2 className="text-lg font-bold text-[#15314E]">Address</h2>
                 <p className="text-base xl:text-lg text-[#767676]">
                   47, North 90 Street, New Cairo, Egypt. <br />
                   Tower 2, Al Guezira Plaza, 6 of October, Egypt.
                 </p>
               </div>
             </div>
-            <div className="flex items-center text-left gap-6">              
-              <img src={Phone} alt="phone" className="w-7 h-7"/>
+            <div className="flex items-center text-left gap-6">
+              <img src={Phone} alt="phone" className="w-7 h-7" />
               <div>
-                <h2 className="text-lg font-bold text-[#15314E]">
-                  Contacts
-                </h2>
+                <h2 className="text-lg font-bold text-[#15314E]">Contacts</h2>
                 <p className="text-base xl:text-lg text-[#767676]">
                   +201065888849
                   <br /> info@nawy.com
@@ -110,7 +110,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="flex items-center text-left gap-4">
-              <img src={Clock} alt="phone" className="w-7 h-7"/>
+              <img src={Clock} alt="phone" className="w-7 h-7" />
               <div>
                 <h2 className="text-lg font-bold text-[#15314E]">
                   Working Hours
