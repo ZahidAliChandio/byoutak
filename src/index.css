@@ -59,6 +59,7 @@ body {
 }
 @keyframes enter {
   0% {
+    display: flex;
     opacity: 0;
     transform: translateX(80%);
   }
@@ -148,6 +149,7 @@ body {
     transform: translateX(72%);
   }
   100% {
+    display: none;
     opacity: 0;
     transform: translateX(80%);
   }
