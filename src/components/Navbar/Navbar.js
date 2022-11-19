@@ -31,7 +31,7 @@ const Navbar = () => {
                 : state === "exiting"
                 ? "exit-animation"
                 : null
-            } gap-4 sm:gap-20 text-white md:text-lg lg:text-xl font-semibold md:!flex`}
+            } gap-4 sm:gap-20 text-white sm:text-lg md:text-xl font-semibold md:!flex`}
           >
             <li className="inline">
               <Link to="/" className="hover:text-[red]">
