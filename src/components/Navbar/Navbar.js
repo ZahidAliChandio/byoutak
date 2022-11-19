@@ -9,9 +9,9 @@ const Navbar = () => {
   const onClickHandler = () => {
     setShowNav((prev) => (prev ? false : true));
   };
-useEffect(()=>{
-  window.innerWidth>768?setShowNav(true):setShowNav(false);
-},[])
+  useEffect(() => {
+    window.innerWidth > 768 ? setShowNav(true) : setShowNav(false);
+  }, []);
   return (
     <div className="flex items-center justify-between py-3 md:py-4 px-5 sm:px-12">
       <span>
@@ -31,14 +31,20 @@ useEffect(()=>{
                 : state === "exiting"
                 ? "exit-animation"
                 : null
-            } gap-4 sm:gap-20 text-white text-lg font-semibold md:!flex`}
+            } gap-4 sm:gap-20 text-white md:text-lg lg:text-xl font-semibold md:!flex`}
           >
             <li className="inline">
-              <Link to="/">Home</Link>
+              <Link to="/" className="hover:text-[red]">
+                Home
+              </Link>
             </li>
-            <li className="inline mx-4 md:m-0">Search</li>
+            <li className="inline mx-4 md:m-0">
+              <Link className="hover:text-[red]">Search</Link>
+            </li>
             <li className="inline">
-              <Link to="contactus">Contact us</Link>
+              <Link to="contactus" className="hover:text-[red]">
+                Contact us
+              </Link>
             </li>
           </ul>
         )}
