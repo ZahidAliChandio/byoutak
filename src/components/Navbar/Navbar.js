@@ -5,6 +5,7 @@ import { Transition } from "react-transition-group";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const nodeRef = useRef(null);
 
   const onClickHandler = () => {
     setShowNav((prev) => (prev ? false : true));
@@ -19,6 +20,7 @@ const Navbar = () => {
       </span>
       <Transition
         in={showNav}
+        nodeRef={nodeRef} 
         timeout={{ enter: 500, exit: 200 }}
         mountOnEnter
         unmountOnExit
