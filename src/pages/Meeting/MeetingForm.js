@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Button from "../../components/UI/Button";
 import DateList from "../../components/UI/DateList";
 import PhoneInput from "react-phone-number-input";
@@ -20,99 +20,103 @@ const MeetingForm = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 2xl:gap-6 bg-[#212020] w-[95%] md:w-11/12 lg:w-10/12 p-4 md:p-8 rounded-lg mx-auto form-shadow mt-7">
-      <h2 className="text-lg sm:text-xl md:text-2xl text-gray-100 font-bold">
-        Your Information
-      </h2>
-      <div className="flex flex-wrap lg:items-end gap-3 md:gap-6 lg:gap-8">
-        <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-          <label
-            htmlFor="first_name"
-            className="block mb-2 text-sm sm:text-base md:text-lg text-gray-100 font-medium"
-          >
-            Your Name
-          </label>
-          <input
-            type="text"
-            id="first_name"
-            className="bg-gray-200 border-gray-300 border text-gray-900 text-sm rounded-lg block w-full p-2.5"
-            placeholder="John"
-            required
-          />
-        </div>
-        <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
-          {/* <div className="bg-transparent rounded-lg border-gray-300 border"> */}
+    <Fragment>
+      <div className="flex flex-col gap-4 2xl:gap-6 w-[95%] md:w-11/12 lg:w-10/12 px-12 rounded-lg mx-auto form-shadow">
+        <h2 className="text-lg sm:text-xl md:text-2xl text-gray-100 font-bold">
+          Your Information
+        </h2>
+        <div className="flex flex-wrap lg:items-end gap-3 md:gap-6 lg:gap-8">
+          <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
+            <label
+              htmlFor="first_name"
+              className="block mb-2 text-sm sm:text-base md:text-lg text-gray-100 font-medium"
+            >
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="first_name"
+              className=" border-gray-300 border text-gray-900 text-sm rounded-lg block w-full p-2.5"
+              placeholder="John"
+              required
+            />
+          </div>
+          <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/4">
+            {/* <div className="bg-transparent rounded-lg border-gray-300 border"> */}
             <PhoneInput
               placeholder="Enter phone number"
               value={phone}
               onChange={setPhone}
               defaultCountry="NL"
               className="!z-9999 input-box"
-              style={{backgroundColor:"white",borderRadius:"8px"}}
+              style={{ backgroundColor: "white", borderRadius: "8px" }}
             />
-          {/* </div> */}
-        </div>
-      </div>
-      <div>
-        <h3 className="text-gray-100 text-sm sm:text-base md:text-lg font-semibold">
-          Select date
-        </h3>
-        <DateList dates={dates} />
-      </div>
-      <div className="flex flex-col gap-2">
-        <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-100">
-          Select location
-        </h3>
-        <div className="flex gap-4">
-          <div className="flex items-center gap-2">
-            <input type="radio" id="zoom" className="h-4 w-4" />
-            <label
-              htmlFor="zoom"
-              className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
-            >
-              Zoom Video
-            </label>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" id="zoom" className="h-4 w-4" />
-            <label
-              htmlFor="zoom"
-              className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
-            >
-              New Cairo
-            </label>
-          </div>
-          <div className="flex items-center gap-2">
-            <input type="radio" id="zoom" className="h-4 w-4" />
-            <label
-              htmlFor="zoom"
-              className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
-            >
-              6th of October
-            </label>
+            {/* </div> */}
           </div>
         </div>
+        <div>
+          <h3 className="text-gray-100 text-sm sm:text-base md:text-lg font-semibold">
+            Select date
+          </h3>
+          <DateList dates={dates} />
+        </div>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-100">
+            Select location
+          </h3>
+          <div className="flex gap-4">
+            <div className="flex items-center gap-2">
+              <input type="radio" id="zoom" className="h-4 w-4" />
+              <label
+                htmlFor="zoom"
+                className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
+              >
+                Zoom Video
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <input type="radio" id="zoom" className="h-4 w-4" />
+              <label
+                htmlFor="zoom"
+                className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
+              >
+                New Cairo
+              </label>
+            </div>
+            <div className="flex items-center gap-2">
+              <input type="radio" id="zoom" className="h-4 w-4" />
+              <label
+                htmlFor="zoom"
+                className="text-xs sm:text-sm lg:text-base font-semibold text-gray-100"
+              >
+                6th of October
+              </label>
+            </div>
+          </div>
+        </div>
+        <h2 className="text-sm sm:text-base md:text-lg font-semibold text-gray-100">
+          Select time
+        </h2>
+        <select
+          class="block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-blue-800 w-fit"
+          name="time"
+          id="time"
+          defaultValue="9:00 AM"
+        >
+          <option value="11:00">11:00 AM</option>
+          <option value="12:00">12:00 AM</option>
+          <option value="1:00">1:00 PM</option>
+        </select>
+        <div className="flex justify-center gap-4 md:gap-8 md:justify-end">
+          <Button className="bg-gray-600 text-gray-100">
+            Request this time
+          </Button>
+          <Button className="bg-gray-200 border-gray-700 border !px-3 md:!px-10">
+            Live chat now
+          </Button>
+        </div>
       </div>
-      <h2 className="text-sm sm:text-base md:text-lg font-semibold text-gray-100">
-        Select time
-      </h2>
-      <select
-        class="block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-blue-800 w-fit"
-        name="time"
-        id="time"
-        defaultValue="9:00 AM"
-      >
-        <option value="11:00">11:00 AM</option>
-        <option value="12:00">12:00 AM</option>
-        <option value="1:00">1:00 PM</option>
-      </select>
-      <div className="flex justify-center gap-4 md:gap-8 md:justify-end">
-        <Button className="bg-gray-600 text-gray-100">Request this time</Button>
-        <Button className="bg-gray-200 border-gray-700 border !px-3 md:!px-10">
-          Live chat now
-        </Button>
-      </div>
-    </div>
+    </Fragment>
   );
 };
 

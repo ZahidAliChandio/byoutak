@@ -11,7 +11,7 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        {/* <RightAngle /> */}
+        <RightAngle />
         <Router />        
         
       </main>

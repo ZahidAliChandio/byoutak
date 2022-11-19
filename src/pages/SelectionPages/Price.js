@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
-import RightAngle from "../../components/UI/RightAngle";
 
 const Price = () => {
   const content = {
@@ -10,8 +9,7 @@ const Price = () => {
     nextLink: "/slider",
   };
   return (
-    <Fragment>
-      <RightAngle/>
+    <Fragment>      
       <SlidingContent content={content}></SlidingContent>
     </Fragment>
   );

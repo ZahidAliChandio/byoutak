@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import RightAngle from "../../components/UI/RightAngle";
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
 
 const Property = () => {
@@ -10,8 +9,7 @@ const Property = () => {
     nextLink: "/unit",
   };
   return (
-    <Fragment>
-      <RightAngle/>
+    <Fragment>      
       <SlidingContent content={content}></SlidingContent>
     </Fragment>
   );

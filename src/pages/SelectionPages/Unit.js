@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
-import RightAngle from "../../components/UI/RightAngle";
 const Unit = () => {
   const content = {
     id: 4,
@@ -10,7 +9,7 @@ const Unit = () => {
   };
   return (
     <Fragment>
-      <RightAngle /> <SlidingContent content={content}></SlidingContent>
+       <SlidingContent content={content}></SlidingContent>
     </Fragment>
   );
 };
