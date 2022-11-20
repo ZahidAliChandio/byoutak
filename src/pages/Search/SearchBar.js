@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Price from "./Price";
 import PropertyType from "./PropertyType";
+import Delivery from "./Delivery";
 
 const SearchBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -44,7 +45,7 @@ const SearchBar = () => {
           </div>
         );
       })}
-      <ul className="flex items-start rounded-sm gap-0 lg:gap-1 xl:gap-3 overflow-hidden border border-gray-300 px-[0.09rem]">
+      <ul className="flex items-start lg:items-center rounded-sm gap-0 lg:gap-1 xl:gap-3 overflow-hidden border border-gray-300 px-[0.09rem]">
         {lis.map((content, index) => {
           return (
             <li
@@ -63,6 +64,7 @@ const SearchBar = () => {
       </ul>
       {activeItemIndex===0 && <Price changeActiveItemIndex={setActiveItemIndex}/>}
       {activeItemIndex===1 && <PropertyType changeActiveItemIndex={setActiveItemIndex}/>}
+      {activeItemIndex===2 && <Delivery changeActiveItemIndex={setActiveItemIndex}/>}
     </div>
   );
 };
