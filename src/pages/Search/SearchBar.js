@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Price from "./Price";
+import PropertyType from "./PropertyType";
 
 const SearchBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -60,7 +61,8 @@ const SearchBar = () => {
           );
         })}
       </ul>
-      {activeItemIndex===0 && <Price/>}
+      {activeItemIndex===0 && <Price changeActiveItemIndex={setActiveItemIndex}/>}
+      {activeItemIndex===1 && <PropertyType changeActiveItemIndex={setActiveItemIndex}/>}
     </div>
   );
 };

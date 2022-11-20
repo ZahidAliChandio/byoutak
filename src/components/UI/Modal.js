@@ -4,14 +4,14 @@ import ReactDOM from "react-dom";
 const BackDrop = (props) => {
   return (
     <div
-      className="fixed top-0 left-0  w-full h-screen bg-[rgba(0,0,0,0.5)] z-20"
-      onClick={props.onClose}
+      className="fixed top-0 left-0  w-full h-screen bg-[rgba(0,0,0,0.3)] z-40 cursor-pointer"
+      onClick={props.onClick}
     ></div>
   );
 };
 const ModalOverlay = (props) => {
   return (
-    <div className="fixed top-[20vh] left-[50%] w-[95%] sm:w-4/5 md:w-9/12 lg:w-3/5 -translate-x-1/2 rounded-2xl bg-white box-shadow z-30">
+    <div className={`${props.className} fixed top-[8vh] left-[50%] w-[95%] sm:w-4/5 md:w-9/12 lg:w-3/5 -translate-x-1/2 rounded-2xl bg-white box-shadow z-50`}>
       <div className="content">{props.children}</div>
     </div>
   );
@@ -25,7 +25,7 @@ const Modal = (props) => {
         portalElement
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
+        <ModalOverlay className={props.className}>{props.children}</ModalOverlay>,
         portalElement
       )}
     </Fragment>

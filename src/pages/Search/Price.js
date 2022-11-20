@@ -5,8 +5,8 @@ import "react-range-slider-input/dist/style.css";
 
 const Price = (props) => {
   const [yearCounter, setYearCounter] = useState(1);
-  const [priceMinRange, setPriceMinRange] = useState(null);
-  const [priceMaxRange, setPriceMaxRange] = useState(null);
+  const [priceMinRange, setPriceMinRange] = useState(0);
+  const [priceMaxRange, setPriceMaxRange] = useState(100);
   const price=useRef(null);
 
   const decreaseHandler = () => {
@@ -16,12 +16,12 @@ const Price = (props) => {
     setYearCounter((prev) => prev + 1);
   };
   const changeValues=()=>{    
-    setPriceMinRange(price.current.value.min);
+    setPriceMinRange(prev=>prev+price.current.value.min);
     setPriceMaxRange(price.current.value.max);
   }
 
   return (
-    <Modal>
+    <Modal onClose={()=>props.changeActiveItemIndex(null)}>
       <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center my-6">
         Price
       </h2>
@@ -30,6 +30,7 @@ const Price = (props) => {
           <span className="text-[#212020] text-lg md:text-xl">Price Range</span>
           <RangeSlider
             className="h-1"
+            step={5}
             ref={price}
             defaultValue={[0,100]}
             value={[priceMinRange,priceMaxRange]}
@@ -43,7 +44,7 @@ const Price = (props) => {
               <input
                 type="text"
                 placeholder={``}
-                value={priceMinRange}
+                value={priceMinRange*10000+70000}
                 className="px-2 rounded-md border border-gray-500 text-gray-500 py-1 w-10/12"
               />
             </div>
@@ -119,7 +120,7 @@ const Price = (props) => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
-                stroke="currentColor"
+                stroke="gray"
                 className="w-7 h-7"
               >
                 <path
@@ -129,14 +130,14 @@ const Price = (props) => {
                 />
               </svg>
             </div>
-            <span className="text-xl">{yearCounter}+ Years</span>
+            <span className="text-xl text-gray-500">{yearCounter}+ Years</span>
             <div className="cursor-pointer" onClick={() => increaseHandler()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
-                stroke="currentColor"
+                stroke="gray"
                 className="w-7 h-7"
               >
                 <path
