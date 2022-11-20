@@ -110,3 +110,6 @@ body {
   background: #04AA6D;
   cursor: pointer;
 }
+.text-xxs{
+  font-size: 0.5rem;
+}

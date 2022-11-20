@@ -18,14 +18,14 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex gap-4 justify-center">
-      <div className="grid grid-cols-[1fr,8fr] w-fit border border-gray-300 text-gray-300 rounded-lg overflow-hidden items-center px-2">
+    <div className="flex gap-3 justify-center lg:justify-around w-full items-center px-4">
+      <div className="grid grid-cols-[1fr,8fr] border border-gray-300 text-gray-300 rounded-sm overflow-hidden items-center px-2 h-fit">
         <i className="fa-solid fa-magnifying-glass"></i>
         <input
           type="text"
           name="search"
           id="search"
-          className="py-2 px-4 bg-transparent w-full h-full mr-8"
+          className="p-2 bg-transparent w-full lg:px-6"
           placeholder="Area, Compound, Developer"
         />
       </div>
@@ -36,15 +36,15 @@ const SearchBar = () => {
               activeItemIndex === index
                 ? "text-[#212020] bg-gray-300"
                 : "text-gray-300"
-            } flex items-center gap-4 sm:gap-8 md:gap-12  border border-gray-300 w-fit py-1 rounded-sm px-4 cursor-pointer`}
+            } flex items-center gap-3 xl:gap-4 2xl:gap-12  border border-gray-300 w-fit rounded-sm py-2 px-2 m xl:px-4 cursor-pointer h-fit`}
             onClick={() => onSelectHanler(index)}
           key={index}>
-            <span className="text-2xl font-semibold">{item}</span>
+            <span className="text-xxs lg:text-sm xl:text-base 2xl:text-2xl font-semibold">{item}</span>
             <i className="fa-solid fa-chevron-down"></i>
           </div>
         );
       })}
-      <ul className="flex items-center rounded-sm gap-4 overflow-hidden border border-gray-300">
+      <ul className="flex items-start rounded-sm gap-0 lg:gap-1 xl:gap-3 overflow-hidden border border-gray-300 px-[0.09rem]">
         {lis.map((content, index) => {
           return (
             <li
@@ -53,7 +53,7 @@ const SearchBar = () => {
                 activeIndex === index
                   ? "text-[#212020] bg-gray-300"
                   : "text-gray-300"
-              } py-2 px-2 rounded-sm m-[0.09rem]`}
+              } py-2 px-2 rounded-sm my-[0.09rem] text-sm xl:text-base text-center last:p-0`}
               onClick={() => onClickHandler(index)}
             >
               {content}
