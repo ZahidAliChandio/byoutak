@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import Modal from "../../components/UI/Modal";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+
 const Price = (props) => {
   const [yearCounter, setYearCounter] = useState(1);
-  const decreaseHandler=()=>{
-    setYearCounter(prev=>prev-1);
-  }
-  const increaseHandler=()=>{
-    setYearCounter(prev=>prev+1);
+  const [priceMinRange, setPriceMinRange] = useState(null);
+  const [priceMaxRange, setPriceMaxRange] = useState(null);
+  const price=useRef(null);
+
+  const decreaseHandler = () => {
+    setYearCounter((prev) => prev - 1);
+  };
+  const increaseHandler = () => {
+    setYearCounter((prev) => prev + 1);
+  };
+  const changeValues=()=>{    
+    setPriceMinRange(price.current.value.min);
+    setPriceMaxRange(price.current.value.max);
   }
 
   return (
@@ -15,31 +26,34 @@ const Price = (props) => {
         Price
       </h2>
       <div className="grid grid-cols-2 justify-center items-center border rounded-xl overflow-hidden">
-        <div className="flex flex-col justify-center gap-12 border pb-16 pt-8 pl-16 px-16 w-full">
+        <div className="flex flex-col justify-center gap-12 border pb-16 pt-8 pl-16 px-16 w-full h-full">
           <span className="text-[#212020] text-lg md:text-xl">Price Range</span>
-          <input
-            id="minmax-range"
-            type="range"
+          <RangeSlider
+            className="h-1"
+            ref={price}
+            defaultValue={[0,100]}
+            value={[priceMinRange,priceMaxRange]}
             min="0"
-            max="10"
-            value="5"
-            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+            max="100"
+            onInput={()=>changeValues()}            
           />
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <span className="text-lg md:text-xl text-gray-500">EGP</span>
               <input
                 type="text"
-                placeholder="700,00"
-                className="px-2 rounded-md border border-gray-500 py-1 w-10/12"
+                placeholder={``}
+                value={priceMinRange}
+                className="px-2 rounded-md border border-gray-500 text-gray-500 py-1 w-10/12"
               />
             </div>
             <div className="flex items-center gap-3">
               <span className="text-lg md:text-xl text-gray-500">EGP</span>
               <input
                 type="text"
-                placeholder="20,000,000"
-                className="px-2 rounded-md border border-gray-500 py-1 w-full"
+                placeholder=""
+                value={priceMaxRange}
+                className="px-2 rounded-md border border-gray-500 text-gray-500 py-1 w-full"
               />
             </div>
           </div>
@@ -48,14 +62,7 @@ const Price = (props) => {
           <span className="text-[#212020] text-lg md:text-xl">
             Monthly installments
           </span>
-          <input
-            id="minmax-range"
-            type="range"
-            min="0"
-            max="10"
-            value="5"
-            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-          />
+          <RangeSlider />
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <span className="text-lg md:text-xl text-gray-500">EGP</span>
@@ -79,14 +86,7 @@ const Price = (props) => {
           <span className="text-[#212020] text-lg md:text-xl">
             Down payment
           </span>
-          <input
-            id="minmax-range"
-            type="range"
-            min="0"
-            max="10"
-            value="5"
-            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-          />
+          <RangeSlider />
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <span className="text-lg md:text-xl text-gray-500">EGP</span>
@@ -111,9 +111,41 @@ const Price = (props) => {
             Installment years
           </h3>
           <div className="flex justify-center items-center gap-8">
-            <i class="fa-solid fa-circle-minus text-xl cursor-pointer" onClick={()=>decreaseHandler()}></i>
+            <div className="cursor-pointer"
+              onClick={() => decreaseHandler()}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-7 h-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
             <span className="text-xl">{yearCounter}+ Years</span>
-            <i class="fa-solid fa-circle-plus text-xl cursor-pointer" onClick={()=>increaseHandler()}></i>
+            <div className="cursor-pointer" onClick={() => increaseHandler()}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-7 h-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

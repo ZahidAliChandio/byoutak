@@ -19,7 +19,7 @@ const SearchBar = () => {
   return (
     <div className="flex gap-4 justify-center">
       <div className="grid grid-cols-[1fr,8fr] w-fit border border-gray-300 text-gray-300 rounded-lg overflow-hidden items-center px-2">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
         <input
           type="text"
           name="search"
@@ -39,7 +39,7 @@ const SearchBar = () => {
             onClick={() => onSelectHanler(index)}
           key={index}>
             <span className="text-2xl font-semibold">{item}</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <i className="fa-solid fa-chevron-down"></i>
           </div>
         );
       })}
@@ -47,6 +47,7 @@ const SearchBar = () => {
         {lis.map((content, index) => {
           return (
             <li
+            key={index}
               className={`${
                 activeIndex === index
                   ? "text-[#212020] bg-gray-300"
