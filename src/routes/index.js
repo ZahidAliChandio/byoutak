@@ -7,6 +7,7 @@ import Projects from "../pages/Projects/Projects";
 import Slider from "../pages/Slider/Slider";
 import Meeting from "../pages/Meeting/Meeting";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import Search from "../pages/Search/Search";
 
 export default function Router(){
 
@@ -22,6 +23,7 @@ export default function Router(){
     {path:"slider",element:<Slider/>},
     {path:"meeting",element:<Meeting /> },
     {path:"contactus",element:<ContactUs/> },
+    {path:"search",element:<Search/> },
     
 ])
     return element;

@@ -41,10 +41,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="inline mx-4 md:m-0">
-              <Link className="hover:text-[red]">Search</Link>
+              <Link to="/search" className="hover:text-[red]">Search</Link>
             </li>
             <li className="inline">
-              <Link to="contactus" className="hover:text-[red]">
+              <Link to="/contactus" className="hover:text-[red]">
                 Contact us
               </Link>
             </li>

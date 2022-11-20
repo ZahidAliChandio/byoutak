@@ -3,7 +3,6 @@ import RightAngle from "./components/UI/RightAngle";
 import Footer from "./components/Footer/Footer";
 import Router from "./routes";
 
-
 const App = () => {
   return (
     <div>
@@ -11,11 +10,9 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        <RightAngle />
-        <Router />        
-        
+        {/* <RightAngle /> */} <Router />
       </main>
-      <Footer />      
+      <Footer />
     </div>
   );
 };
