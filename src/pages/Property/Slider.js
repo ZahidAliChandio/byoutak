@@ -28,7 +28,7 @@ const Slider = () => {
       {images.map((data) => {
         return (
           <SwiperSlide key={data.id} className="">
-            <img src={data} alt="property" className="w-full h-[520px]" />
+            <img src={data} alt="property" className="w-full h-[32.5rem]" />
           </SwiperSlide>
         );
       })}
