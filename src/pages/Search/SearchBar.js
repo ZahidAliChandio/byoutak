@@ -2,6 +2,7 @@ import { useState } from "react";
 import Price from "./Price";
 import PropertyType from "./PropertyType";
 import Delivery from "./Delivery";
+import PropertyDetails from "./PropertyDetails";
 
 const SearchBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -65,6 +66,7 @@ const SearchBar = () => {
       {activeItemIndex===0 && <Price changeActiveItemIndex={setActiveItemIndex}/>}
       {activeItemIndex===1 && <PropertyType changeActiveItemIndex={setActiveItemIndex}/>}
       {activeItemIndex===2 && <Delivery changeActiveItemIndex={setActiveItemIndex}/>}
+      {activeItemIndex===3 && <PropertyDetails changeActiveItemIndex={setActiveItemIndex}/>}
     </div>
   );
 };

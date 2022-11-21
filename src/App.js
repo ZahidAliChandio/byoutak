@@ -10,7 +10,8 @@ const App = () => {
         <Navbar />
       </header>
       <main>
-        {/* <RightAngle /> */} <Router />
+        {/* <RightAngle /> */} 
+        <Router />
       </main>
       <Footer />
     </div>

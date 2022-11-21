@@ -57,12 +57,12 @@ const Delivery = (props) => {
         </select>
       </div>
       <div className="flex gap-6 items-center justify-center md:justify-end px-4 md:px-12 py-6">
-        <Button type="clear" className="border !py-2 !px-4 xl:!px-7 !text-sm xl:!text-lg h-fit">
+        <Button type="clear" className="border !py-2 !px-4 xl:!px-7 !text-sm xl:!text-md h-fit">
           Clear all
         </Button>
         <Button
           type="submit"
-          className="bg-[#212020] !text-sm xl:!text-lg text-gray-50 !py-2 !px-6 xl:!px-12 2xl:!px-12 h-fit"
+          className="bg-[#212020] !text-sm xl:!text-md text-gray-50 !py-2 !px-6 xl:!px-12 2xl:!px-12 h-fit"
         >
           Apply
         </Button>

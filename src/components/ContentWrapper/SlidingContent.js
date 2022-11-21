@@ -16,10 +16,10 @@ const SlidingContent = (props) => {
       <motion.div
         key="select"
         className={`flex flex-col items-center m-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
-        initial={{ transform:"translateX(100%)" }}        
-        animate={{ transform:"translateX(0%)" }}
-        exit={{transform:"translateX(100%)"}}
-        transition={{duration:0.1,ease:"easeOut"}}
+        initial={{ transform: "translateX(100%)" }}
+        animate={{ transform: "translateX(0%)" }}
+        exit={{ transform: "translateX(100%)" }}
+        transition={{ duration: 0.1, ease: "easeOut" }}
       >
         <div className="text-white text-center w-full">
           <div className="flex flex-col gap-8 w-full items-center">
@@ -32,10 +32,25 @@ const SlidingContent = (props) => {
                   type="text"
                   id="visitors"
                   className="block w-full px-3 md:px-4 py-2.5 text-sm md:text-base bg-gray-50 outline-none  border-gray-300 text-gray-900 rounded-l-full"
-                  placeholder=""
+                  placeholder="Enter Location, Compound, Developer"
                   required
                 />
-                <span className="p-2.5 bg-[red] rounded-r-full w-full"></span>
+                <span className="flex items-center justify-center p-2.5 bg-[red] rounded-r-full w-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </svg>
+                </span>
               </div>
             )}
           </div>
