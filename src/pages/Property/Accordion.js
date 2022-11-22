@@ -32,16 +32,16 @@ const Accordion = () => {
           onClick={() => onClickHandler(index)}
         >
           <div>
-            <div class={`circle-plus ${index === activeIndex?accordianPlus:null}`}>
-              <div class="circle">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
+            <div className={`circle-plus ${index === activeIndex?accordianPlus:null}`}>
+              <div className="circle">
+                <div className="horizontal"></div>
+                <div className="vertical"></div>
               </div>
             </div>
-            <div class={`circle-plus-two ${index === activeIndex?accordianPlus:null}`}>
-              <div class="circle">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
+            <div className={`circle-plus-two ${index === activeIndex?accordianPlus:null}`}>
+              <div className="circle">
+                <div className="horizontal"></div>
+                <div className="vertical"></div>
               </div>
             </div>
           </div>

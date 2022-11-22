@@ -4,7 +4,7 @@ const Contact = (props) => {
   return (
     <div className={`${props.className} grid grid-cols-3 border-2 border-gray-300 rounded-lg w-fit bg-[#212020]`}>
       <div className="flex gap-2 px-8 items-center cursor-pointer py-2 justify-center">
-        <i class="fa-sharp fa-solid fa-video text-gray-400"></i>
+        <i className="fa-sharp fa-solid fa-video text-gray-400"></i>
         <span className="text-gray-50">Zoom</span>
       </div>
 
@@ -21,7 +21,7 @@ const Contact = (props) => {
         className="flex items-center gap-2 px-8 border-l py-2 justify-center cursor-pointer"
       >
         {/* <i className="fas fa-comment-dots text-xl text-gray-400"></i> */}
-        <i class="fa-brands fa-whatsapp text-2xl text-gray-400"></i>
+        <i className="fa-brands fa-whatsapp text-2xl text-gray-400"></i>
         <span className="font-semibold text-white text-sm sm:text-base text-center">
           Whatsapp
         </span>

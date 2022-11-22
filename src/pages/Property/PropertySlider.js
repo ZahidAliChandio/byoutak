@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Slider = () => {
+const PropertySlider = () => {
   const images = [Image1, Image2, Image3, Image4];
   return (
     <div className="relative">
@@ -27,10 +27,10 @@ const Slider = () => {
           disableOnInteraction: false,
         }}
       >
-        {images.map((data) => {
+        {images.map((data,index) => {
           return (
-            <SwiperSlide key={data.id} className="">
-              <img
+            <SwiperSlide className="" key={index}>
+              <img                
                 src={data}
                 alt="property"
                 className="w-full h-[18rem] md:h-[20rem]  lg:h-[28rem] 2xl:h-[32.5rem]"
@@ -39,8 +39,8 @@ const Slider = () => {
           );
         })}
       </Swiper>
-      <Contact className="absolute bottom-4 sm:bottom-12 right-4 sm:right-12 z-50"/>
+      <Contact className="absolute bottom-4 sm:bottom-12 right-4 sm:right-12 z-50" />
     </div>
   );
 };
-export default Slider;
+export default PropertySlider;

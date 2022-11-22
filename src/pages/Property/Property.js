@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-import Slider from "./Slider";
+import PropertySlider from "./PropertySlider";
 import Intro from "./Intro";
 import Accordion from "./Accordion";
 
 const Property = () => {
   return<Fragment>
-    <Slider />    
+    <PropertySlider />    
     <Intro/>
     <Accordion/>
   </Fragment> 
