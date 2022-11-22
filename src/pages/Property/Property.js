@@ -5,7 +5,7 @@ import Accordion from "./Accordion";
 
 const Property = () => {
   return<Fragment>
-    <Slider />
+    <Slider />    
     <Intro/>
     <Accordion/>
   </Fragment> 
