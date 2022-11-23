@@ -70,16 +70,65 @@ const Search = () => {
       bathrooms: 2,
       area: "150 m²",
     },
+    {
+      id: 6,
+      image: null,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
+    },
+    {
+      id: 7,
+      image: null,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
+    },
+    {
+      id: 8,
+      image: null,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
+    },
+    {
+      id: 9,
+      image: null,
+      title: "Twinhouse",
+      subtitle: "SODIC",
+      price: "EGP 5,500,000",
+      contient: "Sodic Ease",
+      location: "New Heliopolis, Egypt",
+      bedrooms: 3,
+      bathrooms: 2,
+      area: "150 m²",
+    },
+    
   ];
   return (
-    <Fragment>
+    <Fragment>      
       <SearchBar />
-      {/* <div className="relative px-4 py-4">
+      <div className="relative px-4 py-4">
         <div className="text-white text-center w-full">
-          <h2 className="font-bold text-xl md:text-2xl lg:text-3xl lg:mb-6 px-4 sm:p-0">
+          <h2 className="font-bold text-xl md:text-2xl lg:text-3xl lg:mb-6 px-4 sm:p-0 grid-cols-3">
             {propertyData.length} results
           </h2>
-        </div>
+        </div>      
         <Swiper
           slidesPerView={3}
           grid={{ rows:2 }}
@@ -98,9 +147,9 @@ const Search = () => {
             );
           })}
         </Swiper>
-      </div> */}
-      <PropertyCard data={propertyData[0]} />
-      <PropertyCard data={propertyData[1]} />
+      {/* <PropertyCard data={propertyData[0]} />
+      <PropertyCard data={propertyData[1]} /> */}
+      </div>
     </Fragment>
   );
 };

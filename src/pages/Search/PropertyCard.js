@@ -5,9 +5,9 @@ const PropertyCard = ({ data }) => {
   return (
     <div className="bg-gray-50 rounded-md font-gillsans w-fit z-0 pb-3">
       {/* Image portion */}
-      <div className=" h-[150px] bg-[#EFEFEF] rounded-t-md overflow-hidden w-fit">
+      <div className=" h-[150px] bg-[#EFEFEF] rounded-t-md overflow-hidden w-fit cursor-pointer">
         {data.image && (
-          <img src={data.image} alt="apartment" className="w-[22.7rem]" />
+          <img src={data.image} alt="apartment" className="object-full hover:scale-[1.19] transition-all duration-1000" />
         )}
       </div>
 
@@ -38,14 +38,14 @@ const PropertyCard = ({ data }) => {
                 />
               </svg>
             </div>
-            <span className="text-lg text-[#212020]">Badya</span>
-            <span>6th of October City, Egypt</span>
+            <span className="text-lg text-gray-700">Badya</span>
+            <span className="text-gray-700">6th of October City, Egypt</span>
           </div>
         </div>
       </div>
 
       {/* property details */}
-      <div className="flex gap-2 sm:gap-4 md:gap-6 lg:gap-8  bg-gray-200 mb-4 w-full py-3 justify-center">
+      <div className="flex gap-2 sm:gap-4 md:gap-6 lg:gap-8  bg-gray-200 mb-4 w-full py-3 justify-center text-gray-700">
         <div className="flex items-center gap-2">
           <Bed />
           <span className="text-sm font-semibold">{data.bedrooms}</span>
@@ -55,8 +55,8 @@ const PropertyCard = ({ data }) => {
           <span className="text-sm font-semibold">{data.bathrooms}</span>
         </div>
         <div className="flex items-center gap-2">
-          <i className="far fa-square-full text-lg"></i>
-          <span className="text-sm font-semibold">{data.area}</span>
+          <i className="far fa-square-full text-lg "></i>
+          <span className="text-sm font-semibold ">{data.area}</span>
         </div>
       </div>
 

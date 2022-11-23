@@ -14,7 +14,7 @@ const Delivery = (props) => {
   return (
     <Modal
       onClose={() => props.changeActiveItemIndex(null)}
-      className=" w-4/5 sm:!w-1/2 lg:!w-1/3 xl:!w-1/3 2xl:!w-1/4"
+      className={`${props.className} w-4/5 sm:!w-1/2 lg:!w-1/3 xl:!w-1/3 2xl:!w-1/4`}
     >
       <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center my-4">
         Delivery date
@@ -32,7 +32,7 @@ const Delivery = (props) => {
               onClick={() => movNowHandler()}
             >
               Move now
-              <input type="checkbox" name="movenow" id="movenow" className="" />
+              {/* <input type="checkbox" name="movenow" id="movenow" className="" /> */}
             </button>
           </label>
           <button
