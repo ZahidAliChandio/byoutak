@@ -83,7 +83,7 @@ const SearchBar = () => {
           <PropertyDetails changeActiveItemIndex={setActiveItemIndex} />
         )}
       </div>
-      {showAll && <Filter/>}
+      {showAll && <Filter setShowAll={setShowAll}/>}
     </Fragment>
   );
 };

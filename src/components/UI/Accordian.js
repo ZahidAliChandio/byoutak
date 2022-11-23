@@ -9,11 +9,11 @@ const Accordion = ({ items }) => {
     const newIndex = index === activeIndex ? null : index;
     setActiveIndex(newIndex);
   };
-  const renderedItems = items.map((item, index) => {    
+  const renderedItems = items.map((item, index) => {
     return (
       <Fragment key={index}>
         <div
-          className={`flex items-center justify-between text-sm md:text-base 2xl:text-lg border-b border-gray-400 py-3 cursor-pointer mb-2 font-gillsans`}
+          className={`relative flex items-center justify-between text-sm md:text-base 2xl:text-lg border-b border-gray-400 py-3 cursor-pointer mb-2 font-gillsans`}
           onClick={() => onClickHandler(index)}
         >
           {item.title}
@@ -47,7 +47,9 @@ const Accordion = ({ items }) => {
       </Fragment>
     );
   });
-  return <div className="w-11/12 md:w-10/12 lg:w-1/3 mt-2">{renderedItems}</div>;
+  return (
+    <div className="relative w-11/12 md:w-10/12 lg:w-1/3 mt-2">{renderedItems}</div>
+  );
 };
 
 export default Accordion;
