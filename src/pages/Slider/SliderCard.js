@@ -27,7 +27,7 @@ const SliderCard = ({ data }) => {
         </div>
 
         <div className="flex flex-col gap-0 mt-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[red]">{data.price}</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-[#ff4545]">{data.price}</h3>
           <span className="font-semibold">{data.continent}</span>
         </div>
         <div className="flex gap-0 sm:gap-2 my-4">
@@ -36,7 +36,7 @@ const SliderCard = ({ data }) => {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.3}
-            stroke="red"
+            stroke="#ff4545"
             className="w-6 h-6"
           >
             <path

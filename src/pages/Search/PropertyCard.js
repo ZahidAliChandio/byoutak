@@ -1,66 +1,51 @@
-import Contact from "../../components/UI/Contact";
 import { ReactComponent as Bed } from "../../static/icons/bed.svg";
 import Phone from "../../static/icons/phone.png";
 
 const PropertyCard = ({ data }) => {
   return (
-    <div className="bg-gray-50 rounded-md font-gillsans w-full z-0 pb-3">
+    <div className="bg-gray-50 rounded-md font-gillsans w-fit z-0 pb-3">
       {/* Image portion */}
-      <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>
-      {/* Conent portion */}
-      <div className="px-4 sm:px-6">
-        <div className="flex flex-col w-full mt-4 gap-0">
-          <div className="flex justify-between items-center">
-            <h2 className="text-xl font-bold">{data.title}</h2>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="red"
-              className="w-7 h-7"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
-          </div>
-          {/* <span className="text-gray-500 font-bold"><i className="fas fa-cube text-cyan-500"></i>SODIC</span> */}
-          <span className="text-gray-500 font-bold">SODIC</span>
-        </div>
+      <div className=" h-[150px] bg-[#EFEFEF] rounded-t-md overflow-hidden w-fit">
+        {data.image && (
+          <img src={data.image} alt="apartment" className="w-[22.7rem]" />
+        )}
+      </div>
 
-        <div className="flex flex-col gap-0 mt-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[red]">
-            {data.price}
-          </h3>
-          <span className="font-semibold">{data.continent}</span>
-        </div>
-        <div className="flex gap-0 sm:gap-2 my-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.3}
-            stroke="red"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-            />
-          </svg>
-          <span className="text-sm sm:text-base">{data.location}</span>
+      {/* Conent portion */}
+      <div className="px-4 sm:px-4">
+        <div className="flex flex-col w-full mt-4 gap-0">
+          <div className="flex justify-between w-full mb-2">
+            <h3 className="font-bold text-lg text-[#411515]">Apartment</h3>
+            <span className="text-gray-500">Delivery in 2026</span>
+          </div>
+          <div className="flex flex-col gap-[0.2rem] mb-10">
+            <div className="flex justify-between items-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#ff4545]">
+                {data.price}
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="gray"
+                className="w-7 h-7"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </div>
+            <span className="text-lg text-[#212020]">Badya</span>
+            <span>6th of October City, Egypt</span>
+          </div>
         </div>
       </div>
-      <div className="flex gap-2 sm:gap-4 pl-0 sm:pl-4 bg-gray-200 mb-4 w-full py-3 justify-center">
+
+      {/* property details */}
+      <div className="flex gap-2 sm:gap-4 md:gap-6 lg:gap-8  bg-gray-200 mb-4 w-full py-3 justify-center">
         <div className="flex items-center gap-2">
           <Bed />
           <span className="text-sm font-semibold">{data.bedrooms}</span>
@@ -74,34 +59,32 @@ const PropertyCard = ({ data }) => {
           <span className="text-sm font-semibold">{data.area}</span>
         </div>
       </div>
+
+      {/* Contact buttons */}
       <div
-        className={`grid grid-cols-3 rounded-lg gap-2 justify-center w-fit mx-auto px-3`}
+        className={`grid grid-cols-3 rounded-lg gap-2 justify-between w-fit mx-auto px-3`}
       >
-        <div className="flex gap-2 items-center cursor-pointer py-2 justify-center border border-[#212020] rounded-full">
+        <div className="flex gap-2 items-center cursor-pointer py-0 justify-center border border-[#212020] rounded-full">
           <i className="fa-sharp fa-solid fa-video text-gray-400"></i>
-          <span className={`text-[#212020]`}>Zoom</span>
+          <span className={`text-[#212020] text-sm`}>Zoom</span>
         </div>
 
         <a
           href="tel:03482146022"
-          className="flex items-center gap-2 py-1 border border-[#212020] rounded-full justify-center cursor-pointer"
+          className="flex items-center gap-2 py-0 border border-[#212020] rounded-full justify-center cursor-pointer"
         >
           <span>
-            <img src={Phone} alt="phone" className="w-6 h-6" />
+            <img src={Phone} alt="phone" className="w-4 h-4" />
           </span>
-          <span className={`text-[#212020] font-semibold text-sm sm:text-base`}>
-            Call
-          </span>
+          <span className={`text-[#212020] font-semibold text-sm`}>Call</span>
         </a>
         <a
           href="whatsapp://send?text=Lets chat!&phone=+923163366566"
-          className="flex items-center gap-2 px-2 border border-[#212020] rounded-full py-1 justify-center cursor-pointer w-fit"
+          className="flex items-center gap-2 px-2 border border-[#212020] rounded-full justify-center cursor-pointer w-fit"
         >
           {/* <i className="fas fa-comment-dots text-xl text-gray-400"></i> */}
-          <i className="fa-brands fa-whatsapp text-2xl text-gray-400"></i>
-          <span
-            className={`text-[#212020] font-semibold text-sm sm:text-base text-center`}
-          >
+          <i className="fa-brands fa-whatsapp text-xl text-gray-400"></i>
+          <span className={`text-[#212020] font-semibold text-sm text-center`}>
             Whatsapp
           </span>
         </a>

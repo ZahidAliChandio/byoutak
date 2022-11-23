@@ -3,6 +3,7 @@ import PropertyCard from "./PropertyCard";
 import SearchBar from "./SearchBar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Grid } from "swiper";
+import Apartment from "../../static/images/apartment.jpg"
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
@@ -11,7 +12,7 @@ const Search = () => {
   const propertyData = [
     {
       id: 1,
-      img: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -23,7 +24,7 @@ const Search = () => {
     },
     {
       id: 2,
-      img: null,
+      image: null,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -35,7 +36,7 @@ const Search = () => {
     },
     {
       id: 3,
-      img: null,
+      image: null,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -47,7 +48,7 @@ const Search = () => {
     },
     {
       id: 4,
-      img: null,
+      image: null,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -59,7 +60,7 @@ const Search = () => {
     },
     {
       id: 5,
-      img: null,
+      image: null,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -73,7 +74,7 @@ const Search = () => {
   return (
     <Fragment>
       <SearchBar />
-      <div className="relative px-4 py-4">
+      {/* <div className="relative px-4 py-4">
         <div className="text-white text-center w-full">
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl lg:mb-6 px-4 sm:p-0">
             {propertyData.length} results
@@ -97,7 +98,9 @@ const Search = () => {
             );
           })}
         </Swiper>
-      </div>
+      </div> */}
+      <PropertyCard data={propertyData[0]} />
+      <PropertyCard data={propertyData[1]} />
     </Fragment>
   );
 };
