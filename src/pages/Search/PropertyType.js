@@ -51,19 +51,19 @@ const PropertyType = (props) => {
       <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center my-4">
         Property type
       </h2>
-      <div className="flex flex-col gap-6 border-y pb-4 pt-6 md:pt-8 pl-6 md:px-12 w-full h-full">
+      <div className="flex flex-col gap-4 border-y pb-4 pt-4 lg:pt-6 pl-6 md:px-12 w-full h-full">
         <div className="flex flex-wrap items-center gap-3">
           <input
             type="checkbox"
             name="apartment"
             id="apartment"
-            className="w-4 h-4 md:w-5 md:h-5"
+            className="w-4 h-4 lg:w-5 lg:h-5"
           />
           <h3 className="text-base md:text-lg font-semibold">
             Apartment Types
           </h3>
         </div>
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-3 lg:gap-4">
           {apartmentTypes.map((apartment, index) => {
             return (
               <Fragment>
@@ -73,7 +73,7 @@ const PropertyType = (props) => {
                     apartment.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-lg md:text-xl rounded-md py-2 px-3 cursor-pointer`}
+                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => apartmentSelectHandler(index)}
                 >
                   {apartment.name}
@@ -83,17 +83,17 @@ const PropertyType = (props) => {
           })}
         </ul>
       </div>
-      <div className="flex flex-col gap-6 border-y pb-4 pt-4 md:pt-8 pl-6 md:px-12 w-full">
+      <div className="flex flex-col gap-4 border-y pb-4 pt-3 md:pt-4 pl-6 md:px-12 w-full">
         <div className="flex flex-wrap items-center gap-3">
           <input
             type="checkbox"
             name="apartment"
             id="apartment"
-            className="w-4 h-4 md:w-5 md:h-5"
+            className="w-4 lg:w-5 h-4 lg:h-5"
           />
           <h3 className="text-base md:text-lg font-semibold">Villa Types</h3>
         </div>
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-3 lg:gap-4">
           {villaTypes.map((villa, index) => {
             return (
               <Fragment>
@@ -103,7 +103,7 @@ const PropertyType = (props) => {
                     villa.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-lg md:text-xl rounded-md py-2 px-3 cursor-pointer`}
+                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => villaSelectHandler(index)}
                 >
                   {villa.name}
@@ -113,17 +113,17 @@ const PropertyType = (props) => {
           })}
         </ul>
       </div>
-      <div className="flex flex-col gap-6 border-y pb-4 pt-6 md:pt-8 pl-6 md:px-12 w-full">
+      <div className="flex flex-col gap-4 border-y pb-4 pt-3 md:pt-4 pl-6 md:px-12 w-full">
         <div className="flex flex-wrap items-center gap-3">
           <input
             type="checkbox"
             name="apartment"
             id="apartment"
-            className="w-4 h-4 md:w-5 md:h-5"
+            className="w-4 h-4 lg:w-5 lg:h-5"
           />
           <h3 className="text-base md:text-lg font-semibold">Chalet Types</h3>
         </div>
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-3 lg:gap-4">
           {chaletTypes.map((chalet, index) => {
             return (
               <Fragment>
@@ -133,7 +133,7 @@ const PropertyType = (props) => {
                     chalet.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-lg md:text-xl rounded-md py-2 px-3 cursor-pointer`}
+                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => chaletSelectHandler(index)}
                 >
                   {chalet.name}
@@ -143,19 +143,19 @@ const PropertyType = (props) => {
           })}
         </ul>
       </div>
-      <div className="flex flex-col gap-6 border-y pb-4 pt-6 md:pt-8 pl-6 md:px-12 w-full">
+      <div className="flex flex-col gap-4 border-y pb-4 pt-3 lg:pt-4 pl-6 md:px-12 w-full">
         <div className="flex flex-wrap items-center gap-3">
           <input
             type="checkbox"
             name="apartment"
             id="apartment"
-            className="w-4 h-4 md:w-5 md:h-5"
+            className="w-4 h-4 lg:w-5 lg:h-5"
           />
           <h3 className="text-base md:text-lg font-semibold">
             Commercial Types
           </h3>
         </div>
-        <ul className="flex flex-wrap gap-4">
+        <ul className="flex flex-wrap gap-3 lg:gap-4">
           {commercialTypes.map((commercial, index) => {
             return (
               <Fragment>
@@ -165,7 +165,7 @@ const PropertyType = (props) => {
                     commercial.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-lg md:text-xl rounded-md py-2 px-3 cursor-pointer`}
+                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => commercialSelectHandler(index)}
                 >
                   {commercial.name}
@@ -176,8 +176,8 @@ const PropertyType = (props) => {
         </ul>
       </div>
       <div className="flex gap-6 justify-center md:justify-end px-2 md:px-6 py-6">
-        <Button type="clear" className="border !px-12 md:!text-lg">Clear all</Button>
-        <Button type="submit" className="bg-[#212020] md:!text-lg text-gray-50 !px-12">Apply</Button>
+        <Button type="clear" className="border !px-12 !text-sm">Clear all</Button>
+        <Button type="submit" className="bg-[#212020] !text-sm text-gray-50 !px-12">Apply</Button>
       </div>
     </Modal>
   );

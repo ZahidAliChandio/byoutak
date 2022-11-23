@@ -30,7 +30,7 @@ const PropertyDetails = (props) => {
         Property details
       </h2>
       <div className="grid grid-cols-2 justify-center items-center rounded-xl overflow-hidden">
-        <div className="flex flex-col justify-center gap-12 border pb-16 pt-8 pl-16 px-16 w-full h-full">
+        <div className="flex flex-col justify-center gap-7 2xl:gap-10 border py-10 2xl:py-16 px-16 w-full h-full">
           <span className="text-[#212020] text-sm md:text-lg">Area</span>
           <RangeSlider
             className="h-1"
@@ -63,7 +63,7 @@ const PropertyDetails = (props) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6 border pt-8 pb-16 pl-16 px-16 w-full h-full">
+        <div className="flex flex-col gap-7 2xl:gap-10 border py-10 2xl:py-16 px-16 w-full h-full">
           <span className="text-[#212020] text-sm md:text-lg">Bedrooms</span>
           <ul
             className={`flex items-center justify-center rounded-lg overflow-hidden`}
@@ -76,7 +76,7 @@ const PropertyDetails = (props) => {
                     selectedBedrooms === index
                       ? "font-semibold bg-gray-200"
                       : ""
-                  } py-2 border w-full h-full text-center text-sm`}
+                  } py-2 border w-full h-full text-center text-sm cursor-pointer`}
                   onClick={() => bedroomSelectHandler(index)}
                 >
                   {bedroom}
@@ -85,7 +85,7 @@ const PropertyDetails = (props) => {
             })}
           </ul>
         </div>
-        <div className="flex flex-col gap-6 border pt-8 pb-16 pl-16 px-16 w-full h-full">
+        <div className="flex flex-col justify-center gap-7 2xl:gap-10 border pb-8 2xl:pb-16 pt-8 px-10 w-full h-full">
           <span className="text-[#212020] text-sm md:text-lg">
             Delivery condition
           </span>
@@ -98,7 +98,7 @@ const PropertyDetails = (props) => {
                     selectedCondition === index
                       ? "font-semibold bg-gray-200"
                       : ""
-                  } p-2 border  text-center text-sm rounded-md`}
+                  } p-2 border  text-center text-sm rounded-md cursor-pointer`}
                   onClick={() => conditionSelectHandler(index)}
                 >
                   {condition}

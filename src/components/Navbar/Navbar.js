@@ -21,7 +21,7 @@ const Navbar = () => {
       <Transition
         in={showNav}
         nodeRef={nodeRef} 
-        timeout={{ enter: 500, exit: 200 }}
+        timeout={{ enter: 1000, exit: 500 }}
         mountOnEnter
         unmountOnExit
       >
@@ -33,8 +33,8 @@ const Navbar = () => {
                 : state === "exiting"
                 ? "exit-animation"
                 : null
-            } bg-[rgba(0,0,0,0.75)] absolute left-0 top-12 h-[50vh] md:h-fit md:static md:bg-transparent items-center gap-4 md:gap-20 text-white sm:text-lg md:text-xl font-semibold flex flex-col md:flex-row py-2 md:p-0 w-full md:w-fit z-30`}
-          >
+            } bg-[rgba(0,0,0,0.75)] absolute transition-all duration-300 left-0 top-12 md:static md:bg-transparent items-center gap-4 md:gap-20 text-white sm:text-lg md:text-xl font-semibold flex flex-col md:flex-row py-2 md:p-0 w-full md:w-fit z-30`}
+          >            
             <li className="inline">
               <Link to="/" className="hover:text-[red]">
                 Home

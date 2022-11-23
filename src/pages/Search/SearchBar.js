@@ -13,21 +13,17 @@ const SearchBar = () => {
 
   const onSelectHanler = (index) => {
     setActiveItemIndex(index);
-  };
-
-  const onClickHandler = (index) => {
-    setActiveIndex(index);
-  };
+  };  
 
   return (
-    <div className="flex gap-3 justify-center lg:justify-around w-full items-center px-4">
+    <div className="grid items-center grid-flow-col w-full px-4 gap-4">
       <div className="grid grid-cols-[1fr,8fr] border border-gray-300 text-gray-300 rounded-sm overflow-hidden items-center px-2 h-fit">
         <i className="fa-solid fa-magnifying-glass"></i>
         <input
           type="text"
           name="search"
           id="search"
-          className="p-2 bg-transparent w-full lg:px-6"
+          className="p-2 bg-transparent w-full lg:px-6 outline-none"
           placeholder="Area, Compound, Developer"
         />
       </div>
@@ -38,31 +34,14 @@ const SearchBar = () => {
               activeItemIndex === index
                 ? "text-[#212020] bg-gray-300"
                 : "text-gray-300"
-            } flex items-center gap-3 xl:gap-4 2xl:gap-12  border border-gray-300 w-fit rounded-sm py-2 px-2 m xl:px-4 cursor-pointer h-fit`}
+            } flex items-center justify-between  border border-gray-300 rounded-sm py-2 px-2 m xl:px-4 cursor-pointer h-full`}
             onClick={() => onSelectHanler(index)}
           key={index}>
             <span className="text-xxs lg:text-sm xl:text-base 2xl:text-2xl font-semibold">{item}</span>
             <i className="fa-solid fa-chevron-down"></i>
           </div>
         );
-      })}
-      <ul className="flex items-start lg:items-center rounded-sm gap-0 lg:gap-1 xl:gap-3 overflow-hidden border border-gray-300 px-[0.09rem]">
-        {lis.map((content, index) => {
-          return (
-            <li
-            key={index}
-              className={`${
-                activeIndex === index
-                  ? "text-[#212020] bg-gray-300"
-                  : "text-gray-300"
-              } py-2 px-2 rounded-sm my-[0.09rem] text-sm xl:text-base text-center last:p-0`}
-              onClick={() => onClickHandler(index)}
-            >
-              {content}
-            </li>
-          );
-        })}
-      </ul>
+      })}      
       {activeItemIndex===0 && <Price changeActiveItemIndex={setActiveItemIndex}/>}
       {activeItemIndex===1 && <PropertyType changeActiveItemIndex={setActiveItemIndex}/>}
       {activeItemIndex===2 && <Delivery changeActiveItemIndex={setActiveItemIndex}/>}
