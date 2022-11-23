@@ -15,8 +15,8 @@ export default function Router(){
     let element=useRoutes([
         {
       path:"/",      
-      element:<Property/>
-    //   element:<NewHome/>
+    //   element:<Property/>
+      element:<NewHome/>
     },
     // {path:"property",element:<Property/>},
     {path:"unit",element:<Unit/>},

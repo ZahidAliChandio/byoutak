@@ -70,12 +70,6 @@ const Slider = (props) => {
       area: "150 m²",
     },
   ];
-  const diffMakeups = [
-    { id: 1, type: "Fruit Facial", amount: 1 },
-    { id: 2, type: "O3+ Facial", amount: 1 },
-    { id: 3, type: "Sara gold Facial", amount: 1 },
-    { id: 4, type: "New Facial", amount: 1 },
-  ];
   return (
     <div className="relative px-2 sm:px-20 md:px-24 lg:px-32 xl:px-40 2xl:px-48 z-0">
       <div className="text-white text-center w-full">
@@ -96,16 +90,16 @@ const Slider = (props) => {
           className="!relative md:!static mySwiper !py-4"
           breakpoints={{
             1536: {
-              slidesPerView: diffMakeups.length >= 4 ? 4 : diffMakeups.length,
+              slidesPerView: data.length >= 4 ? 4 : data.length,
             },
             1280: {
-              slidesPerView: diffMakeups.length >= 3 ? 3 : diffMakeups.length,
+              slidesPerView: data.length >= 3 ? 3 : data.length,
             },
             1024: {
-              slidesPerView: diffMakeups.length >= 2 ? 2 : diffMakeups.length,
+              slidesPerView: data.length >= 2 ? 2 : data.length,
             },
             768: {
-              slidesPerView: diffMakeups.length >= 2 ? 2 : diffMakeups.length,
+              slidesPerView: data.length >= 2 ? 2 : data.length,
             },
           }}
           spaceBetween={14}

@@ -1,7 +1,7 @@
 import { ReactComponent as Bed } from "../../static/icons/bed.svg";
 const SliderCard = ({ data }) => {
   return (
-    <div className="bg-white px-6 py-7 rounded-md font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
+    <div className="bg-gray-50 px-6 py-7 rounded-md font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
       <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>
       <div className="px-4 sm:px-6">
         <div className="flex flex-col w-full mt-4 gap-0">

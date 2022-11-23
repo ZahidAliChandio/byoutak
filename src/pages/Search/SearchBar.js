@@ -17,13 +17,13 @@ const SearchBar = () => {
 
   return (
     <div className="grid items-center grid-flow-col w-full px-4 gap-4">
-      <div className="grid grid-cols-[1fr,8fr] border border-gray-300 text-gray-300 rounded-sm overflow-hidden items-center px-2 h-fit">
+      <div className="grid grid-cols-[1fr,8fr] border border-gray-300 text-gray-300 rounded-sm overflow-hidden items-center pl-2 lg:pl-4 h-full">
         <i className="fa-solid fa-magnifying-glass"></i>
         <input
           type="text"
           name="search"
           id="search"
-          className="p-2 bg-transparent w-full lg:px-6 outline-none"
+          className="bg-transparent w-full lg:px-6 outline-none h-full"
           placeholder="Area, Compound, Developer"
         />
       </div>
