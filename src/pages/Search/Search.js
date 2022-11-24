@@ -227,6 +227,7 @@ const Search = () => {
               );
             },
           }}
+          allowTouchMove={false}
           modules={[Grid, Pagination]}
           className="mySwiper !z-0 search-swiper !pb-12"
         >
