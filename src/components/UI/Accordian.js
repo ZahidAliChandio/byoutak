@@ -1,7 +1,8 @@
 import { Fragment, useState, useRef } from "react";
 import { Transition } from "react-transition-group";
 
-const Accordion = ({ items }) => {
+const Accordion = (props) => {
+  const items=props.items;
   const [activeIndex, setActiveIndex] = useState(null);
   const nodeRef = useRef(null);
 
@@ -13,7 +14,7 @@ const Accordion = ({ items }) => {
     return (
       <Fragment key={index}>
         <div
-          className={`relative flex items-center justify-between text-sm md:text-base 2xl:text-lg border-b border-gray-400 py-3 cursor-pointer mb-2 font-gillsans`}
+          className={`relative flex items-center justify-between text-sm md:text-base 2xl:text-lg border-b border-gray-400 py-3 cursor-pointer mb-2 font-gillsans px-4`}
           onClick={() => onClickHandler(index)}
         >
           {item.title}
@@ -40,7 +41,7 @@ const Accordion = ({ items }) => {
                   : null
               }`}
             >
-              <p>{item.content}</p>
+              {item.content}
             </div>
           )}
         </Transition>
@@ -48,7 +49,7 @@ const Accordion = ({ items }) => {
     );
   });
   return (
-    <div className="relative w-11/12 md:w-10/12 lg:w-1/3 mt-2">{renderedItems}</div>
+    <div className={`${props.className} relative mt-2`}>{renderedItems}</div>
   );
 };
 

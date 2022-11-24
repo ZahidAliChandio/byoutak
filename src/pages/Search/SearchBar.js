@@ -16,7 +16,7 @@ const SearchBar = () => {
     setActiveItemIndex(index);
   };
   const filterClickHandler = () => {
-    setShowAll(true);
+    setShowAll(prev=>!prev);
   };
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const SearchBar = () => {
           <PropertyDetails changeActiveItemIndex={setActiveItemIndex} />
         )}
       </div>
-      {/* {showAll && <Filter setShowAll={setShowAll}/>} */}
+      {showAll && <Filter setShowAll={filterClickHandler}/>}
     </Fragment>
   );
 };

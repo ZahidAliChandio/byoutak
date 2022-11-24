@@ -8,9 +8,11 @@ const PropertyDetails = (props) => {
   const [priceMinRange, setPriceMinRange] = useState(0);
   const [priceMaxRange, setPriceMaxRange] = useState(100);
   const [selectedBedrooms, setSelectedBedrooms] = useState(0);
+  const [selectedBathrooms, setSelectedBathrooms] = useState(0);
   const [selectedCondition, setSelectedCondition] = useState(0);
   const price = useRef(null);
   const bedrooms = ["All", "1", "2", "3", "4", "5", "6+"];
+  const bathrooms = ["All", "1", "2", "3", "4", "5", "6+"];
   const conditions = [" All ", "Finished", "Not Finished", "Semi Finished"];
 
   const changeValues = () => {
@@ -19,6 +21,9 @@ const PropertyDetails = (props) => {
   };
   const bedroomSelectHandler = (index) => {
     setSelectedBedrooms(index);
+  };
+  const bathroomSelectHandler = (index) => {
+    setSelectedBathrooms(index);
   };
   const conditionSelectHandler = (index) => {
     setSelectedCondition(index);
@@ -57,7 +62,7 @@ const PropertyDetails = (props) => {
               <input
                 type="text"
                 placeholder=""
-                value={priceMaxRange*50000+50000}
+                value={priceMaxRange * 50000 + 50000}
                 className="px-2 rounded-md border border-gray-500 text-gray-500 py-1 w-full"
               />
             </div>
@@ -102,6 +107,28 @@ const PropertyDetails = (props) => {
                   onClick={() => conditionSelectHandler(index)}
                 >
                   {condition}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="flex flex-col gap-7 2xl:gap-10 border py-10 2xl:py-16 px-16 w-full h-full">
+          <span className="text-[#212020] text-sm md:text-lg">Bathrooms</span>
+          <ul
+            className={`flex items-center justify-center rounded-lg overflow-hidden`}
+          >
+            {bathrooms.map((bathroom, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`${
+                    selectedBathrooms === index
+                      ? "font-semibold bg-gray-200"
+                      : ""
+                  } py-2 border w-full h-full text-center text-sm cursor-pointer`}
+                  onClick={() => bathroomSelectHandler(index)}
+                >
+                  {bathroom}
                 </li>
               );
             })}

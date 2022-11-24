@@ -7,7 +7,7 @@ import Accordion from "../../components/UI/Accordian"
 const components=[
     {
         title:"Delivery",
-        content:<Delivery className="!static"/>
+        content:<Delivery className=""/>
     },{
         title:"Price",
         content:<Price className=""/>
@@ -24,7 +24,7 @@ const components=[
 
 const Filter=(props)=>{
     return(
-        <Modal className="!top-0 !left-0 !translate-x-0 !overflow-hidden !px-4 !rounded-none" onClose={() => props.setShowAll(false)}>
+        <Modal className="!absolute !top-0 !left-0 !translate-x-0 !overflow-hidden !rounded-none !h-screen" onClose={() => props.filterClickHandler()}>
             <Accordion items={components}/>
         </Modal>    
     )
