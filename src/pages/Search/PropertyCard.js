@@ -3,9 +3,9 @@ import Phone from "../../static/icons/phone.png";
 
 const PropertyCard = ({ data }) => {
   return (
-    <div className="bg-gray-50 rounded-xl font-gillsans z-0 pb-3 w-full">
+    <div className="bg-gray-50 rounded-3xl font-gillsans z-0 pb-3 w-full">
       {/* Image portion */}
-      <div className="h-[150px] bg-[#EFEFEF] rounded-t-md overflow-hidden w-fit cursor-pointer">
+      <div className="h-[150px] bg-[#EFEFEF] rounded-t-3xl overflow-hidden w-fit cursor-pointer">
         {data.image && (
           <img src={data.image} alt="apartment" className="object-cover w-fit hover:scale-[1.19] transition-all duration-1000" />
         )}
@@ -62,7 +62,7 @@ const PropertyCard = ({ data }) => {
 
       {/* Contact buttons */}
       <div
-        className={`grid grid-cols-3 gap-2 justify-between w-fit mx-auto px-3`}
+        className={`grid grid-cols-3 gap-2 justify-between w-fit mx-auto px-2`}
       >
         <div className="flex gap-2 items-center cursor-pointer py-0 justify-center border border-[#212020] rounded-full">
           <i className="fa-sharp fa-solid fa-video text-gray-400"></i>

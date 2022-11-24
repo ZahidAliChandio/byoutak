@@ -9,7 +9,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 
 const Search = () => {
-  const [slidesPerView,setSlidesPerView]=useState(0);
+  const [slidesPerView, setSlidesPerView] = useState(0);
 
   const propertyData = [
     {
@@ -26,7 +26,7 @@ const Search = () => {
     },
     {
       id: 2,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -38,7 +38,7 @@ const Search = () => {
     },
     {
       id: 3,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -50,7 +50,7 @@ const Search = () => {
     },
     {
       id: 4,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -62,7 +62,7 @@ const Search = () => {
     },
     {
       id: 5,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -74,7 +74,7 @@ const Search = () => {
     },
     {
       id: 6,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -86,7 +86,7 @@ const Search = () => {
     },
     {
       id: 7,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -98,7 +98,7 @@ const Search = () => {
     },
     {
       id: 8,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -110,7 +110,7 @@ const Search = () => {
     },
     {
       id: 9,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -122,7 +122,7 @@ const Search = () => {
     },
     {
       id: 10,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -134,7 +134,7 @@ const Search = () => {
     },
     {
       id: 11,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -146,7 +146,7 @@ const Search = () => {
     },
     {
       id: 12,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -158,7 +158,7 @@ const Search = () => {
     },
     {
       id: 13,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -170,7 +170,7 @@ const Search = () => {
     },
     {
       id: 14,
-      image: null,
+      image: Apartment,
       title: "Twinhouse",
       subtitle: "SODIC",
       price: "EGP 5,500,000",
@@ -181,51 +181,54 @@ const Search = () => {
       area: "150 m²",
     },
   ];
-  useEffect(()=>{
-    if(window.innerWidth>=1200){
+  useEffect(() => {
+    if (window.innerWidth >= 1200) {
       setSlidesPerView(4);
-    }
-    else if(window.innerWidth>=993){
+    } else if (window.innerWidth >= 993) {
       setSlidesPerView(3);
-    }    
-    else if(window.innerWidth>=768){
+    } else if (window.innerWidth >= 768) {
       setSlidesPerView(2);
-    }else{
+    } else {
       setSlidesPerView(1);
     }
-  },[])
+  }, []);
   return (
     <Fragment>
       <SearchBar />
-      <div className="relative px-4 py-4">
+      <div className="relative px-8 pt-4">
         <div className="text-white text-center w-full">
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl lg:mb-6 px-4 sm:p-0 grid-cols-3">
             {propertyData.length} results
           </h2>
         </div>
 
-        <Swiper          
-          grid={{ rows: (12/slidesPerView), fill: "row" }}          
+        <Swiper
+          grid={{ rows: 12 / slidesPerView, fill: "row" }}
           breakpoints={{
             1536: {
-              slidesPerView: propertyData.length > 4 ? 4 : propertyData.length,
+              slidesPerView: propertyData.length > 6 ? 6 : propertyData.length,
             },
             1280: {
-              slidesPerView: propertyData.length >= 3 ? 3 : propertyData.length,
+              slidesPerView: propertyData.length >= 4 ? 4 : propertyData.length,
             },
             1024: {
-              slidesPerView: propertyData.length >= 2 ? 2 : propertyData.length,
+              slidesPerView: propertyData.length >= 3 ? 3 : propertyData.length,
             },
             768: {
               slidesPerView: propertyData.length >= 2 ? 2 : propertyData.length,
             },
           }}
-          spaceBetween={20}          
+          spaceBetween={20}
           pagination={{
-            clickable: true,            
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' + className + '">' + (index + 1) + "</span>"
+              );
+            },
           }}
           modules={[Grid, Pagination]}
-          className="mySwiper !z-0"
+          className="mySwiper !z-0 search-swiper !pb-12"
         >
           {propertyData.map((data) => {
             return (
@@ -235,7 +238,7 @@ const Search = () => {
             );
           })}
         </Swiper>
-        <div className="my-3">aa</div>        
+        <div className="my-3">aa</div>
       </div>
     </Fragment>
   );

@@ -160,3 +160,17 @@ body {
   top: 50%;
   margin-top: -13px;
 }
+
+/* Search Slider */
+.search-swiper .swiper-pagination-bullet {
+  margin-top: 2rem !important;
+  opacity: 1 !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  background: white !important;
+  color: rgb(88, 0, 0);
+  font-weight: 500;
+}
+.search-swiper .swiper-pagination-bullet-active {
+  background: red !important;  
+}
