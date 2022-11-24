@@ -27,7 +27,7 @@ const Price = (props) => {
       <h2 className="text-lg sm:text-base lg:text-lg xl:text-3xl font-bold text-center my-3 xl:my-6">
         Price
       </h2>
-      <div className="grid grid-cols-2 justify-center items-center overflow-hidden">
+      <div className="grid grid-col-1 md:grid-cols-2 justify-center items-center overflow-hidden">
         <div className="flex flex-col justify-center gap-7 border pb-16 pt-6 px-8 lg:px-10 w-full h-full">
           <span className="text-[#212020] text-base lg:text-lg xl:text-lg">
             Price Range
@@ -154,17 +154,6 @@ const Price = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex gap-6 justify-center md:justify-end px-2 md:px-6 py-6">
-        <Button type="clear" className="border !px-12 !text-sm">
-          Clear all
-        </Button>
-        <Button
-          type="submit"
-          className="bg-[#212020] !text-sm text-gray-50 !px-12"
-        >
-          Apply
-        </Button>
       </div>
     </Fragment>
   );

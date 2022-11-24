@@ -9,7 +9,7 @@ const App = () => {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className="mb-16">
         {/* <RightAngle /> */} 
         <Router />
       </main>

@@ -10,13 +10,13 @@ const Delivery = (props) => {
   };
 
   return (
-    <Fragment>
-      <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center my-4">
+    <div className="my-4">
+      <h2 className="text-base md:text-3xl lg:text-4xl md:font-bold md:text-center md:mb-4 px-[3rem] md:p-0">
         Delivery date
       </h2>
       <form
         action=""
-        className={`${props.display} grid grid-cols-2 gap-x-8 gap-y-10 justify-center items-center w-full border-t-2 px-[3rem]  lg:px-12 py-12`}
+        className={`${props.display} grid grid-cols-2 gap-x-8 gap-y-10 justify-center items-center w-full md:border-t-2 px-[3rem] lg:px-12 py-4 md:py-12`}
       >
         <label htmlFor="movenow" className="cursor-pointer">
           <button
@@ -62,7 +62,7 @@ const Delivery = (props) => {
           <option value="2024">2024</option>
         </select>        
       </form>
-    </Fragment>
+    </div>
   );
 };
 export default Delivery;

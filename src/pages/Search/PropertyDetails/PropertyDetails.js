@@ -34,7 +34,7 @@ const PropertyDetails = (props) => {
       <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl font-bold text-center my-4">
         Property details
       </h2>
-      <div className="grid grid-cols-2 justify-center items-center rounded-xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center rounded-xl overflow-hidden">
         <div className="flex flex-col justify-center gap-7 2xl:gap-10 border py-10 2xl:py-16 px-16 w-full h-full">
           <span className="text-[#212020] text-sm md:text-lg">Area</span>
           <RangeSlider
@@ -134,20 +134,6 @@ const PropertyDetails = (props) => {
             })}
           </ul>
         </div>
-      </div>
-      <div className="flex gap-6 items-center justify-center md:justify-end px-4 md:px-12 py-6">
-        <Button
-          type="clear"
-          className="border !py-2 !px-4 xl:!px-7 !text-sm xl:!text-lg h-fit"
-        >
-          Clear all
-        </Button>
-        <Button
-          type="submit"
-          className="bg-[#212020] !text-sm xl:!text-lg text-gray-50 !py-2 !px-6 xl:!px-12 2xl:!px-12 h-fit"
-        >
-          Apply
-        </Button>
       </div>
     </Fragment>
   );

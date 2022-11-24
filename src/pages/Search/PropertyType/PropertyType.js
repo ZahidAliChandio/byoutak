@@ -175,10 +175,6 @@ const PropertyType = (props) => {
           })}
         </ul>
       </div>
-      <div className="flex gap-6 justify-center md:justify-end px-2 md:px-6 py-6">
-        <Button type="clear" className="border !px-12 !text-sm">Clear all</Button>
-        <Button type="submit" className="bg-[#212020] !text-sm text-gray-50 !px-12">Apply</Button>
-      </div>
     </Fragment>
   );
 };

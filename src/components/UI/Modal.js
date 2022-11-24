@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 const BackDrop = (props) => {
   return (
     <div
-      className="fixed top-0 left-0  w-full h-screen bg-[rgba(0,0,0,0.3)] z-40 cursor-pointer"
+      className={`${props.backdropClass} fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0)] z-40 cursor-pointer opacity-40`}
       onClick={props.onClick}
     ></div>
   );
@@ -21,7 +21,7 @@ const Modal = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <BackDrop onClick={props.onClose}>{props.children}</BackDrop>,
+        <BackDrop onClick={props.onClose} {...props}>{props.children}</BackDrop>,
         portalElement
       )}
       {ReactDOM.createPortal(
