@@ -195,7 +195,7 @@ const Search = () => {
   return (
     <Fragment>
       <SearchBar />
-      <div className="relative px-8 pt-4">
+      <div className="relative px-2 sm:px-4 lg:px-8 pt-4">
         <div className="text-white text-center w-full">
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl mb-4 lg:mb-6 px-4 sm:p-0 grid-cols-3">
             {propertyData.length} results

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 py-1 flex justify-center w-full gap-4 sm:gap-8 md:gap-12 lg:gap-24 xl:gap-32 bg-[#212020]">
+    <footer className="fixed bottom-0 py-1 flex items-center justify-center w-full gap-4 sm:gap-8 md:gap-12 lg:gap-24 xl:gap-32 bg-[#212020]">
       <a href="tel:03482146022" className="flex flex-col items-center justify-center">
         <span>
           <i className="fas fa-headphones-alt text-gray-400"></i>

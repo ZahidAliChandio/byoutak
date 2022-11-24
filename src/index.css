@@ -177,3 +177,18 @@ body {
 .white-shadow{
   /* box-shadow: -2px -4px 4px 1px rgba(255, 255, 255,0.7); */
 }
+.open-accordion{
+  animation: openAccord 0.3s ease-in-out forwards;
+  border: 2px solid green;
+}
+@keyframes openAccord {
+  0%{
+    border:2px solid red;
+  }
+  50%{
+    border:2px solid blue;
+  }
+  100%{
+    border:2px solid black;
+  }
+}

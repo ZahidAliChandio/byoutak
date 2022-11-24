@@ -1,9 +1,9 @@
 import { ReactComponent as Bed } from "../../static/icons/bed.svg";
 const SliderCard = ({ data }) => {
   return (
-    <div className="bg-gray-50 px-6 py-7 rounded-md font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
+    <div className="bg-gray-50 px-4 py-7 rounded-md font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
       <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>
-      <div className="px-4 sm:px-6">
+      <div className="px-4">
         <div className="flex flex-col w-full mt-4 gap-0">
           <div className="flex justify-between items-center">
             <h2 className="text-xl font-bold">{data.title}</h2>
@@ -52,7 +52,7 @@ const SliderCard = ({ data }) => {
           </svg>
           <span className="text-sm sm:text-base">{data.location}</span>
         </div>
-        <div className="flex gap-2 sm:gap-4 pl-0 sm:pl-4">
+        <div className="flex gap-2 sm:gap-4 pl-0 sm:pl-2">
           <div className="flex items-center gap-2">
             <Bed />
             <span className="text-sm font-semibold">{data.bedrooms}</span>

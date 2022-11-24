@@ -7,7 +7,7 @@ import Accordion from "../../components/UI/Accordian"
 const components=[
     {
         title:"Delivery",
-        content:<Delivery className=""/>
+        content:<Delivery className="!left-0 !translate-x-0 !w-full"/>
     },{
         title:"Price",
         content:<Price className=""/>

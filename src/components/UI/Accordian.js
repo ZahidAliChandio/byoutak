@@ -26,7 +26,7 @@ const Accordion = (props) => {
         </div>
         <Transition
           in={index === activeIndex}
-          timeout={150}
+          timeout={{ enter: 500, exit: 5000 }}
           nodeRef={nodeRef}
           mountOnEnter
           unmountOnExit
@@ -35,9 +35,9 @@ const Accordion = (props) => {
             <div
               className={`${
                 state === "entering"
-                  ? "open-modal"
+                  ? "open-accordion"
                   : state === "exiting"
-                  ? "close-modal"
+                  ? "close-accordion"
                   : null
               }`}
             >
