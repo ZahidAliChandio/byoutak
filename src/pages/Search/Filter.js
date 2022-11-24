@@ -31,9 +31,9 @@ const components = [
 const Filter = (props) => {
   return (
     <Modal
-      className="!absolute !top-0 !left-0 !translate-x-0 !overflow-hidden !rounded-none !min-h-screen !max-h-screen !w-[70%] shadow-none"
+      className="!top-0 !left-0 !translate-x-0 !overflow-hidden !h-screen !rounded-none !w-[70%] shadow-none border border-gray-300 !z-[10000]"
       onClose={() => props.setShowAll()}
-      backdropClass="!absolute"
+      backdropClass="!fixed"
     >
       <FilterHeader />
       <FilterAccordion items={components} />

@@ -51,7 +51,7 @@ const PropertyType = (props) => {
       <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-center my-4">
         Property type
       </h2>
-      <div className="flex flex-col gap-4 border-y pb-4 pt-4 lg:pt-6 pl-6 md:px-12 w-full h-full">
+      <div className="flex flex-col gap-4 border-y pb-4 pt-4 lg:pt-6 pl-6 px-4 md:px-12 w-full h-full">
         <div className="flex flex-wrap items-center gap-3">
           <input
             type="checkbox"
@@ -73,7 +73,7 @@ const PropertyType = (props) => {
                     apartment.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
+                  } text-sm md:text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => apartmentSelectHandler(index)}
                 >
                   {apartment.name}
@@ -103,7 +103,7 @@ const PropertyType = (props) => {
                     villa.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
+                  } text-sm md:text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => villaSelectHandler(index)}
                 >
                   {villa.name}
@@ -133,7 +133,7 @@ const PropertyType = (props) => {
                     chalet.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
+                  } text-sm md:text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => chaletSelectHandler(index)}
                 >
                   {chalet.name}
@@ -165,7 +165,7 @@ const PropertyType = (props) => {
                     commercial.isActive
                       ? "bg-[#212020] text-gray-50"
                       : " bg-gray-100 text-[#212020] "
-                  } text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
+                  } text-sm md:text-xxs lg:text-sm rounded-md py-2 px-3 cursor-pointer`}
                   onClick={() => commercialSelectHandler(index)}
                 >
                   {commercial.name}

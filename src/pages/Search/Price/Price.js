@@ -24,10 +24,10 @@ const Price = (props) => {
 
   return (
     <Fragment>
-      <h2 className="text-lg sm:text-base lg:text-lg xl:text-3xl font-bold text-center my-3 xl:my-6">
+      <h2 className="hidden md:block text-lg sm:text-base lg:text-lg xl:text-3xl font-bold text-center my-3 xl:my-6">
         Price
       </h2>
-      <div className="grid grid-col-1 md:grid-cols-2 justify-center items-center overflow-hidden">
+      <div className="grid grid-col-1 md:grid-cols-2 justify-center items-center overflow-hidden w-full">
         <div className="flex flex-col justify-center gap-7 border pb-16 pt-6 px-8 lg:px-10 w-full h-full">
           <span className="text-[#212020] text-base lg:text-lg xl:text-lg">
             Price Range
