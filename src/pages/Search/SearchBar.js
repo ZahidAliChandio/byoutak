@@ -1,8 +1,8 @@
 import { Fragment, useEffect, useState } from "react";
-import Price from "./Price";
-import PropertyType from "./PropertyType";
-import Delivery from "./Delivery";
-import PropertyDetails from "./PropertyDetails";
+import Price from "./Price/PriceModal";
+import PropertyType from "./PropertyType/PropertyTypeModal";
+import Delivery from "./Delivery/DeliveryModal";
+import PropertyDetails from "./PropertyDetails/PropertyDetailsModal";
 import Filter from "./Filter";
 
 const SearchBar = () => {

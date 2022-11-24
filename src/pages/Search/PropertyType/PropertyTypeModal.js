@@ -1,8 +1,8 @@
 import { Fragment, useState } from "react";
-import Modal from "../../components/UI/Modal";
-import Button from "../../components/UI/Button";
+import Modal from "../../../components/UI/Modal";
+import Button from "../../../components/UI/Button";
 
-const PropertyType = (props) => {
+const PropertyTypeModal = (props) => {
   const [apartmentTypes, setApartmentTypes] = useState([
     { name: "Apartment", isActive: false },
     { name: "Duplex", isActive: false },
@@ -182,4 +182,4 @@ const PropertyType = (props) => {
     </Modal>
   );
 };
-export default PropertyType;
+export default PropertyTypeModal;

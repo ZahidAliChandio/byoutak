@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
-import Modal from "../../components/UI/Modal";
-import Button from "../../components/UI/Button";
+import Modal from "../../../components/UI/Modal";
+import Button from "../../../components/UI/Button";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 
 
-const Price = (props) => {
+const PriceModal = (props) => {
   const [yearCounter, setYearCounter] = useState(1);
   const [priceMinRange, setPriceMinRange] = useState(0);
   const [priceMaxRange, setPriceMaxRange] = useState(100);
@@ -183,4 +183,4 @@ const Price = (props) => {
     </Modal>
   );
 };
-export default Price;
+export default PriceModal;

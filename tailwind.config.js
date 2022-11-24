@@ -3,7 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      
+      backgroundImage:{
+        // 'facility-1':"url('./src/static/imgages/facilites.png?v-120')"
+      }
     },
   },
   plugins: [],

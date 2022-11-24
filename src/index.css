@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 .swiper-pagination-bullet {
+  width: 0.7rem !important;
+  height: 0.7rem !important;
   opacity: 1 !important;
   background: white !important;
 }
@@ -116,18 +118,19 @@ body {
 
 .closed .vertical {
   transition: all 0.5s ease-in-out;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg);  
+  opacity: 0;  
 }
 .closed .horizontal {
   transition: all 0.5s ease-in-out;
   transform: rotate(-90deg);
-  /* opacity: 1; */
+  opacity: 1;
 }
 
 .opened .vertical {
   transition: all 0.5s ease-in-out;
-  /* opacity: 1; */
-  transform: rotate(90deg);
+  opacity: 1;
+  transform: rotate(90deg);  
 }
 .opened .horizontal {
   transition: all 0.5s ease-in-out;

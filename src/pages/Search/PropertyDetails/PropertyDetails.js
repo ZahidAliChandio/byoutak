@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
-import Modal from "../../components/UI/Modal";
+import { Fragment, useRef, useState } from "react";
+import Modal from "../../../components/UI/Modal";
 import RangeSlider from "react-range-slider-input";
-import Button from "../../components/UI/Button";
+import Button from "../../../components/UI/Button";
 import "react-range-slider-input/dist/style.css";
 
 const PropertyDetails = (props) => {
@@ -30,7 +30,7 @@ const PropertyDetails = (props) => {
   };
 
   return (
-    <Modal onClose={() => props.changeActiveItemIndex(null)}>
+    <Fragment>
       <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl font-bold text-center my-4">
         Property details
       </h2>
@@ -149,7 +149,7 @@ const PropertyDetails = (props) => {
           Apply
         </Button>
       </div>
-    </Modal>
+    </Fragment>
   );
 };
 

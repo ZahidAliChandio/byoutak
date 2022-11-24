@@ -156,30 +156,6 @@ const Search = () => {
       bathrooms: 2,
       area: "150 m²",
     },
-    {
-      id: 13,
-      image: Apartment,
-      title: "Twinhouse",
-      subtitle: "SODIC",
-      price: "EGP 5,500,000",
-      contient: "Sodic Ease",
-      location: "New Heliopolis, Egypt",
-      bedrooms: 3,
-      bathrooms: 2,
-      area: "150 m²",
-    },
-    {
-      id: 14,
-      image: Apartment,
-      title: "Twinhouse",
-      subtitle: "SODIC",
-      price: "EGP 5,500,000",
-      contient: "Sodic Ease",
-      location: "New Heliopolis, Egypt",
-      bedrooms: 3,
-      bathrooms: 2,
-      area: "150 m²",
-    },
   ];
   useEffect(() => {
     if (window.innerWidth >= 1200) {
@@ -201,44 +177,11 @@ const Search = () => {
             {propertyData.length} results
           </h2>
         </div>
-
-        <Swiper
-          grid={{ rows: 12 / slidesPerView, fill: "row" }}
-          breakpoints={{
-            1200: {
-              slidesPerView: propertyData.length >= 4 ? 4 : propertyData.length,
-              spaceBetween: 15,
-            },
-            993: {
-              slidesPerView: propertyData.length >= 3 ? 3 : propertyData.length,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: propertyData.length >= 2 ? 2 : propertyData.length,
-            },
-          }}
-          spaceBetween={20}
-          pagination={{
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' + className + '">' + (index + 1) + "</span>"
-              );
-            },
-          }}
-          allowTouchMove={false}
-          modules={[Grid, Pagination]}
-          className="mySwiper !z-0 search-swiper !pb-12"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {propertyData.map((data) => {
-            return (
-              <SwiperSlide key={data.id}>
-                <PropertyCard data={data} />
-              </SwiperSlide>
-            );
+            return <PropertyCard data={data} />;
           })}
-        </Swiper>
-        <div className="my-3">aa</div>
+        </div>
       </div>
     </Fragment>
   );
