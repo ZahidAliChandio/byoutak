@@ -3,7 +3,7 @@ import Phone from "../../static/icons/phone.png";
 
 const PropertyCard = ({ data }) => {
   return (
-    <div className="bg-gray-50 rounded-3xl font-gillsans z-0 pb-3 w-full">
+    <div className="bg-gray-50 rounded-3xl font-gillsans z-0 pb-3 w-full white-shadow">
       {/* Image portion */}
       <div className="h-[150px] bg-[#EFEFEF] rounded-t-3xl overflow-hidden w-fit cursor-pointer">
         {data.image && (
@@ -62,7 +62,7 @@ const PropertyCard = ({ data }) => {
 
       {/* Contact buttons */}
       <div
-        className={`grid grid-cols-3 gap-2 justify-between w-fit mx-auto px-2`}
+        className={`grid grid-cols-3 gap-2 justify-between w-full mx-auto px-2`}
       >
         <div className="flex gap-2 items-center cursor-pointer py-0 justify-center border border-[#212020] rounded-full">
           <i className="fa-sharp fa-solid fa-video text-gray-400"></i>
@@ -80,7 +80,7 @@ const PropertyCard = ({ data }) => {
         </a>
         <a
           href="whatsapp://send?text=Lets chat!&phone=+923163366566"
-          className="flex items-center gap-2 px-2 border border-[#212020] rounded-full justify-center cursor-pointer w-fit"
+          className="flex items-center gap-2 border border-[#212020] rounded-full justify-center cursor-pointer"
         >
           {/* <i className="fas fa-comment-dots text-xl text-gray-400"></i> */}
           <i className="fa-brands fa-whatsapp text-xl text-gray-400"></i>

@@ -174,3 +174,6 @@ body {
 .search-swiper .swiper-pagination-bullet-active {
   background: red !important;  
 }
+.white-shadow{
+  /* box-shadow: -2px -4px 4px 1px rgba(255, 255, 255,0.7); */
+}

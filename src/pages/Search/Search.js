@@ -205,14 +205,13 @@ const Search = () => {
         <Swiper
           grid={{ rows: 12 / slidesPerView, fill: "row" }}
           breakpoints={{
-            1536: {
-              slidesPerView: propertyData.length > 6 ? 6 : propertyData.length,
-            },
-            1280: {
+            1200: {
               slidesPerView: propertyData.length >= 4 ? 4 : propertyData.length,
+              spaceBetween: 15,
             },
-            1024: {
+            993: {
               slidesPerView: propertyData.length >= 3 ? 3 : propertyData.length,
+              spaceBetween: 20,
             },
             768: {
               slidesPerView: propertyData.length >= 2 ? 2 : propertyData.length,
