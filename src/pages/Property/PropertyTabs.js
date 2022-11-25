@@ -6,38 +6,73 @@ const PropertyTabs = () => {
   const nodeRef = useRef(null);
 
   const list = ["Villa", "Townhouse", "Penthouse", "Apartment"];
+
+  //   Sublist data
   const subList = [
     {
       subList: [
-        { title: "Brooks Villa A", content: "a" },
-        { title: "Brooks Villa B", content: "b" },
+        {
+          title: "Brooks Villa A",
+          content: [
+            { AreaFrom: "992 ㎡", AreaTo: "440 ㎡", Price: "9,900,000 EGP" },
+          ],
+        },
+        {
+          title: "Brooks Villa B",
+          content: [
+            { AreaFrom: "236 ㎡", AreaTo: "380 ㎡", Price: "7,900,000 EGP" },
+          ],
+        },
       ],
     },
     {
       subList: [
-        { title: "Town House Corner", content: "a" },
-        { title: "Town House Middle", content: "b" },
+        {
+          title: "Town House Corner",
+          content: [
+            { AreaFrom: "191 ㎡", AreaTo: "220 ㎡", Price: "5,450,000 EGP" },
+          ],
+        },
+        {
+          title: "Town House Middle",
+          content: [
+            { AreaFrom: "191 ㎡", AreaTo: "200 ㎡", Price: "4,850,000 EGP" },
+          ],
+        },
       ],
     },
     {
       subList: [
-        { title: "Pent House", content: "a" },
-        { title: "Pent House", content: "b" },
+        {
+          title: "Pent House",
+          content: [{ AreaFrom: "214 ㎡", Price: "3,700,000 EGP" }],
+        },
+        {
+          title: "Pent House",
+          content: [{ AreaFrom: "217 ㎡", Price: "3,800,000 EGP" }],
+        },
       ],
     },
     {
       subList: [
-        { title: "2 Bedrooms", content: "a" },
-        { title: "3 Bedrooms", content: "b" },
+        {
+          title: "2 Bedrooms",
+          content: [{ AreaFrom: "115 ㎡", Price: "1,690,000 EGP" }],
+        },
+        {
+          title: "3 Bedrooms",
+          content: [{ AreaFrom: "135 ㎡", Price: "1,990,000 EGP" }],
+        },
       ],
     },
   ];
+
   const activeSubList = subList[activeIndex].subList;
   const onClickHandler = (index) => {
     setActiveIndex(index);
   };
   const subListClickHandler = (index) => {
-    setActiveSubItemIndex(index);
+    setActiveSubItemIndex((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -90,9 +125,31 @@ const PropertyTabs = () => {
                       : state === "exiting"
                       ? "close-accordion"
                       : null
-                  }`}
+                  } my-4 pl-2 sm:pl-4 md:pl-8`}
                 >
-                  {item.content}
+                  {item.content.map((subitem, index) => {
+                    return (
+                      <ul className="text-gray-300" key={index}>
+                        <li>
+                          <div className="inline-block w-2 h-2 bg-gray-300 mr-3 border border-[#212020] rounded-full"></div>
+                          <span>Area From: </span>
+                          <span>{subitem.AreaFrom}</span>
+                        </li>
+                        {subitem.AreaTo && (
+                          <li>
+                            <div className="inline-block w-2 h-2 bg-gray-300 mr-3 border border-[#212020] rounded-full"></div>
+                            <span>Area To: </span>
+                            <span>{subitem.AreaTo}</span>
+                          </li>
+                        )}
+                        <li>
+                          <div className="inline-block w-2 h-2 bg-gray-300 mr-3 border border-[#212020] rounded-full"></div>
+                          <span>Starting Price: </span>
+                          <span>{subitem.Price}</span>
+                        </li>
+                      </ul>
+                    );
+                  })}
                 </div>
               )}
             </Transition>
