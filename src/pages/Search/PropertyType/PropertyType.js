@@ -1,6 +1,4 @@
 import { Fragment, useState } from "react";
-import Modal from "../../../components/UI/Modal";
-import Button from "../../../components/UI/Button";
 
 const PropertyType = (props) => {
   const [apartmentTypes, setApartmentTypes] = useState([

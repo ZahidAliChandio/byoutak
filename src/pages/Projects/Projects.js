@@ -1,9 +1,7 @@
-import Image1 from "../../static/images/image-1.JPG";
-import Image2 from "../../static/images/image-2.JPG";
-import Image3 from "../../static/images/image-3.JPG";
-import { Link } from "react-router-dom";
+// import Image1 from "../../static/images/image-1.JPG";
+// import Image2 from "../../static/images/image-2.JPG";
+// import Image3 from "../../static/images/image-3.JPG";
 
-const images = [Image1, Image2, Image3];
 const Projects = (props) => {
 
 

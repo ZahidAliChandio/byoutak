@@ -1,7 +1,5 @@
 import { Fragment, useRef, useState } from "react";
-import Modal from "../../../components/UI/Modal";
 import RangeSlider from "react-range-slider-input";
-import Button from "../../../components/UI/Button";
 import "react-range-slider-input/dist/style.css";
 
 const PropertyDetails = (props) => {

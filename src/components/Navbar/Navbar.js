@@ -50,7 +50,7 @@ const Navbar = () => {
         </ul>
       </CSSTransition>
       <i
-        className="fas fa-bars  text-[red] text-lg md:text-xl lg:text-2xl"
+        className="fas fa-bars  text-[red] text-lg md:text-xl lg:text-2xl cursor-pointer"
         onClick={() => onClickHandler()}
       ></i>
     </div>

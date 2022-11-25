@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 const Delivery = (props) => {
   const [moveActive, setMoveActive] = useState(false);
