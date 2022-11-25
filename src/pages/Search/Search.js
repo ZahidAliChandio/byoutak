@@ -1,15 +1,16 @@
 import { Fragment, useEffect, useState } from "react";
 import PropertyCard from "./PropertyCard";
 import SearchBar from "./SearchBar";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Grid } from "swiper";
+
 import Apartment from "../../static/images/apartment.jpg";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 
 const Search = () => {
-  const [slidesPerView, setSlidesPerView] = useState(0);
+  const [activePage, setActivePage] = useState(0);
+  const [showAll, setShowAll] = useState(false);
+  const pageNumbers = ["1", "2", "3", "4"];
 
   const propertyData = [
     {
@@ -157,20 +158,21 @@ const Search = () => {
       area: "150 m²",
     },
   ];
+  const selectPageHandler = (index) => {
+    setActivePage(index);
+  };
+
   useEffect(() => {
-    if (window.innerWidth >= 1200) {
-      setSlidesPerView(4);
-    } else if (window.innerWidth >= 993) {
-      setSlidesPerView(3);
-    } else if (window.innerWidth >= 768) {
-      setSlidesPerView(2);
+    if (showAll) {
+      document.body.style.overflow = "hidden";
     } else {
-      setSlidesPerView(1);
+      document.body.style.overflow = "unset";
     }
-  }, []);
+  }, [showAll]);
+
   return (
     <Fragment>
-      <SearchBar />
+      <SearchBar showAll={showAll} setShowAll={setShowAll} />
       <div className="relative px-2 sm:px-4 lg:px-8 pt-4">
         <div className="text-white text-center w-full">
           <h2 className="font-bold text-xl md:text-2xl lg:text-3xl mb-4 lg:mb-6 px-4 sm:p-0 grid-cols-3">
@@ -178,8 +180,25 @@ const Search = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {propertyData.map((data) => {
-            return <PropertyCard data={data} />;
+          {propertyData.map((data, index) => {
+            return <PropertyCard data={data} key={index} />;
+          })}
+        </div>
+        <div className="flex items-center justify-center gap-4 w-full mt-4">
+          {pageNumbers.map((pageNumber, index) => {
+            return (
+              <button
+                key={index}
+                className={`${
+                  activePage === index
+                    ? "bg-[red] text-gray-50"
+                    : "bg-gray-50 text-[#212020]"
+                } rounded-full font-semibold`}
+                onClick={() => selectPageHandler(index)}
+              >
+                <span className="p-2">{pageNumber}</span>
+              </button>
+            );
           })}
         </div>
       </div>

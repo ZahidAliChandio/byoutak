@@ -5,9 +5,8 @@ import Delivery from "./Delivery/DeliveryModal";
 import PropertyDetails from "./PropertyDetails/PropertyDetailsModal";
 import Filter from "./Filter";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   const [activeItemIndex, setActiveItemIndex] = useState(null);
-  const [showAll, setShowAll] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
 
   const selectList = ["Price", "Property type", "Delivery", "Property details"];
@@ -16,7 +15,7 @@ const SearchBar = () => {
     setActiveItemIndex(index);
   };
   const filterClickHandler = () => {
-    setShowAll(prev=>!prev);
+    props.setShowAll(prev=>!prev);
   };
 
   useEffect(() => {
@@ -83,7 +82,7 @@ const SearchBar = () => {
           <PropertyDetails changeActiveItemIndex={setActiveItemIndex} />
         )}
       </div>
-      {showAll && <Filter setShowAll={filterClickHandler}/>}
+      {props.showAll && <Filter setShowAll={filterClickHandler}/>}
     </Fragment>
   );
 };

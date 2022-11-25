@@ -9,29 +9,29 @@ const components = [
   {
     title: "Delivery",
     content: <Delivery />,
-    isAcitve: false,
+    isAcitve: true,
   },
   {
     title: "Price",
     content: <Price className="" />,
-    isAcitve: false,
+    isAcitve: true,
   },
   {
     title: "Property types",
     content: <PropertyType className="" />,
-    isAcitve: false,
+    isAcitve: true,
   },
   {
     title: "Property options",
     content: <PropertyDetails className="" />,
-    isAcitve: false,
+    isAcitve: true,
   },
 ];
 
 const Filter = (props) => {
   return (
     <Modal
-      className="!left-0 !translate-x-0 !rounded-none !w-[70%] shadow-none !h-screen border border-gray-300 !z-[10000] !overflow-auto search-modal"
+      className="!left-0 !translate-x-0 !rounded-none !w-[70%] shadow-none !h-screen border border-gray-300 !z-[10000] !overflow-scroll search-modal"
       onClose={() => props.setShowAll()}
       backdropClass="!overflow-scroll"
     >
