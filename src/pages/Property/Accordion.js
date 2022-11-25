@@ -7,11 +7,46 @@ import RestaurantFacility from "../../static/images/restaurant_facility.png";
 import SecurityFacility from "../../static/images/security_facility.png";
 import LocationPointer from "../../static/images/location_pointer.png";
 import DeveloperLogo from "../../static/images/developer_logo.png";
+import PropertyCard from "./PropertyCard";
+import HydePark from "../../static/images/hyde_park.png";
+import HydeParkLogo from "../../static/images/hyde_park_logo.png";
+import Mivida from "../../static/images/mivida.png"
+import MividaLogo from "../../static/images/mivida_logo.png"
 import { CSSTransition } from "react-transition-group";
 
 const Accordion = () => {
   const [accordianPlus, setAccordianPlus] = useState("closed");
   const nodeRef = useRef(null);
+  const data = [
+    {
+      image: HydePark,
+      logo: HydeParkLogo,
+      title: "Mountain View Hyde Park",
+      location: "New Cairo",
+      price: "2,9,37,093 EGP",
+    },
+    {
+      image: Mivida,
+      logo: MividaLogo,
+      title: "Mountain View Hyde Park",
+      location: "New Cairo",
+      price: "2,9,37,093 EGP",
+    },
+    {
+      image: HydePark,
+      logo: HydeParkLogo,
+      title: "Mountain View Hyde Park",
+      location: "New Cairo",
+      price: "2,9,37,093 EGP",
+    },
+    {
+      image: Mivida,
+      logo: MividaLogo,
+      title: "Mountain View Hyde Park",
+      location: "New Cairo",
+      price: "2,9,37,093 EGP",
+    },
+  ];
   const [items, setItems] = useState([
     {
       title: "THE BROOKS Unit Types",
@@ -78,23 +113,33 @@ const Accordion = () => {
     {
       title: "Project Developer",
       content: (
-        <div className="flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16">
           <img src={DeveloperLogo} alt="developer" />
           <p className="text-gray-50">
             PRE was established in 2017 by Pioneers Holding Group with a plan to
             be one of the market leaders in the Egyptian Real Estate field, Our
             Sister Companies: Cairo Housing – Giza General Contracting – Rooaya
             Group – Electro Cable Egypt – United Housing – ...{" "}
-            <a href="/"><u>read more</u></a>
+            <a href="/">
+              <u>read more</u>
+            </a>
           </p>
-          <button className="text-[#212020] bg-gray-50 p-3 sm:p-4 md:p-5 rounded-full"><span>ASK NOW</span></button>
+          <button className="text-[#212020] bg-gray-50 p-3 sm:p-4 md:p-5 rounded-full">
+            <span>ASK NOW</span>
+          </button>
         </div>
       ),
       isActive: false,
     },
     {
       title: "You May Also Like",
-      content: "fifth content is here",
+      content: (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {data.map((item, index) => {
+            return <PropertyCard data={item} key={index}/>;
+          })}
+        </div>
+      ),
       isActive: false,
     },
   ]);
