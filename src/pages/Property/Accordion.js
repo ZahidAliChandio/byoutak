@@ -10,8 +10,9 @@ import DeveloperLogo from "../../static/images/developer_logo.png";
 import PropertyCard from "./PropertyCard";
 import HydePark from "../../static/images/hyde_park.png";
 import HydeParkLogo from "../../static/images/hyde_park_logo.png";
-import Mivida from "../../static/images/mivida.png"
-import MividaLogo from "../../static/images/mivida_logo.png"
+import Mivida from "../../static/images/mivida.png";
+import MividaLogo from "../../static/images/mivida_logo.png";
+import PropertyTabs from "./PropertyTabs";
 import { CSSTransition } from "react-transition-group";
 
 const Accordion = () => {
@@ -28,7 +29,7 @@ const Accordion = () => {
     {
       image: Mivida,
       logo: MividaLogo,
-      title: "Mountain View Hyde Park",
+      title: "Mivida",
       location: "New Cairo",
       price: "2,9,37,093 EGP",
     },
@@ -42,7 +43,7 @@ const Accordion = () => {
     {
       image: Mivida,
       logo: MividaLogo,
-      title: "Mountain View Hyde Park",
+      title: "Mivida",
       location: "New Cairo",
       price: "2,9,37,093 EGP",
     },
@@ -90,7 +91,7 @@ const Accordion = () => {
     },
     {
       title: "THE BROOKS Unit Types",
-      content: "Second items here",
+      content: <PropertyTabs />,
       isActive: false,
     },
     {
@@ -136,7 +137,7 @@ const Accordion = () => {
       content: (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {data.map((item, index) => {
-            return <PropertyCard data={item} key={index}/>;
+            return <PropertyCard data={item} key={index} />;
           })}
         </div>
       ),
