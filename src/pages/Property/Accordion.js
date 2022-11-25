@@ -1,10 +1,12 @@
+import { Fragment, useState, useRef } from "react";
 // import ParkingAreaFacility from "../../static/images/facilities.png?v=120.png";
 import CafesFacility from "../../static/images/cafes_facility.png";
 import ParkingAreaFacility from "../../static/images/parking_area_facility.png";
 import ClubFacility from "../../static/images/club_facility.png";
 import RestaurantFacility from "../../static/images/restaurant_facility.png";
 import SecurityFacility from "../../static/images/security_facility.png";
-import { Fragment, useState, useRef } from "react";
+import LocationPointer from "../../static/images/location_pointer.png";
+import DeveloperLogo from "../../static/images/developer_logo.png";
 import { CSSTransition } from "react-transition-group";
 
 const Accordion = () => {
@@ -59,11 +61,13 @@ const Accordion = () => {
     {
       title: "THE BROOKS Location",
       content: (
-        <div className="relative overflow-hidden">
-          <div className="map border-2 border-[red]">
-            <div className="relative overflow-hidden min-h-[300px] h-full">
-              <button className="text-gray-50">Show Location on Map</button>
-              <span>pointer</span>
+        <div className="relative overflow-hidden min-h-[300px] h-full">
+          <div className="map">
+            <div className="flex flex-col items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+              <img src={LocationPointer} alt="pointer" />
+              <button className="text-gray-50 bg-[#212020] px-2 py-1 rounded-full">
+                Show Location on Map
+              </button>
             </div>
           </div>
           <div id="google-map"></div>
@@ -73,7 +77,19 @@ const Accordion = () => {
     },
     {
       title: "Project Developer",
-      content: "fourth content is here",
+      content: (
+        <div className="flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16">
+          <img src={DeveloperLogo} alt="developer" />
+          <p className="text-gray-50">
+            PRE was established in 2017 by Pioneers Holding Group with a plan to
+            be one of the market leaders in the Egyptian Real Estate field, Our
+            Sister Companies: Cairo Housing – Giza General Contracting – Rooaya
+            Group – Electro Cable Egypt – United Housing – ...{" "}
+            <a href="/"><u>read more</u></a>
+          </p>
+          <button className="text-[#212020] bg-gray-50 p-3 sm:p-4 md:p-5 rounded-full"><span>ASK NOW</span></button>
+        </div>
+      ),
       isActive: false,
     },
     {

@@ -224,6 +224,7 @@ body {
   background-image: url("./static/images/facilities.png?v=120");
   background-size: 100%;
 }
+/* Property page lis map */
 .map {
   background-image: url("./static/images/map.jpeg");
   height: 100%;
@@ -235,6 +236,7 @@ body {
   background-size: 100%;
   background-repeat: repeat;
   transition: all 0.5s ease-in-out;
+  background-position: center center;
 }
 /* property page accrodion*/
 .accordian-enter{
