@@ -1,9 +1,7 @@
-import {useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Logo from "../../static/images/logo.png";
 import { Link } from "react-router-dom";
-import {  
-  CSSTransition,  
-} from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -17,13 +15,17 @@ const Navbar = () => {
       <span>
         <img src={Logo} alt="logo" className="h-8 w-24 lg:w-auto lg:h-auto" />
       </span>
-      <CSSTransition nodeRef={nodeRef} in={showNav} timeout={{enter:50,exit:100}} classNames="navbar"
-      mountOnEnter
-      unmountOnExit
+      <CSSTransition
+        nodeRef={nodeRef}
+        in={showNav}
+        timeout={{ enter: 50, exit: 100 }}
+        classNames="navbar"
+        mountOnEnter
+        unmountOnExit
       >
         <ul
           className={`bg-[rgba(0,0,0,0.7)] absolute transition-all duration-400 left-0 top-14 md:top-16 lg:top-20 items-center gap-4 text-white sm:text-lg md:text-xl font-semibold flex flex-col py-2 w-full z-[100] overflow-hidden`}
-        ref={nodeRef}
+          ref={nodeRef}
         >
           <li className="inline">
             <Link to="/" className="hover:text-[red]">
@@ -38,6 +40,11 @@ const Navbar = () => {
           <li className="inline">
             <Link to="/contactus" className="hover:text-[red]">
               Contact us
+            </Link>
+          </li>
+          <li className="inline">
+            <Link to="/propertypage" className="hover:text-[red]">
+              Property
             </Link>
           </li>
         </ul>
