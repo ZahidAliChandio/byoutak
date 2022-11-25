@@ -26,12 +26,12 @@ body {
   opacity: 0.6;
 }
 .navbar-enter-done {
-  height: 89vh;
+  height: 87vh;
   opacity: 1;
 }
 .navbar-exit {
   opacity: 1;
-  height: 89vh;
+  height: 87vh;
 }
 .navbar-exit-active {
   opacity: 0.6;
