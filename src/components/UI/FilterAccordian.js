@@ -29,7 +29,7 @@ const FilterAccordion = (props) => {
         </div>
         <Transition
           in={items[index].isActive}
-          timeout={{ enter: 500, exit: 5000 }}
+          timeout={{ enter: 600, exit: 5000 }}
           nodeRef={nodeRef}
           mountOnEnter
           unmountOnExit

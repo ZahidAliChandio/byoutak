@@ -181,17 +181,41 @@ body {
   /* box-shadow: -2px -4px 4px 1px rgba(255, 255, 255,0.7); */
 }
 .open-accordion{
-  animation: openAccord 0.3s ease-in-out forwards;
-  border: 2px solid green;
+  animation: openAccord 0.4s ease-in-out forwards;
 }
 @keyframes openAccord {
   0%{
-    border:2px solid red;
+    transform: translateY(-50px);
   }
   50%{
-    border:2px solid blue;
+    transform: translateY(-25px);
   }
   100%{
-    border:2px solid black;
+    transform: translateY(0px);
   }
+}
+.search-modal{
+  animation: slide-down 300ms ease-out forwards;
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    top: -10rem;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+ /* 0%{
+  transform: translateY(-20rem);
+  opacity: 0;
+ } 
+ 50%{
+  opacity: 0.5;
+  transform: translateY(-10rem);
+ }
+ 100%{
+  transform: translateY(0);
+  opacity: 1;
+ } */
 }

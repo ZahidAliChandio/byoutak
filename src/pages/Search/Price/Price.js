@@ -1,6 +1,4 @@
 import { useState, useRef, Fragment } from "react";
-import Modal from "../../../components/UI/Modal";
-import Button from "../../../components/UI/Button";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 
@@ -27,7 +25,7 @@ const Price = (props) => {
       <h2 className="hidden md:block text-lg sm:text-base lg:text-lg xl:text-3xl font-bold text-center my-3 xl:my-6">
         Price
       </h2>
-      <div className="grid grid-col-1 md:grid-cols-2 justify-center items-center overflow-hidden w-full">
+      <div className="grid grid-col-1 md:grid-cols-2 justify-center items-center overflow-hidden w-full mx-0">
         <div className="flex flex-col justify-center gap-7 border pb-16 pt-6 px-8 lg:px-10 w-full h-full">
           <span className="text-[#212020] text-base lg:text-lg xl:text-lg">
             Price Range
