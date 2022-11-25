@@ -1,10 +1,11 @@
+// import ParkingAreaFacility from "../../static/images/facilities.png?v=120.png";
 import CafesFacility from "../../static/images/cafes_facility.png";
 import ParkingAreaFacility from "../../static/images/parking_area_facility.png";
 import ClubFacility from "../../static/images/club_facility.png";
 import RestaurantFacility from "../../static/images/restaurant_facility.png";
 import SecurityFacility from "../../static/images/security_facility.png";
 import { Fragment, useState, useRef } from "react";
-import { Transition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 const Accordion = () => {
   const [accordianPlus, setAccordianPlus] = useState("closed");
@@ -13,57 +14,61 @@ const Accordion = () => {
     {
       title: "THE BROOKS Unit Types",
       content: (
-        <div className="flex gap-2">
-          <div className="flex flex-col justify-center items-center gap-4">
-            <span className="text-sm group:hober:visible invisible">Cafes</span>
-            <span className="border bg-gray-200 group cursor-pointer">
-              <img src={CafesFacility} alt="facility" className="" />
-            </span>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <span className="text-sm group:hober:visible invisible">
-              Parking Area
-            </span>
-            <span className="border bg-gray-200 group cursor-pointer">
-              <img src={ParkingAreaFacility} alt="facility" />
-            </span>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <span className="text-sm group:hober:visible invisible">
-              Club House
-            </span>
-            <span className="border bg-gray-200 group cursor-pointer">
-              <img src={ClubFacility} alt="facility" />
-            </span>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <span className="text-sm group:hober:visible invisible">
-              Restaurant
-            </span>
-            <span className="border bg-gray-200 group cursor-pointer">
-              <img src={RestaurantFacility} alt="facility" />
-            </span>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <span className="text-sm group:hober:visible invisible">
-              Security
-            </span>
-            <span className="border bg-gray-200 group cursor-pointer">
-              <img src={SecurityFacility} alt="facility" />
-            </span>
-          </div>
+        <div className="flex gap-4 items-center">
+          <span
+            className="bg-gray-200 p-2 rounded-full text-[red]"
+            data-toggle="tooltip"
+            title
+            data-original-title="Cafes"
+          >
+            <img src={CafesFacility} alt="facility" className="cafe-facility" />
+          </span>
+          <span className="border bg-gray-200 p-2 rounded-full">
+            <img
+              src={ParkingAreaFacility}
+              alt="facility"
+              className="parking-facility"
+            />
+          </span>
+          <span className="border bg-gray-200 p-2 rounded-full ">
+            <img src={ClubFacility} alt="facility" className="club-facility" />
+          </span>
+          <span className="border bg-gray-200 p-2 rounded-full ">
+            <img
+              src={RestaurantFacility}
+              alt="facility"
+              className="restaurant-facility"
+            />
+          </span>
+          <span className="border bg-gray-200 p-2 rounded-full ">
+            <img
+              src={SecurityFacility}
+              alt="facility"
+              className="security-facility"
+            />
+          </span>
         </div>
       ),
       isActive: false,
     },
     {
       title: "THE BROOKS Unit Types",
-      content: "second content is here",
+      content: "Second items here",
       isActive: false,
     },
     {
       title: "THE BROOKS Location",
-      content: "third content is here",
+      content: (
+        <div className="relative overflow-hidden">
+          <div className="map border-2 border-[red]">
+            <div className="relative overflow-hidden min-h-[300px] h-full">
+              <button className="text-gray-50">Show Location on Map</button>
+              <span>pointer</span>
+            </div>
+          </div>
+          <div id="google-map"></div>
+        </div>
+      ),
       isActive: false,
     },
     {
@@ -119,27 +124,18 @@ const Accordion = () => {
           </div>
           <span>{item.title}</span>
         </div>
-        <Transition
+        <CSSTransition
           in={items[index].isActive}
-          timeout={150}
+          timeout={200}
           nodeRef={nodeRef}
+          classNames="accordian"
           mountOnEnter
           unmountOnExit
         >
-          {(state) => (
-            <div
-              className={`${
-                state === "entering"
-                  ? "open-modal"
-                  : state === "exiting"
-                  ? "close-modal"
-                  : null
-              } text-gray-50 lg:text-xl pl-4 md:pl-8 lg:pl-12`}
-            >
-              <p>{item.content}</p>
-            </div>
-          )}
-        </Transition>
+          <div className={`text-gray-50 pl-4 md:pl-8 lg:pl-12 my-8`}>
+            {item.content}
+          </div>
+        </CSSTransition>
       </Fragment>
     );
   });
