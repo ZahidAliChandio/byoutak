@@ -27,24 +27,19 @@ const Navbar = () => {
           className={`bg-[rgba(0,0,0,0.7)] absolute transition-all duration-400 left-0 top-14 md:top-16 lg:top-20 items-center gap-4 text-white sm:text-lg md:text-xl font-semibold flex flex-col py-2 w-full z-[100] overflow-hidden`}
           ref={nodeRef}
         >
-          <li className="inline">
+          <li className="inline" onClick={() => onClickHandler()}>
             <Link to="/" className="hover:text-[red]">
               Home
             </Link>
           </li>
-          <li className="inline mx-4 md:m-0">
+          <li className="inline mx-4 md:m-0" onClick={() => onClickHandler()}>
             <Link to="/search" className="hover:text-[red]">
               Search
             </Link>
           </li>
-          <li className="inline">
+          <li className="inline" onClick={() => onClickHandler()}>
             <Link to="/contactus" className="hover:text-[red]">
               Contact us
-            </Link>
-          </li>
-          <li className="inline">
-            <Link to="/propertypage" className="hover:text-[red]">
-              Property
             </Link>
           </li>
         </ul>

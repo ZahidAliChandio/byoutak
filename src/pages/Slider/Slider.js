@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import { Pagination, Navigation } from "swiper";
 import NextBtn from "../../components/UI/PrevBtn";
 import PrevBtn from "../../components/UI/NextBtn";
@@ -102,7 +103,7 @@ const Slider = (props) => {
               slidesPerView: data.length >= 2 ? 2 : data.length,
             },
           }}
-          spaceBetween={14}
+          spaceBetween={10}
         >
           <div className="absolute flex justify-between w-full top-1/2 z-50">
             <NextBtn />
@@ -114,7 +115,9 @@ const Slider = (props) => {
                 className="flex justify-center text-left rounded-xl z-0 w-full mb-6 md:mb-10"
                 key={data.id}
               >
-                <SliderCard data={data} />
+                <Link to="/property-page" className="w-full">
+                  <SliderCard data={data}/>
+                </Link>
               </SwiperSlide>
             );
           })}

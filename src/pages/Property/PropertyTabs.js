@@ -77,7 +77,7 @@ const PropertyTabs = () => {
 
   return (
     <Fragment>
-      <ul className="flex gap-4 border-b w-fit">
+      <ul className="flex w-fit">
         {list.map((item, index) => {
           return (
             <li
@@ -86,8 +86,8 @@ const PropertyTabs = () => {
               className={`${
                 activeIndex === index
                   ? "font-bold border border-b-0"
-                  : "border-none"
-              }  px-4 py-2`}
+                  : "border-b"
+              }  px-8 py-2`}
             >
               {item}
             </li>

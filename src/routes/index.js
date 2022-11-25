@@ -25,7 +25,7 @@ export default function Router(){
     {path:"meeting",element:<Meeting /> },
     {path:"contactus",element:<ContactUs/> },
     {path:"search",element:<Search/> },
-    {path:"propertypage",element:<PropertyPage/> },
+    {path:"property-page",element:<PropertyPage/> },
     
 ])
     return element;

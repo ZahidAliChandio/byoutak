@@ -1,7 +1,10 @@
 import { ReactComponent as Bed } from "../../static/icons/bed.svg";
-const SliderCard = ({ data }) => {
+const SliderCard = (props) => {
+  const data = props.data;
   return (
-    <div className="bg-gray-50 px-4 py-7 rounded-md font-gillsans w-3/4 sm:w-4/5 md:w-11/12">
+    <div
+      className={`${props.className} bg-gray-50 px-4 py-7 rounded-md font-gillsans mx-auto w-3/4 sm:w-4/5 md:w-11/12`}
+    >
       <div className="w-full h-[180px] rounded-md bg-[#EFEFEF]"></div>
       <div className="px-4">
         <div className="flex flex-col w-full mt-4 gap-0">
@@ -27,7 +30,9 @@ const SliderCard = ({ data }) => {
         </div>
 
         <div className="flex flex-col gap-0 mt-1">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#ff4545]">{data.price}</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-[#ff4545]">
+            {data.price}
+          </h3>
           <span className="font-semibold">{data.continent}</span>
         </div>
         <div className="flex gap-0 sm:gap-2 my-4">

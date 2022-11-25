@@ -48,6 +48,7 @@ const Accordion = () => {
       price: "2,9,37,093 EGP",
     },
   ];
+  // List items
   const [items, setItems] = useState([
     {
       title: "THE BROOKS Unit Types",
@@ -132,17 +133,17 @@ const Accordion = () => {
       ),
       isActive: false,
     },
-    {
-      title: "You May Also Like",
-      content: (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {data.map((item, index) => {
-            return <PropertyCard data={item} key={index} />;
-          })}
-        </div>
-      ),
-      isActive: false,
-    },
+    // {
+    //   title: "You May Also Like",
+    //   content: (
+    //     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    //       {data.map((item, index) => {
+    //         return <PropertyCard data={item} key={index} />;
+    //       })}
+    //     </div>
+    //   ),
+    //   isActive: false,
+    // },
   ]);
 
   const onClickHandler = (index) => {
