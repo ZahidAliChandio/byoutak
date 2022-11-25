@@ -22,7 +22,7 @@ const Navbar = () => {
       unmountOnExit
       >
         <ul
-          className={`bg-[rgba(0,0,0,0.7)] absolute transition-all duration-400 left-0 top-12 md:top-16 lg:top-20 items-center gap-4 text-white sm:text-lg md:text-xl font-semibold flex flex-col py-2 w-full z-30 overflow-hidden`}
+          className={`bg-[rgba(0,0,0,0.7)] absolute transition-all duration-400 left-0 top-14 md:top-16 lg:top-20 items-center gap-4 text-white sm:text-lg md:text-xl font-semibold flex flex-col py-2 w-full z-30 overflow-hidden`}
         ref={nodeRef}
         >
           <li className="inline">
