@@ -39,7 +39,7 @@ const PropertySlider = () => {
           );
         })}
       </Swiper>
-      <Contact className="absolute bottom-4 sm:bottom-12 right-4 sm:right-12 z-50" />
+      <Contact className="absolute bottom-4 sm:bottom-12 right-1/2 translate-x-1/2 sm:translate-x-0 sm:right-4 md:right-12 z-50" />
     </div>
   );
 };
