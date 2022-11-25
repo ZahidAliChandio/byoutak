@@ -1,18 +1,21 @@
 import { ReactComponent as Bed } from "../../static/icons/bed.svg";
 import Phone from "../../static/icons/phone.png";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ data }) => {
   return (
     <div className="bg-gray-50 rounded-3xl font-gillsans z-0 pb-3 w-full white-shadow">
       {/* Image portion */}
       <div className="h-[150px] bg-[#EFEFEF] rounded-t-3xl overflow-hidden w-fit cursor-pointer">
-        {data.image && (
-          <img
-            src={data.image}
-            alt="apartment"
-            className="object-cover w-fit hover:scale-[1.19] transition-all duration-1000"
-          />
-        )}
+        <Link to="/property-page">
+          {data.image && (
+            <img
+              src={data.image}
+              alt="apartment"
+              className="object-cover w-fit hover:scale-[1.19] transition-all duration-1000"
+            />
+          )}
+        </Link>
       </div>
 
       {/* Conent portion */}
