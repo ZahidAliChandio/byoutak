@@ -21,6 +21,23 @@
 body {
   background-color: #212020;
 }
+.navbar-enter {
+  height: 0;
+  opacity: 0.6;
+}
+.navbar-enter-done {
+  height: 89vh;
+  opacity: 1;
+}
+.navbar-exit {
+  opacity: 1;
+  height: 89vh;
+}
+.navbar-exit-active {
+  opacity: 0.6;
+  height: 0;
+}
+
 #background-container {
   background-image: linear-gradient(
       rgba(12, 49, 78, 0) 0%,
@@ -46,34 +63,6 @@ body {
   outline: none;
 }
 
-.enter-animation {
-  animation: enter 0.3s ease-in-out forwards;
-}
-@keyframes enter {
-  0% {    
-    height: 0;
-  }
-  50% {    
-    height: 48vh;
-  }
-  100% {
-    height: 87vh;
-  }
-}
-.exit-animation {
-  animation: exit 0.3s ease-in-out forwards;
-}
-@keyframes exit {
-  0% {
-    height: 87vh;
-  }
-  50% {
-    height: 48vh;
-  }
-  100% {
-    height: 0vh;
-  }
-}
 /* Range slider */
 .slidecontainer {
   width: 100%;
@@ -118,8 +107,8 @@ body {
 
 .closed .vertical {
   transition: all 0.5s ease-in-out;
-  transform: rotate(-90deg);  
-  opacity: 0;  
+  transform: rotate(-90deg);
+  opacity: 0;
 }
 .closed .horizontal {
   transition: all 0.5s ease-in-out;
@@ -130,7 +119,7 @@ body {
 .opened .vertical {
   transition: all 0.5s ease-in-out;
   opacity: 1;
-  transform: rotate(90deg);  
+  transform: rotate(90deg);
 }
 .opened .horizontal {
   transition: all 0.5s ease-in-out;
@@ -175,26 +164,26 @@ body {
   font-weight: 500;
 }
 .search-swiper .swiper-pagination-bullet-active {
-  background: red !important;  
+  background: red !important;
 }
-.white-shadow{
+.white-shadow {
   /* box-shadow: -2px -4px 4px 1px rgba(255, 255, 255,0.7); */
 }
-.open-accordion{
+.open-accordion {
   animation: openAccord 0.4s ease-in-out forwards;
 }
 @keyframes openAccord {
-  0%{
+  0% {
     transform: translateY(-50px);
   }
-  50%{
+  50% {
     transform: translateY(-25px);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
 }
-.search-modal{
+.search-modal {
   animation: slide-down 300ms ease-out forwards;
 }
 @keyframes slide-down {
@@ -206,7 +195,7 @@ body {
     opacity: 1;
     top: 0;
   }
- /* 0%{
+  /* 0%{
   transform: translateY(-20rem);
   opacity: 0;
  } 

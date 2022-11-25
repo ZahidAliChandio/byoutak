@@ -179,11 +179,14 @@ const Search = () => {
             {propertyData.length} results
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Search Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-3">
           {propertyData.map((data, index) => {
             return <PropertyCard data={data} key={index} />;
           })}
         </div>
+        
+        {/* Page Numbers */}
         <div className="flex items-center justify-center gap-4 w-full mt-4">
           {pageNumbers.map((pageNumber, index) => {
             return (

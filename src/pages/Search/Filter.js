@@ -13,17 +13,17 @@ const components = [
   },
   {
     title: "Price",
-    content: <Price className="" />,
+    content: <Price />,
     isAcitve: true,
   },
   {
     title: "Property types",
-    content: <PropertyType className="" />,
+    content: <PropertyType />,
     isAcitve: true,
   },
   {
     title: "Property options",
-    content: <PropertyDetails className="" />,
+    content: <PropertyDetails />,
     isAcitve: true,
   },
 ];

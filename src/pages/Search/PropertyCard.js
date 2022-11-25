@@ -7,7 +7,11 @@ const PropertyCard = ({ data }) => {
       {/* Image portion */}
       <div className="h-[150px] bg-[#EFEFEF] rounded-t-3xl overflow-hidden w-fit cursor-pointer">
         {data.image && (
-          <img src={data.image} alt="apartment" className="object-cover w-fit hover:scale-[1.19] transition-all duration-1000" />
+          <img
+            src={data.image}
+            alt="apartment"
+            className="object-cover w-fit hover:scale-[1.19] transition-all duration-1000"
+          />
         )}
       </div>
 
@@ -80,10 +84,9 @@ const PropertyCard = ({ data }) => {
         </a>
         <a
           href="whatsapp://send?text=Lets chat!&phone=+923163366566"
-          className="flex items-center gap-2 border border-[#212020] rounded-full justify-center cursor-pointer"
+          className="flex items-center gap-2 xl:gap-1 border border-[#212020] rounded-full justify-center cursor-pointer"
         >
-          {/* <i className="fas fa-comment-dots text-xl text-gray-400"></i> */}
-          <i className="fa-brands fa-whatsapp text-xl text-gray-400"></i>
+          <i className="fa-brands fa-whatsapp text-lg text-gray-400"></i>
           <span className={`text-[#212020] font-semibold text-sm text-center`}>
             Whatsapp
           </span>
