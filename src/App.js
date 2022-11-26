@@ -5,16 +5,7 @@ import Router from "./routes";
 
 const App = () => {
   return (
-    <div>
-      <header>
-        <Navbar />
-      </header>
-      <main className="mb-16">
-        {/* <RightAngle /> */} 
-        <Router />
-      </main>
-      <Footer />
-    </div>
+    <Router />
   );
 };
 
