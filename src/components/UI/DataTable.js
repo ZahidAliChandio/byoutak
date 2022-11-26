@@ -2,9 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 const DataTable = ({
     tableHeadersData,
     tableBodyData,
-    selectedColumns,
-    onSort,
-    defaultWidth,
     reference,
     fixedColumn,
     onRowClick,
@@ -28,7 +25,7 @@ const DataTable = ({
         const col = tableHeaders && tableHeaders.filter((x) => x.id === id)[0];
         return col ? <>
             {col.label}
-        </> : '';
+        </> : 'na';
     }
 
 
@@ -57,7 +54,7 @@ const DataTable = ({
                             <div className="shadow-table rounded-lg z-11">
                                 <table className="min-w-full divide-y divide-gray-300 border-separate border-spacing-y-0" id="data-table">
                                     <thead className="bg-gray-50">
-                                        <tr>
+                                        <tr className='inline-flex w-full  justify-between'>
                                             {fixedColumn && <th
                                                 scope="col"
                                                 className={`${fixedColumn
@@ -73,16 +70,15 @@ const DataTable = ({
                                                 {fixedColumn && <span className={`${hideCheckboxes ? 'pl-4' : 'pl-[4rem]'}`}>{fixedColumn.label}</span>}
                                             </th>}
                                             {!fixedColumn && <th className='pl-3'></th>}
-                                            {selectedColumns &&
-                                                selectedColumns.map((id, index) => (
+                                            {tableHeaders &&
+                                                tableHeaders.map((header, index) => (
                                                     <>
                                                         <th
                                                             key={index}
                                                             scope="col"
                                                             className="relative inline-flex items-center py-3.5 pr-3 text-left text-xs font-medium text-gray-500 uppercase"
-                                                            style={{ minWidth: defaultWidth[index] }}
                                                         >
-                                                            {getColumnLabel(id)}
+                                                            {header.label}
 
 
                                                         </th>
@@ -116,8 +112,8 @@ const DataTable = ({
                                                         )}
                                                     </td>}
                                                     {!fixedColumn && <th className='pl-3'></th>}
-                                                    {selectedColumns &&
-                                                        selectedColumns.map((col, index) => (
+                                                    {tableHeaders &&
+                                                        tableHeaders.map((col, index) => (
                                                             <>
                                                                 {rowClickEnabled ? (
                                                                     <>
@@ -150,8 +146,8 @@ const DataTable = ({
                                                         <div className="h-4 bg-gray-200 mt-1 mb-1 rounded-lg w-[70%]"></div>
                                                     </td>
 
-                                                    {selectedColumns &&
-                                                        selectedColumns.map((col, index) => (
+                                                    {tableHeaders &&
+                                                        tableHeaders.map((col, index) => (
                                                             <>
                                                                 <td >
                                                                     <div className="h-4 bg-gray-200 mt-1 mb-1 rounded-lg w-[70%]"></div>
@@ -168,9 +164,9 @@ const DataTable = ({
                                         <tr className="odd">
                                             <td valign="top" colSpan="12" className="dataTables_empty pt-5">
                                                 <div align="center" className='text-red-500 align-center justify-center'>
-                                                    <img alt="Empty Table" src="/icons/easy-setup.svg" className='justify-center mx-auto py-10' />
+                                                    <img alt="Empty Table" src="/addnewitem.svg" className='justify-center mx-auto py-5' />
                                                     <p className="text-success text-bold font-medium text-black p-2">No data available in table.</p>
-                                                    <p className="text-success text-sm font-medium text-gray-500 ">Add new record or search with different criteria.</p>
+                                                    <p className="text-success text-sm font-medium text-gray-500 pb-5">Add new record or search with different criteria.</p>
                                                 </div>
                                             </td>
                                         </tr>

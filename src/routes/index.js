@@ -39,6 +39,12 @@ export default function Router() {
           element: (
             <AddProperty />
           ),
+        },
+        {
+          path: 'viewAllProperties',
+          element: (
+            <ViewAllProperties />
+          ),
         }
       ],
 

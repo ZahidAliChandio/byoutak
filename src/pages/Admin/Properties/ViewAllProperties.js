@@ -3,8 +3,10 @@ import React, { useState, useEffect, useContext } from 'react'
 import DataTable from '../../../components/UI/DataTable'
 import Dialog from '../../../components/UI/Dialog'
 import BoxHeader from '../../../components/UI/BoxHeader'
+import Paginator from '../../../components/UI/paginator'
 // import { ATLAS_URI } from '../../Constants'
 // import stateContext from '../../context/StateContext'
+
 
 function ViewAllProperties() {
 
@@ -20,6 +22,9 @@ function ViewAllProperties() {
             type: ""
         },
     })
+
+    const [page, setPage] = useState(0)
+    const [limit, setLimit] = useState(20)
     // const mounted = React.useRef(true);
     // useEffect(() => () => { mounted.current = false; }, []);
     useEffect(() => {
@@ -72,6 +77,22 @@ function ViewAllProperties() {
     }
 
 
+
+    const [tableHeaders, setTableHeaders] = useState([
+        { id: 'createdAt', label: 'Sale Date', sorting: "desc" },
+        { id: 'contactJoined', label: 'Contact Created' },
+        { id: 'productName', label: 'Product Name' },
+        { id: 'productTag', label: 'Product Tag' },
+        { id: 'recurring', label: 'Recurring' },
+        { id: 'value', label: 'Sale' },
+        { id: 'transactionType', label: 'Transaction Type' },
+        { id: 'contactPhone', label: 'Contact Phone#' },
+        { id: 'contactName', label: 'Contact Name' },
+        { id: 'closerEmail', label: 'Closer Email' },
+        { id: 'closerName', label: 'Closer Name' },
+
+    ]);
+
     return (
         <div className="content">
             <div className="row">
@@ -88,19 +109,22 @@ function ViewAllProperties() {
 
                         <BoxHeader title="Properties List" />
 
-                        <div className="box-body">
+                        <div class="h-fit rounded-lg bg-white mb-6 shadow-md">
+                            <div>
+                                <DataTable
+                                    // isLoading={loading}
+                                    tableHeadersData={tableHeaders}
+                                    setTableHeadersData={setTableHeaders}
+                                    tableBodyData={[]}
+                                />
 
-                            <DataTable
-                                tableHeader={["id", "Property Title", "Project Name", "Type", "Size", "AgentName"]}
-                                tableBody={state.tableBodyList}
-                                searchField="PropertyTitle"
-                                customAction={[
-                                    { title: "Update", icon: "fas fa-edit", redirectTo: "/Properties/addNewProperty", onClickEvent: editRecord },
-                                    { title: "Delete", icon: "fas fa-times text-red", onClickEvent: openDialog }
-                                ]}
-                            />
-
+                            </div>
                         </div>
+                        <div className="fixed bottom-0 w-[-webkit-fill-available] z-50">
+                            <Paginator page={page} setPage={setPage} limit={limit} setLimit={setLimit} total={0}
+                            />
+                        </div>
+
                     </div>
 
                 </div>
