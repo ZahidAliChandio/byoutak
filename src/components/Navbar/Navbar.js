@@ -42,6 +42,11 @@ const Navbar = () => {
               Contact us
             </Link>
           </li>
+          <li className="inline" onClick={() => onClickHandler()}>
+            <Link to="/admin/login" className="hover:text-[red]">
+              Login
+            </Link>
+          </li>
         </ul>
       </CSSTransition>
       <i

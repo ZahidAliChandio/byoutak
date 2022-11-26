@@ -163,7 +163,7 @@ function AddProperty(props) {
         oldChangeHandler(e, state, setState);
     }
     return (
-        <section className="content">
+        <section className="content text-gray-300">
             <div className="row">
                 <Dialog
                     onFalse={(e) => setState(prevState => ({ ...prevState, dialogInfo: { isOpened: false, text: "" } }))}

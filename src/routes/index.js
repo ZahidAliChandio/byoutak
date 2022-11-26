@@ -55,13 +55,12 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         {
-          path: "/",
-          //   element:<Property/>
+          path: "/",          
           element: <NewHome />
         },
-        { path: "property", element: <Property /> },
         { path: "unit", element: <Unit /> },
         { path: "price", element: <Price /> },
+        { path: "property", element: <Property /> },
         { path: "projects", element: <Projects /> },
         { path: "slider", element: <Slider /> },
         { path: "meeting", element: <Meeting /> },
