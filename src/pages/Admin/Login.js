@@ -110,26 +110,26 @@ function Login() {
         className="flex flex-col justify-center items-center h-screen"
       >
         <div className="login_container flex flex-col items-center w-full">
-          <div className="flex flex-col justify gap-4 w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3">
-            <div className="text-gray-300">
+          <div className="flex flex-col justify gap-12 w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3">
+            <div className="flex flex-col gap-1 text-gray-300">
               <p className="login_heading font-semibold">
                 Real Estate CRM : Demo
               </p>
               <p className="login_subHeading">CRM Login</p>
             </div>
-            <div className="login_card bg-gray-300 flex flex-col gap-4 px-8 rounded-b-sm">
+            <div className="login_card relative bg-gray-300 flex flex-col gap-4 px-8 rounded-sm form-signin-logo">
               <form
                 onSubmit={loginOperator}
                 autoComplete="off"
                 className="flex flex-col"
-              >                
+              >
                 <br />
                 <div class="relative z-0 mb-3 w-full group">
                   <input
                     type="email"
                     name="floating_email"
                     id="floating_email"
-                    class="block pb-2 pt-5 px-2 w-full text-gray-900 bg-transparent border-b-2 border-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border focus:border-b-2 focus:border-[#212020] peer text-xs font-semibold"
+                    class="block pb-2 pt-5 px-2 w-full text-[#212020] bg-transparent border-transparent border border-b-2 border-b-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border-[#212020] peer text-xs font-semibold"
                     placeholder=" "
                     required
                   />
@@ -146,7 +146,7 @@ function Login() {
                     type="password"
                     name="floating_password"
                     id="floating_password"
-                    class="block pb-2 pt-5 px-2 w-full text-gray-900 bg-transparent border-b-2 border-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border focus:border-b-2 focus:border-[#212020] peer text-xs font-semibold"
+                    class="block pb-2 pt-5 px-2 w-full text-[#212020] border-transparent bg-transparent border border-b-2 border-b-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border-[#212020] peer text-xs font-semibold"
                     placeholder=" "
                     required
                   />
@@ -162,13 +162,17 @@ function Login() {
                   <button
                     type="submit"
                     id="loginBtn"
-                    className="btn btn-success bg-[#212020] text-gray-300 py-[0.38rem] px-2 rounded-md text-sm font-semibold"
+                    className="btn btn-success bg-[#212020] text-gray-300 py-[0.38rem] px-2 rounded-md text-sm font-semibold outline-none"
                   >
                     Sign in
                   </button>
                 </div>
               </form>
               <br />
+              <div className="flex items-center gap-1 justify-center absolute -top-8 right-0 w-fit px-2 h-8 bg-gray-300 text-[#212020] rounded-sm border border-[#212020]">
+                <i class="fas fa-user"></i>
+                <span className="text-sm font-semibold">Sign in</span>
+              </div>
             </div>
           </div>
         </div>
