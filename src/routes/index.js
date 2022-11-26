@@ -1,4 +1,5 @@
 import { useRoutes } from "react-router-dom";
+
 import NewHome from "../pages/SelectionPages/NewHome";
 import Unit from "../pages/SelectionPages/Unit";
 import Price from "../pages/SelectionPages/Price";
@@ -10,6 +11,7 @@ import Search from "../pages/Search/Search";
 import PropertyPage from "../pages/Property/Property";
 import Property from "../pages/SelectionPages/Property";
 import Login from "../pages/Admin/Login";
+import Dashboard from "../places/components/Navigation/Dashboard";
 import { AddProperty, ViewAllProperties } from "../pages/Admin/Properties/Properties";
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
@@ -24,6 +26,18 @@ export default function Router() {
           path: 'login',
           element: (
             <Login />
+          ),
+        }
+      ],
+
+    },
+    {
+      path: 'admin',
+      children: [
+        {
+          path: 'dashboard',
+          element: (
+            <Dashboard/>
           ),
         }
       ],
@@ -47,7 +61,6 @@ export default function Router() {
           ),
         }
       ],
-
     },
 
     {
