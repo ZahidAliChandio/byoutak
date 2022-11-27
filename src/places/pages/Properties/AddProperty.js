@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { changeHandler as oldChangeHandler } from "../../../utils/ChangeHandler";
+
 // import axios from 'axios'
 import BoxHeader from "../../components/UI/BoxHeader";
 // import SelectBox from '../../../components/UI/SelectBox'
 
 import Dialog from "../../../components/UI/Dialog";
+import AdminCard from "../../components/UI/AdminCard";
+import InputField from "../../components/UI/InputField";
 // import { ATLAS_URI } from '../../Constants'
 
 function AddProperty(props) {
@@ -150,7 +153,7 @@ function AddProperty(props) {
   }
   return (
     <section className="content p-2 bg-[#eee]">
-      <div className="row bg-white text-[#212020] card-shadow border-[color:var(--red-color)] border-t-4 rounded-sm font-open-sans">
+      <AdminCard>
         <Dialog
           onFalse={(e) =>
             setState((prevState) => ({
@@ -171,20 +174,13 @@ function AddProperty(props) {
                 <input type="hidden" name="ci_csrf_token" value="" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
-                  <div className="flex flex-col gap-[0.18rem]">
-                    {" "}
-                    <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
-                      Property Title
-                    </label>{" "}
-                    <input
-                      name="PropertyTitle"
-                      type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
-                      required
-                      value={state.newTableRow.PropertyTitle}
-                      onChange={changeHandler}
-                    />
-                  </div>
+                  <InputField
+                    label={"Property Title"}
+                    name={"PropertyTitle"}
+                    value={state.newTableRow.PropertyTitle}
+                    onChange={changeHandler}
+                    required={true}
+                  />
 
                   {/* <div className="row"> */}
                   {/* <div className="col-md-6"> */}
@@ -223,21 +219,15 @@ function AddProperty(props) {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
-                  <div className="flex flex-col gap-[0.18rem]">
-                    <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
-                      Size
-                    </label>
-                    <input
-                      name="Size"
-                      type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
-                      placeholder="in acre"
-                      required
-                      value={state.newTableRow.Size}
-                      onChange={changeHandler}
-                    />
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">                  
+                  <InputField
+                    label={"Size"}
+                    name={"Size"}
+                    value={state.newTableRow.Size}
+                    onChange={changeHandler}
+                    required={true}
+                    placeholder="in acre"
+                  />
                   <div className="flex flex-col gap-[0.18rem]">
                     <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
                       Payment Mode
@@ -255,21 +245,15 @@ function AddProperty(props) {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
-                  <div className="flex flex-col gap-[0.18rem]">
-                    <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
-                      Property Age
-                    </label>{" "}
-                    <input
-                      name="PropertyAge"
-                      type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
-                      placeholder="in Years"
-                      required
-                      value={state.newTableRow.PropertyAge}
-                      onChange={changeHandler}
-                    />
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">                  
+                  <InputField         
+                    label={"Property Age"}         
+                    name="PropertyAge"                    
+                    placeholder="in Years"
+                    required={true}
+                    value={state.newTableRow.PropertyAge}
+                    onChange={changeHandler}
+                  />
                   <div className="flex flex-col gap-[0.18rem]">
                     <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
                       Loan Availability
@@ -389,7 +373,7 @@ function AddProperty(props) {
               <div className="box-footer flex w-full justify-end border-t p-2">
                 <button
                   type="submit"
-                  className="btn text-white font-semibold text-sm bg-[color:var(--red-color)] px-3 py-1 rounded-md font-open-sans"
+                  className="btn text-white font-semibold text-sm bg-[color:var(--red-color)] px-3 py-1 rounded-md font-open-sans hover:bg-[red]"
                 >
                   Save
                 </button>
@@ -397,7 +381,7 @@ function AddProperty(props) {
             </form>
           </div>
         </div>
-      </div>
+      </AdminCard>
     </section>
   );
 }

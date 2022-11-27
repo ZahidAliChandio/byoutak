@@ -17,7 +17,7 @@ const SideDrawer = (props) => {
 
   return (
     <aside
-      className={`side-drawer flex flex-col relative flex-shrink-0 left-0 top-0 z-20 ${
+      className={`side-drawer flex flex-col sticky flex-shrink-0 left-0 top-0 z-20 ${
         drawerIsOpen ? "w-[220px]" : "w-[44px]"
       } transition-all duration-[900ms] h-screen bg-[#212020] card-shadow overflow-hidden`}
       onClick={props.onClick}      
