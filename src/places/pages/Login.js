@@ -117,13 +117,12 @@ function Login() {
               </p>
               <p className="login_subHeading">CRM Login</p>
             </div>
-            <div className="login_card relative bg-white flex border-t-4 border-[color:var(--red-color)] flex-col gap-4 px-8 rounded-sm form-signin-logo">
+            <div className="login_card relative bg-white flex border-t-4 border-[color:var(--red-color)] flex-col gap-4 px-10 rounded-tr-none rounded-sm form-signin-logo pt-8 pb-6 box-shadow">
               <form
                 onSubmit={loginOperator}
                 autoComplete="off"
                 className="flex flex-col"
-              >
-                <br />
+              >                
                 <div class="relative z-0 mb-3 w-full group">
                   <input
                     type="email"
@@ -167,11 +166,10 @@ function Login() {
                     Sign in
                   </button>
                 </div>
-              </form>
-              <br />
-              <div className="flex items-center gap-1 justify-center absolute -top-9 right-0 w-fit px-3 h-9 bg-[color:var(--red-color)] text-white rounded-sm">
+              </form>              
+              <div className="flex items-center gap-1 justify-center absolute -top-10 right-0 w-fit px-3 h-9 bg-[color:var(--red-color)] text-white rounded-t-sm">
                 <i class="far fa-user text-sm"></i>
-                <span className="text-sm font-semibold">Sign in</span>
+                <span className="text- font-semibold">Sign in</span>
               </div>
             </div>
           </div>
