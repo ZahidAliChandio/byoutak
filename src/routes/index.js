@@ -12,64 +12,47 @@ import PropertyPage from "../pages/Property/Property";
 import Property from "../pages/SelectionPages/Property";
 import Login from "../places/pages/Login";
 import Dashboard from "../places/components/Navigation/Dashboard";
-import { AddProperty, ViewAllProperties } from "../places/pages/Properties/Properties";
+import {
+  AddProperty,
+  ViewAllProperties,
+} from "../places/pages/Properties/Properties";
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
 export default function Router() {
-
   return useRoutes([
     {
-      path: 'admin',
+      path: "admin",
       children: [
         {
-          path: 'login',
-          element: (
-            <Login />
-          ),
-        }
+          path: "login",
+          element: <Login />,
+        },
       ],
-
     },
     {
-      path: 'admin',
-      children: [
-        {
-          path: 'dashboard',
-          element: (
-            <Dashboard/>
-          ),
-        }
-      ],
-
-    },
-    {
-      path: 'admin',
+      path: "admin",
       element: <AdminLayout />,
 
       children: [
         {
-          path: 'addProperty',
-          element: (
-            <AddProperty />
-          ),
+          path: "addProperty",
+          element: <AddProperty />,
         },
         {
-          path: 'viewAllProperties',
-          element: (
-            <ViewAllProperties />
-          ),
-        }
+          path: "viewAllProperties",
+          element: <ViewAllProperties />,
+        },
       ],
     },
 
     {
-      path: '',
+      path: "",
       element: <MainLayout />,
       children: [
         {
-          path: "/",          
-          element: <NewHome />
+          path: "/",
+          element: <NewHome />,
         },
         { path: "unit", element: <Unit /> },
         { path: "price", element: <Price /> },
@@ -82,6 +65,5 @@ export default function Router() {
         { path: "property-page", element: <PropertyPage /> },
       ],
     },
-  ])
-
+  ]);
 }

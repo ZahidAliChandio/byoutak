@@ -1,11 +1,14 @@
-import { Outlet } from 'react-router-dom';
-import SideBar from '../components/UI/Sidebar'
+import { Outlet } from "react-router-dom";
+
+import SideBar from "../places/components/UI/SideBar";
+import MainHeader from "../places/components/Navigation/MainHeader";
+
 export default function AdminLayout() {
   return (
     <div>
-      <main id="pageContainer">
+      <main id="pageContainer" className="flex w-full bg-[#eee]">
         <SideBar />
-        <section id="page_section">
+        <section id="page_section" className="w-full">
           <Outlet />
         </section>
       </main>

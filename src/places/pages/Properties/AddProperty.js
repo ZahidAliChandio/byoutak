@@ -6,6 +6,7 @@ import BoxHeader from "../../components/UI/BoxHeader";
 // import SelectBox from '../../../components/UI/SelectBox'
 
 import Dialog from "../../../components/UI/Dialog";
+import MainHeader from "../../components/Navigation/MainHeader";
 import AdminCard from "../../components/UI/AdminCard";
 import InputField from "../../components/UI/InputField";
 // import { ATLAS_URI } from '../../Constants'
@@ -152,7 +153,9 @@ function AddProperty(props) {
     oldChangeHandler(e, state, setState);
   }
   return (
-    <section className="content p-2 bg-[#eee]">
+    <section className="w-full">
+      <MainHeader type="Properties" subtype="Add New Property" />
+    <div className="content p-2">
       <AdminCard>
         <Dialog
           onFalse={(e) =>
@@ -382,6 +385,7 @@ function AddProperty(props) {
           </div>
         </div>
       </AdminCard>
+    </div>
     </section>
   );
 }

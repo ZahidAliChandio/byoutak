@@ -35,8 +35,8 @@ const NavLinks = (props) => {
     },
     {
       content: [
-        { title: "Add New Property" },
-        { title: "View all Properties" },
+        { title: "Add New Property" ,linkTo: "addProperty"},
+        { title: "View all Properties" ,linkTo: "viewAllProperties"},
       ],
     },
   ];
