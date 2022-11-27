@@ -7,9 +7,8 @@ function BoxHeader(props) {
     }
 
     return (
-        <div className="box-header with-border">
-
-            <h3 className="box-title">{props.title}</h3>
+        <div className="box-header with-border border-b p-3">
+            <h3 className="text-sm font-bold text-[#444] box-title">{props.title}</h3>
 
             <div className="box-tools pull-right">
 

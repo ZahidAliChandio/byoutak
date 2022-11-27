@@ -19,7 +19,7 @@ const SideDrawer = (props) => {
     <aside
       className={`side-drawer block relative left-0 top-0 z-20 ${
         drawerIsOpen ? "w-1/3 lg:w-[20%]" : "w-[44px]"
-      } transition-all duration-[900ms] h-screen bg-[#212020] card-shadow mr-2 overflow-hidden`}
+      } transition-all duration-[900ms] h-screen bg-[#212020] card-shadow overflow-hidden`}
       onClick={props.onClick}      
     >
       <div
