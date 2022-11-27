@@ -10,9 +10,9 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import Search from "../pages/Search/Search";
 import PropertyPage from "../pages/Property/Property";
 import Property from "../pages/SelectionPages/Property";
-import Login from "../pages/Admin/Login";
+import Login from "../places/pages/Login";
 import Dashboard from "../places/components/Navigation/Dashboard";
-import { AddProperty, ViewAllProperties } from "../pages/Admin/Properties/Properties";
+import { AddProperty, ViewAllProperties } from "../places/pages/Properties/Properties";
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 

@@ -11,19 +11,16 @@ const NavLinks = (props) => {
       title: "Dashboard",
       iconClass: "fas fa-tachometer-alt-fast",
       isLi: false,
-      linkTo: "",
     },
     {
       title: "Projects",
       iconClass: "fas fa-flag",
       isLi: true,
-      linkTo: "",
     },
     {
       title: "Properties",
       iconClass: "fas fa-building",
       isLi: true,
-      linkTo: "",
     },
   ];
   const subList = [
@@ -31,7 +28,10 @@ const NavLinks = (props) => {
       content: null,
     },
     {
-      content: [{ title: "Add Projects" }, { title: "View all Projects" }],
+      content: [
+        { title: "Add Projects", linkTo: "" },
+        { title: "View all Projects", linkTo: "" },
+      ],
     },
     {
       content: [
@@ -51,7 +51,11 @@ const NavLinks = (props) => {
 
   return (
     <Fragment>
-      <ul className="nav-links flex flex-col items-center w-full h-full bg-[#212020] mt-4">
+      <ul
+        className="nav-links flex flex-col items-center w-full h-full bg-[#212020] mt-4"
+        onMouseEnter={props.openDrawer}
+        onMouseLeave={props.closeDrawer}
+      >
         {lis.map((li, index) => {
           return (
             <Fragment key={index}>
@@ -59,8 +63,8 @@ const NavLinks = (props) => {
                 className={`relative ${
                   activeLinkIndex === index
                 } flex items-center justify-between text-xs  bg-gray-300 py-3 cursor-pointer font-gillsans px-4 border border-[#212020] text-[#212020] w-full`}
-                onClick={() => listItemClickHandler(index)}
                 key={index}
+                onClick={() => listItemClickHandler(index)}
               >
                 {" "}
                 <div className="flex items-center gap-4">
@@ -88,29 +92,28 @@ const NavLinks = (props) => {
                 nodeRef={nodeRef}
                 className="portal-item"
               > */}
-                {activeSubList && activeLinkIndex === index && (
-                  <ul
-                    className="flex flex-col gap-1 text-gray-300 my-1 font-semibold w-full"
-                    
-                  >
-                    {activeSubList.map((content, index) => {
-                      return (
-                        <li key={index} className="">
-                          <NavLink
-                            to={""}
-                            className="flex items-center gap-2 text-gray-300 text-xs w-full pl-5"
-                          >
-                            <div className="">
-                              <i className="fas fa-chevron-right w-1"></i>
-                              <i className="fas fa-chevron-right w-1"></i>
-                            </div>
-                            <span className="cursor-pointer hover:text-[red]">{content.title}</span>
-                          </NavLink>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                )}
+              {activeSubList && activeLinkIndex === index && (
+                <ul className="flex flex-col gap-2 text-gray-300 my-1 font-semibold w-full">
+                  {activeSubList.map((content, index) => {
+                    return (
+                      <li key={index} className="">
+                        <NavLink
+                          to={content.linkTo}
+                          className="flex items-center gap-2 text-gray-300 text-xs w-[200px] pl-6"
+                        >
+                          <div className="">
+                            <i className="fas fa-chevron-right w-1"></i>
+                            <i className="fas fa-chevron-right w-1"></i>
+                          </div>
+                          <div className="cursor-pointer hover:text-[red]">
+                            {content.title}
+                          </div>
+                        </NavLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
               {/* </CSSTransition> */}
             </Fragment>
           );
