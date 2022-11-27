@@ -1,8 +1,11 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 
 const NavLinks = (props) => {
   const [activeLinkIndex, setActiveLinkIndex] = useState(0);
+
+  //const nodeRef = useRef(null);
   const lis = [
     {
       title: "Dashboard",
@@ -38,13 +41,13 @@ const NavLinks = (props) => {
     },
   ];
 
-  const activeSubList = activeLinkIndex
-    ? subList[activeLinkIndex].content
-    : null;
-
   const listItemClickHandler = (index) => {
     setActiveLinkIndex((prev) => (prev === index ? null : index));
   };
+
+  const activeSubList = activeLinkIndex
+    ? subList[activeLinkIndex].content
+    : null;
 
   return (
     <Fragment>
@@ -69,25 +72,46 @@ const NavLinks = (props) => {
                     <i
                       className={`fas fa-chevron-left ${
                         activeLinkIndex === index ? "-rotate-90" : "rotate-0"
-                      } transition-all duration-500`}
+                      } CSStransition-all duration-500`}
                     ></i>
                   )}
                 </div>
               </li>
-              {activeSubList && activeLinkIndex === index && (
-                <ul className="flex flex-col gap-1 text-gray-300 my-2 font-semibold">
-                  {activeSubList.map((content, index) => {
-                    return (
-                      <li key={index} className="">
-                        <NavLink to={""} className="flex gap-2 text-gray-300 text-xs">
-                          <i className="fal fa-chevron-double-right text-[red]"></i>
-                          <span className="">{content.title}</span>
-                        </NavLink>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+              {/* <CSSTransition
+                in={
+                  !(activeSubList === null || activeSubList === "undefined") &&
+                  activeLinkIndex === index
+                }
+                timeout={300}
+                mountOnEnter
+                unmountOnExit
+                nodeRef={nodeRef}
+                className="portal-item"
+              > */}
+                {activeSubList && activeLinkIndex === index && (
+                  <ul
+                    className="flex flex-col gap-1 text-gray-300 my-1 font-semibold w-full"
+                    
+                  >
+                    {activeSubList.map((content, index) => {
+                      return (
+                        <li key={index} className="">
+                          <NavLink
+                            to={""}
+                            className="flex items-center gap-2 text-gray-300 text-xs w-full pl-5"
+                          >
+                            <div className="">
+                              <i className="fas fa-chevron-right w-1"></i>
+                              <i className="fas fa-chevron-right w-1"></i>
+                            </div>
+                            <span className="cursor-pointer hover:text-[red]">{content.title}</span>
+                          </NavLink>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              {/* </CSSTransition> */}
             </Fragment>
           );
         })}

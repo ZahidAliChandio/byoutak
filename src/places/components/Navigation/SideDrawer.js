@@ -17,18 +17,18 @@ const SideDrawer = (props) => {
       onClick={props.onClick}
     >
       <div
-        className={`flex ${
+        className={`relative flex ${
           drawerIsOpen ? "justify-between" : "justify-center"
         } text-gray-300 font-semibold p-4`}
       >
-        {drawerIsOpen && <h2 className="text-xs">Navigation</h2>}
+        <h2 className="text-xs">Navigation</h2>
         <button
-          className="main-navigation__menu-btn w-6 h-5 bg-transparent flex flex-col justify-around cursor-pointer"
+          className="main-navigation__menu-btn absolute bg-[#212020] px-4 right-0 w-12 h-5 flex flex-col justify-around cursor-pointer"
           onClick={toggleDrawer}
         >
-          <span className="block w-5 h-[3px] bg-white"></span>
-          <span className="block w-5 h-[3px] bg-white"></span>
-          <span className="block w-5 h-[3px] bg-white"></span>
+          <span className={`${drawerIsOpen?'-rotate-45 top-[0.52rem]':'rotate-0'} transition-all duration-500 relative block w-5 h-[3px] bg-white`}></span>
+          <span className={`${drawerIsOpen?'opacity-0':'opaccity-1'} transition-all duration-500 relative block w-5 h-[3px] bg-white`}></span>
+          <span className={`${drawerIsOpen?'rotate-45 -top-[0.3rem]':'rotate-0'} transition-all duration-500 relative block w-5 h-[3px] bg-white`}></span>
         </button>
       </div>
       <NavLinks isOpen={drawerIsOpen}/>

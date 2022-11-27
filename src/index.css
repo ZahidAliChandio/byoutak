@@ -255,24 +255,3 @@ body {
 .accordian-exit-active{
   transform: translateY(-3rem);
 }
-
-/*Side Drawer */
-.slide-in-left-enter{
-  width: 30px;
-}
-
-.slide-in-left-enter-active{
-  width: 30%;
-  opacity: 1;
-  transition: all 300ms;
-}
-
-.slide-in-left-exit{
-  width: 30%;
-  opacity: 1;
-}
-
-.slide-in-left-exit-active{
-  width: 30px;
-  transition: all 300ms;
-}
