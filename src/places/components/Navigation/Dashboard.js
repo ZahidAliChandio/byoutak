@@ -11,7 +11,7 @@ const Dashboard = (props) => {
           <div className="flex gap-1 items-baseline text-xs text-white px-4 font-sans-serif font-semibold">
             <span className="title">Properties</span>
             <i className="fas fa-chevron-right text-[0.57rem]"></i>
-            <span className="subtitle">Add Properties</span>
+            <span className="subtitle">Add New Property</span>
           </div>
         </MainHeader>
         <AddProperty />
