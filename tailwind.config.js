@@ -5,8 +5,14 @@ module.exports = {
     extend: {
       backgroundImage:{
         // 'facility-1':"url('./src/static/imgages/facilites.png?v-120')"
-      }
+      },      
     },
+    fontFamily:{
+      'open-sans':['Poppins-Regular','sans-serif','Open Sans'],
+      'sans-serif':[ 'Poppins-Medium','sans-serif'],
+       
+
+    }
   },
   plugins: [],
 };

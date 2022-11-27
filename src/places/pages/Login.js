@@ -117,13 +117,13 @@ function Login() {
               </p>
               <p className="login_subHeading">CRM Login</p>
             </div>
-            <div className="login_card relative bg-white flex border-t-4 border-[color:var(--red-color)] flex-col gap-4 px-10 rounded-tr-none rounded-sm form-signin-logo pt-8 pb-6 box-shadow">
+            <div className="login_card relative bg-white flex border-t-4 border-[color:var(--red-color)] flex-col gap-4 px-10 rounded-tr-none rounded-sm form-signin-logo pt-12 pb-6 box-shadow">
               <form
                 onSubmit={loginOperator}
                 autoComplete="off"
                 className="flex flex-col"
               >                
-                <div class="relative z-0 mb-3 w-full group">
+                <div class="relative z-0 mb-1 w-full group">
                   <input
                     type="email"
                     name="floating_email"
@@ -140,7 +140,7 @@ function Login() {
                   </label>
                   <i className={`inputIcon fas fa-user absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 peer-focus:text-[color:var(--red-color)]`}></i>
                 </div>
-                <div class="relative z-0 mb-6 w-full group">
+                <div class="relative z-0 mb-4 w-full group">
                   <input
                     type="password"
                     name="floating_password"
@@ -161,15 +161,15 @@ function Login() {
                   <button
                     type="submit"
                     id="loginBtn"
-                    className="btn btn-success bg-[color:var(--red-color)] text-white py-[0.38rem] px-2 rounded-md text-sm font-semibold outline-none"
+                    className="btn btn-success bg-[color:var(--red-color)] text-white py-[0.38rem] px-2 rounded-[0.3rem] text-sm outline-none font-open-sans"
                   >
                     Sign in
                   </button>
                 </div>
               </form>              
-              <div className="flex items-center gap-1 justify-center absolute -top-10 right-0 w-fit px-3 h-9 bg-[color:var(--red-color)] text-white rounded-t-sm">
+              <div className="flex items-center gap-1 justify-center absolute -top-10 right-0 w-fit px-[0.7rem] h-9 bg-[color:var(--red-color)] text-white rounded-t-sm font-open-sans">
                 <i class="far fa-user text-sm"></i>
-                <span className="text- font-semibold">Sign in</span>
+                <span className="text-sm">Sign in</span>
               </div>
             </div>
           </div>
