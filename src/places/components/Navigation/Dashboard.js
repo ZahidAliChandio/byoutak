@@ -4,7 +4,7 @@ import AddProperty from "../../pages/Properties/AddProperty";
 
 const Dashboard = (props) => {
   return (
-    <div className="flex w-full bg-white">
+    <div className="flex w-full bg-[#eee]">
       <SideDrawer />
       <div className="flex flex-col w-full">
         <MainHeader>

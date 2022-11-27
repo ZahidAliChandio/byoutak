@@ -364,7 +364,7 @@ function AddProperty(props) {
                     <textarea
                       name="Description"
                       type="text"
-                      className="form-control p-2 w-full outline-none border border-transparent active:border-gray-300 focus:border-gray-300"
+                      className="form-control p-2 w-full outline-none border border-gray-300 active:border-[color:var(--red-color)] focus:border-[color:var(--red-color)]"
                       value={state.newTableRow.Description}
                       onChange={changeHandler}
                       rows="3"
