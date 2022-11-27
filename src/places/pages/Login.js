@@ -111,11 +111,11 @@ function Login() {
       >
         <div className="login_container flex flex-col items-center w-full">
           <div className="flex flex-col justify gap-12 w-11/12 sm:w-3/4 md:w-1/2 lg:w-[30%]">
-            <div className="flex flex-col gap-1 text-[#555]">
-              <p className="login_heading font-semibold">
+            <div className="flex flex-col gap-1 text-[#555] font-sans-serif font-semibold">
+              <p className="login_heading text-lg">
                 Real Estate CRM : Demo
               </p>
-              <p className="login_subHeading">CRM Login</p>
+              <p className="login_subHeading text-sm font-semibold">CRM Login</p>
             </div>
             <div className="login_card relative bg-white flex border-t-4 border-[color:var(--red-color)] flex-col gap-4 px-10 rounded-tr-none rounded-sm form-signin-logo pt-12 pb-6 box-shadow">
               <form
