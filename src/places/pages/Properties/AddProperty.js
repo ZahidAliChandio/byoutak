@@ -167,10 +167,10 @@ function AddProperty(props) {
             />
 
             <form onSubmit={validateThenAddProperty}>
-              <div className="box-body bozero mx5p flex flex-col gap-4 px-16 py-3 text-[0.7rem] text-[#212020]">
+              <div className="box-body bozero mx5p flex flex-col gap-4 px-4 sm:px-12 md:px-16 py-3 text-[0.7rem] text-[#212020]">
                 <input type="hidden" name="ci_csrf_token" value="" />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg-gap:28 xl:gap-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
                   <div className="flex flex-col gap-[0.18rem]">
                     {" "}
                     <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
@@ -223,7 +223,7 @@ function AddProperty(props) {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg-gap:28 xl:gap-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
                   <div className="flex flex-col gap-[0.18rem]">
                     <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
                       Size
@@ -255,7 +255,7 @@ function AddProperty(props) {
                     </select>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg-gap:28 xl:gap-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-20 lg-gap:28 xl:gap-40">
                   <div className="flex flex-col gap-[0.18rem]">
                     <label className="font-semibold after:content-['*'] after:ml-0.5 after:text-red-500">
                       Property Age
