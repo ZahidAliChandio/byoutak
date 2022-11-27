@@ -149,8 +149,8 @@ function AddProperty(props) {
     oldChangeHandler(e, state, setState);
   }
   return (
-    <section className="content text-[#212020] card-shadow border-[#212020] border-t-2 rounded-sm">
-      <div className="row">
+    <section className="content p-2 bg-[#eee]">
+      <div className="row bg-white text-[#212020] card-shadow border-[color:var(--red-color)] border-t-4 rounded-sm font-open-sans">
         <Dialog
           onFalse={(e) =>
             setState((prevState) => ({
@@ -167,7 +167,7 @@ function AddProperty(props) {
             />
 
             <form onSubmit={validateThenAddProperty}>
-              <div className="box-body bozero mx5p flex flex-col gap-4 px-16 py-3 text-[0.7rem]">
+              <div className="box-body bozero mx5p flex flex-col gap-4 px-16 py-3 text-[0.7rem] text-[#212020]">
                 <input type="hidden" name="ci_csrf_token" value="" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg-gap:28 xl:gap-40">
@@ -179,7 +179,7 @@ function AddProperty(props) {
                     <input
                       name="PropertyTitle"
                       type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
                       required
                       value={state.newTableRow.PropertyTitle}
                       onChange={changeHandler}
@@ -205,7 +205,7 @@ function AddProperty(props) {
                     </label>{" "}
                     <select
                       required
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500 w-full"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
                       name="PropertyType"
                       value={state.newTableRow.PropertyType}
                       onChange={changeHandler}
@@ -231,7 +231,7 @@ function AddProperty(props) {
                     <input
                       name="Size"
                       type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
                       placeholder="in acre"
                       required
                       value={state.newTableRow.Size}
@@ -244,7 +244,7 @@ function AddProperty(props) {
                     </label>{" "}
                     <select
                       required
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500 w-full"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
                       name="PaymentMode"
                       value={state.newTableRow.PaymentMode}
                       onChange={changeHandler}
@@ -263,7 +263,7 @@ function AddProperty(props) {
                     <input
                       name="PropertyAge"
                       type="text"
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
                       placeholder="in Years"
                       required
                       value={state.newTableRow.PropertyAge}
@@ -276,7 +276,7 @@ function AddProperty(props) {
                     </label>{" "}
                     <select
                       required
-                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-gray-500 active:border-gray-500 w-full"
+                      className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
                       name="LoanAvailability "
                       value={state.newTableRow.LoanAvailability}
                       onChange={changeHandler}
@@ -389,7 +389,7 @@ function AddProperty(props) {
               <div className="box-footer flex w-full justify-end border-t p-2">
                 <button
                   type="submit"
-                  className="btn text-gray-50 font-semibold text-sm bg-gray-500 px-2 py-[0.2rem] rounded-md"
+                  className="btn text-white font-semibold text-sm bg-[color:var(--red-color)] px-3 py-1 rounded-md font-open-sans"
                 >
                   Save
                 </button>

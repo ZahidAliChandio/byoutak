@@ -52,7 +52,7 @@ const NavLinks = (props) => {
   return (
     <Fragment>
       <ul
-        className="nav-links flex flex-col items-center w-full h-full bg-[#212020] mt-4"
+        className="nav-links flex flex-col items-center w-full h-full bg-[#212020]"
         onMouseEnter={props.openDrawer}
         onMouseLeave={props.closeDrawer}
       >
@@ -61,13 +61,13 @@ const NavLinks = (props) => {
             <Fragment key={index}>
               <li
                 className={`relative ${
-                  activeLinkIndex === index
-                } flex items-center justify-between text-xs  bg-gray-300 py-3 cursor-pointer font-gillsans px-4 border border-[#212020] text-[#212020] w-full`}
+                  activeLinkIndex === index?'text-[color:var(--red-color)] bg-[#070707] border-l-[color:var(--red-color)]':null
+                } flex items-center justify-between border-2 border-transparent  text-xs  bg-transparent py-3 cursor-pointer font-gillsans px-4 text-white hover:translate-x-[0.18rem] hover:border-l-[color:var(--red-color)] hover:text-[color:var(--red-color)] hover:bg-[#070707] w-full font-open-sans`}
                 key={index}
                 onClick={() => listItemClickHandler(index)}
               >
                 {" "}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <i className={`${li.iconClass} `}></i>
                   <span>{li.title}</span>
                 </div>
@@ -99,13 +99,13 @@ const NavLinks = (props) => {
                       <li key={index} className="">
                         <NavLink
                           to={content.linkTo}
-                          className="flex items-center gap-2 text-gray-300 text-xs w-[200px] pl-6"
+                          className="flex items-center gap-[10px] text-gray-300 text-xs w-[200px] pl-6 hover:text-[color:var(--red-color)]"
                         >
                           <div className="">
                             <i className="fas fa-chevron-right w-1"></i>
                             <i className="fas fa-chevron-right w-1"></i>
                           </div>
-                          <div className="cursor-pointer hover:text-[red]">
+                          <div className="cursor-pointer">
                             {content.title}
                           </div>
                         </NavLink>

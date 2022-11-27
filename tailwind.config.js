@@ -10,8 +10,6 @@ module.exports = {
     fontFamily:{
       'open-sans':['Poppins-Regular','sans-serif','Open Sans'],
       'sans-serif':[ 'Poppins-Medium','sans-serif'],
-       
-
     }
   },
   plugins: [],
