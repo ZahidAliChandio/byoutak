@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --red-color:rgb(220 38 38);
+}
+
 .swiper-pagination-bullet {
   width: 0.7rem !important;
   height: 0.7rem !important;
