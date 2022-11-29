@@ -123,35 +123,35 @@ function Login() {
                 autoComplete="off"
                 className="flex flex-col"
               >                
-                <div class="relative z-0 mb-1 w-full group">
+                <div className="relative z-0 mb-1 w-full group">
                   <input
                     type="email"
                     name="floating_email"
                     id="floating_email"
-                    class="block pb-2 pt-5 px-2 w-full text-[#212020] bg-transparent border-transparent border border-b border-b-gray-600 appearance-none focus:outline-none focus:border-b-2 focus:border-[color:var(--red-color)] focus:ring-0 peer text-xs font-semibold"
+                    className="block pb-2 pt-5 px-2 w-full text-[#212020] bg-transparent border-transparent border border-b border-b-gray-600 appearance-none focus:outline-none focus:border-b-2 focus:border-[color:var(--red-color)] focus:ring-0 peer text-xs font-semibold"
                     placeholder=" "
                     required
                   />
                   <label
                     for="floating_email"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform scale-75 top-3 -z-10 origin-[0] left-2 peer-focus:text-[#212020] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform scale-75 top-3 -z-10 origin-[0] left-2 peer-focus:text-[#212020] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2"
                   >
                     Username
                   </label>
                   <i className={`inputIcon fas fa-user absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 peer-focus:text-[color:var(--red-color)]`}></i>
                 </div>
-                <div class="relative z-0 mb-4 w-full group">
+                <div className="relative z-0 mb-4 w-full group">
                   <input
                     type="password"
                     name="floating_password"
                     id="floating_password"
-                    class="block pb-2 pt-5 px-2 w-full text-[#212020] border-transparent bg-transparent border border-b border-b-gray-600 appearance-none outline-none focus:ring-0 focus:border-[color:var(--red-color)] focus:border-b-2 peer text-xs font-semibold"
+                    className="block pb-2 pt-5 px-2 w-full text-[#212020] border-transparent bg-transparent border border-b border-b-gray-600 appearance-none outline-none focus:ring-0 focus:border-[color:var(--red-color)] focus:border-b-2 peer text-xs font-semibold"
                     placeholder=" "
                     required
                   />
                   <label
                     for="floating_password"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform scale-75 top-3 -z-10 origin-[0] left-2 peer-focus:text-[#212020] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform scale-75 top-3 -z-10 origin-[0] left-2 peer-focus:text-[#212020] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-2"
                   >
                     Password
                   </label>
@@ -168,7 +168,7 @@ function Login() {
                 </div>
               </form>              
               <div className="flex items-center gap-1 justify-center absolute -top-10 right-0 w-fit px-[0.7rem] h-9 bg-[color:var(--red-color)] text-white rounded-t-sm font-open-sans">
-                <i class="far fa-user text-sm"></i>
+                <i className="far fa-user text-sm"></i>
                 <span className="text-sm">Sign in</span>
               </div>
             </div>
