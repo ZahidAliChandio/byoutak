@@ -133,7 +133,7 @@ function AddDeveloper() {
 
   return (
     <section className="content">
-      <MainHeader type="Masters" subtype="Add Location" />
+      <MainHeader type="Masters" subtype="Add Developer" />
       <div className="grid grid-cols-1 md:grid-cols-[2fr,3fr] gap-3 md:gap-5 w-full p-2">
         {/* {typeof state.dialogInfo !== 'undefined' &&
                     <Dialog
@@ -146,15 +146,15 @@ function AddDeveloper() {
             {/* <BoxHeader
               title={`${state.editingActivated ? "Edit" : "Add"} Amenity`}
             /> */}
-            <BoxHeader title="Add Location" />
+            <BoxHeader title="Add Developer" />
 
             {/* <form onSubmit={(e) => insertIntoTable(e, contextState, state, setState)}> */}
             <form onSubmit={""} className="pt-2 px-2">
               <div className="box-body bozero">
                 <div className="form-group">
                   <InputField
-                    label={"Location Name"}
-                    name={"LocationName"}
+                    label={"Name"}
+                    name={"DeveloperName"}
                     // value={state.newTableRow.PropertyTitle}
                     // onChange={changeHandler}
                     required
@@ -168,7 +168,7 @@ function AddDeveloper() {
 
         <AdminCard className="relative">
           <div className="box box-primary">
-            <BoxHeader title="Added Locations" />
+            <BoxHeader title="Added Developers" />
 
             <div className="content">
               <div className="row">

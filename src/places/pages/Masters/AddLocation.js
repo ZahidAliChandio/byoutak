@@ -153,7 +153,7 @@ function AddLocation() {
               <div className="box-body bozero">
                 <div className="form-group">
                   <InputField
-                    label={"Location Name"}
+                    label={"Name"}
                     name={"LocationName"}
                     // value={state.newTableRow.PropertyTitle}
                     // onChange={changeHandler}
