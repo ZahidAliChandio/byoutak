@@ -58,13 +58,13 @@ const SlidingContent = (props) => {
             )}
           </div>
           {content.subtitle && (
-            <p className="mt-6 lg:mt-8 text-gray-300 text-lg md:text-xl">
+            <p className="mt-6 lg:mt-6 text-gray-300 text-lg md:text-xl">
               {content.subtitle}
             </p>
           )}
         </div>
 
-        <div className="w-3/4 sm:w-3/5 md:w-3/5 xl:w-2/6 my-12">
+        <div className="w-3/4 sm:w-3/5 md:w-3/5 xl:w-2/6 my-8">
           <button
             id="dropdownDefault"
             data-dropdown-toggle="dropdown"
