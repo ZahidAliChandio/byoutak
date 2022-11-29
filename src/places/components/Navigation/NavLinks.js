@@ -66,7 +66,7 @@ const NavLinks = (props) => {
   return (
     <Fragment>
       <ul
-        className="nav-links flex flex-col items-center w-full h-full bg-[#212020] transition-all duration-700"
+        className="nav-links flex flex-col items-center h-full w-full bg-[#212020]"
         onMouseEnter={!props.isButtonClicked ? props.openDrawer : undefined}
         onMouseLeave={!props.isButtonClicked ? props.closeDrawer : undefined}
       >
@@ -74,11 +74,14 @@ const NavLinks = (props) => {
           return (
             <Fragment key={index}>
               <li
-                className={`relative ${
+                className={` ${
                   activeLinkIndex === index
-                    ? "text-[color:var(--red-color)] bg-[#070707] border-l-[color:var(--red-color)]"
+                    ? "bg-[#070707] border-l-[color:var(--red-color)]"
                     : null
-                } flex items-center justify-between border-[3px] border-transparent  text-xs  bg-transparent py-[10px] cursor-pointer font-gillsans px-4 text-white hover:pl-[1.18rem] hover:border-l-[color:var(--red-color)] hover:text-[color:var(--red-color)] hover:bg-[#070707] w-full font-open-sans`}
+                } flex items-center justify-between border-[3px] border-transparent  text-xs  bg-transparent py-[10px] cursor-pointer font-gillsans px-4 text-white 
+                ${
+                  !(activeLinkIndex === index) ? "hover:pl-[1.18rem]" : null
+                } hover:border-l-[color:var(--red-color)] hover:text-[color:var(--red-color)]  hover:bg-[#070707] w-full font-open-sans`}
                 key={index}
                 onClick={() => listItemClickHandler(index)}
               >
