@@ -11,7 +11,7 @@ import Search from "../pages/Search/Search";
 import PropertyPage from "../pages/Property/Property";
 import Property from "../pages/SelectionPages/Property";
 import Login from "../places/pages/Login";
-import Dashboard from "../places/components/Navigation/Dashboard";
+
 import {
   AddProperty,
   ViewAllProperties,
@@ -24,6 +24,7 @@ import {
 
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
+import AddDeveloper from "../places/pages/Masters/AddDeveloper";
 
 export default function Router() {
   return useRoutes([
@@ -60,6 +61,10 @@ export default function Router() {
         {
           path: "addUnitType",
           element: <AddUnitType />,
+        },
+        {
+          path: "addDeveloper",
+          element: <AddDeveloper/>,
         },
       ],
     },    

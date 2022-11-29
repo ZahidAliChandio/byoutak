@@ -19,7 +19,7 @@ import FormButton from "../../components/UI/FormButton";
 import DataTable from "../../components/UI/DataTable";
 import Paginator from "../../components/UI/paginator";
 
-function AddAmenities() {
+function AddDeveloper() {
   //   const contextState = useContext(stateContext);
   //   const { configToken, operator } = contextState.state;
 
@@ -133,7 +133,7 @@ function AddAmenities() {
 
   return (
     <section className="content">
-      <MainHeader type="Masters" subtype="Add Amenity" />
+      <MainHeader type="Masters" subtype="Add Location" />
       <div className="grid grid-cols-1 md:grid-cols-[2fr,3fr] gap-3 md:gap-5 w-full p-2">
         {/* {typeof state.dialogInfo !== 'undefined' &&
                     <Dialog
@@ -146,15 +146,15 @@ function AddAmenities() {
             {/* <BoxHeader
               title={`${state.editingActivated ? "Edit" : "Add"} Amenity`}
             /> */}
-            <BoxHeader title="Add Amenity" />
+            <BoxHeader title="Add Location" />
 
             {/* <form onSubmit={(e) => insertIntoTable(e, contextState, state, setState)}> */}
             <form onSubmit={""} className="pt-2 px-2">
               <div className="box-body bozero">
                 <div className="form-group">
                   <InputField
-                    label={"Name"}
-                    name={"AmenityName"}
+                    label={"Location Name"}
+                    name={"LocationName"}
                     // value={state.newTableRow.PropertyTitle}
                     // onChange={changeHandler}
                     required
@@ -168,7 +168,7 @@ function AddAmenities() {
 
         <AdminCard className="relative">
           <div className="box box-primary">
-            <BoxHeader title="Added Amenities" />
+            <BoxHeader title="Added Locations" />
 
             <div className="content">
               <div className="row">
@@ -215,4 +215,4 @@ function AddAmenities() {
   );
 }
 
-export default AddAmenities;
+export default AddDeveloper;
