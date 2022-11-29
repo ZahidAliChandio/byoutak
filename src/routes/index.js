@@ -37,7 +37,7 @@ export default function Router() {
       ],
     },
     {
-      path: "Properties",
+      path: "admin",
       element: <AdminLayout />,
 
       children: [
@@ -49,13 +49,6 @@ export default function Router() {
           path: "viewAllProperties",
           element: <ViewAllProperties />,
         },
-      ],
-    },
-    {
-      path: "Masters",
-      element: <AdminLayout />,
-
-      children: [
         {
           path: "addLocation",
           element: <AddLocation />,
@@ -69,7 +62,7 @@ export default function Router() {
           element: <AddUnitType />,
         },
       ],
-    },
+    },    
 
     {
       path: "",
