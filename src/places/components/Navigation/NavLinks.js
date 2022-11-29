@@ -80,7 +80,7 @@ const NavLinks = (props) => {
                     : null
                 } flex items-center justify-between border-[3px] border-transparent  text-xs  bg-transparent py-[10px] cursor-pointer font-gillsans px-4 text-white 
                 ${
-                  !(activeLinkIndex === index) ? "hover:pl-[1.18rem]" : null
+                  !(activeLinkIndex === index) ? "hover:pl-[1.18rem]" : "pl-[1.18rem]"
                 } hover:border-l-[color:var(--red-color)] hover:text-[color:var(--red-color)]  hover:bg-[#070707] w-full font-open-sans`}
                 key={index}
                 onClick={() => listItemClickHandler(index)}
