@@ -111,7 +111,7 @@ function ViewAllProperties() {
                 <div className="box box-primary">
                   <BoxHeader title="Properties List" />
 
-                  <div class="h-fit rounded-lg bg-white mb-6 shadow-md">
+                  <div className="h-fit rounded-lg bg-white mb-6 shadow-md">
                     <div>
                       <DataTable
                         // isLoading={loading}

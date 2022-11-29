@@ -149,7 +149,7 @@ function AddAmenities() {
             <BoxHeader title="Add Amenity" />
 
             {/* <form onSubmit={(e) => insertIntoTable(e, contextState, state, setState)}> */}
-            <form onSubmit={""} className="pt-2 px-2">
+            <form onSubmit={undefined} className="pt-2 px-2">
               <div className="box-body bozero">
                 <div className="form-group">
                   <InputField
@@ -185,7 +185,7 @@ function AddAmenities() {
 
                 <div className="col-md-12">
                   <div className="box box-primary">
-                    <div class="h-fit rounded-lg bg-white mb-6 shadow-md">
+                    <div className="h-fit rounded-lg bg-white mb-6 shadow-md">
                       <div>
                         <DataTable
                           // isLoading={loading}

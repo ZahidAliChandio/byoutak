@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 const NavLinks = (props) => {
-  const [activeLinkIndex, setActiveLinkIndex] = useState(0);
-
+  const [activeLinkIndex, setActiveLinkIndex] = useState(0);  
   //const nodeRef = useRef(null);
   const lis = [
     {
@@ -65,12 +64,13 @@ const NavLinks = (props) => {
     ? subList[activeLinkIndex].content
     : null;
 
+    console.log(props.isButtonClicked);
   return (
     <Fragment>
       <ul
         className="nav-links flex flex-col items-center w-full h-full bg-[#212020]"
-        onMouseEnter={props.openDrawer}
-        onMouseLeave={props.closeDrawer}
+        onMouseEnter={!props.isButtonClicked? props.openDrawer:undefined}
+        onMouseLeave={!props.isButtonClicked? props.closeDrawer:undefined}
       >
         {lis.map((li, index) => {
           return (
