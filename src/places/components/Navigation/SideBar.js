@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import SideBarItem from "./SideBarItem";
-import NavLinks from "../Navigation/NavLinks";
+import SideBarItem from "../UI/SideBarItem";
+import NavLinks from "./NavLinks";
 // import Accordion from 'react-bootstrap/Accordion';
 function SideBar(props) {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
