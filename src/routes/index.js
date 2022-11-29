@@ -16,6 +16,12 @@ import {
   AddProperty,
   ViewAllProperties,
 } from "../places/pages/Properties/Properties";
+import {
+  AddLocation,
+  AddAmenities,
+  AddUnitType,
+} from "../places/pages/Masters/Masters";
+
 import MainLayout from "../layouts/MainLayout";
 import AdminLayout from "../layouts/AdminLayout";
 
@@ -31,7 +37,7 @@ export default function Router() {
       ],
     },
     {
-      path: "admin",
+      path: "Properties",
       element: <AdminLayout />,
 
       children: [
@@ -42,6 +48,25 @@ export default function Router() {
         {
           path: "viewAllProperties",
           element: <ViewAllProperties />,
+        },
+      ],
+    },
+    {
+      path: "Masters",
+      element: <AdminLayout />,
+
+      children: [
+        {
+          path: "addLocation",
+          element: <AddLocation />,
+        },
+        {
+          path: "addAmenities",
+          element: <AddAmenities />,
+        },
+        {
+          path: "addUnitType",
+          element: <AddUnitType />,
         },
       ],
     },

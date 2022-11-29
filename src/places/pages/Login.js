@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 // import * as $ from 'jquery'
 // import axios from 'axios';
 // import md5 from 'md5';
-import Dialog from "../../components/UI/Dialog";
+import Dialog from "../components/UI/Dialog";
 // import stateContext from '../../context/StateContext'
 // import { ATLAS_URI } from '../../Constants'
 

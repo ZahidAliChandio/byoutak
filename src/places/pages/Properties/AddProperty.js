@@ -5,7 +5,7 @@ import { changeHandler as oldChangeHandler } from "../../../utils/ChangeHandler"
 import BoxHeader from "../../components/UI/BoxHeader";
 // import SelectBox from '../../../components/UI/SelectBox'
 
-import Dialog from "../../../components/UI/Dialog";
+import Dialog from "../../components/UI/Dialog";
 import MainHeader from "../../components/Navigation/MainHeader";
 import AdminCard from "../../components/UI/AdminCard";
 import InputField from "../../components/UI/InputField";

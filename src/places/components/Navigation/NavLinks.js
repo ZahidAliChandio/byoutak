@@ -22,6 +22,11 @@ const NavLinks = (props) => {
       iconClass: "fas fa-building",
       isLi: true,
     },
+    {
+      title: "Masters",
+      iconClass: "fa-solid fa-gear",
+      isLi: true,
+    },
   ];
   const subList = [
     {
@@ -35,8 +40,18 @@ const NavLinks = (props) => {
     },
     {
       content: [
-        { title: "Add New Property" ,linkTo: "addProperty"},
-        { title: "View all Properties" ,linkTo: "viewAllProperties"},
+        { title: "Add New Property", linkTo: "Properties/addProperty" },
+        {
+          title: "View all Properties",
+          linkTo: "Properties/viewAllProperties",
+        },
+      ],
+    },
+    {
+      content: [
+        { title: "Add Location", linkTo: "addLocation" },
+        { title: "Add Amenities", linkTo: "addAmenities" },
+        { title: "Add Unity Type", linkTo: "addUnitType" },
       ],
     },
   ];
@@ -61,7 +76,9 @@ const NavLinks = (props) => {
             <Fragment key={index}>
               <li
                 className={`relative ${
-                  activeLinkIndex === index?'text-[color:var(--red-color)] bg-[#070707] border-l-[color:var(--red-color)]':null
+                  activeLinkIndex === index
+                    ? "text-[color:var(--red-color)] bg-[#070707] border-l-[color:var(--red-color)]"
+                    : null
                 } flex items-center justify-between border-[3px] border-transparent  text-xs  bg-transparent py-[10px] cursor-pointer font-gillsans px-4 text-white hover:pl-[1.18rem] hover:border-l-[color:var(--red-color)] hover:text-[color:var(--red-color)] hover:bg-[#070707] w-full font-open-sans`}
                 key={index}
                 onClick={() => listItemClickHandler(index)}
@@ -105,9 +122,7 @@ const NavLinks = (props) => {
                             <i className="fas fa-chevron-right w-1"></i>
                             <i className="fas fa-chevron-right w-1"></i>
                           </div>
-                          <div className="cursor-pointer">
-                            {content.title}
-                          </div>
+                          <div className="cursor-pointer">{content.title}</div>
                         </NavLink>
                       </li>
                     );

@@ -3,11 +3,10 @@ const InputField = (props) => {
     <div className="flex flex-col gap-[0.18rem]">
       {" "}
       <label
-        className={`font-semibold ${
-          props.required
-            ? "after:content-['*'] after:ml-0.5 after:text-red-500"
-            : null
-        }`}
+        className={`${
+          props.required &&
+          "after:content-['*'] after:ml-0.5 after:text-red-500"
+        } font-semibold text-[0.7rem]`}
       >
         {props.label}
       </label>{" "}

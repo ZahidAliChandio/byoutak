@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 // import axios from 'axios'
 
-import DataTable from "../../../components/UI/DataTable";
-import Dialog from "../../../components/UI/Dialog";
+import DataTable from "../../components/UI/DataTable";
+import Dialog from "../../components/UI/Dialog";
 import BoxHeader from "../../components/UI/BoxHeader";
-import Paginator from "../../../components/UI/paginator";
+import Paginator from "../../components/UI/paginator";
 import MainHeader from "../../components/Navigation/MainHeader";
 import AdminCard from "../../components/UI/AdminCard";
 // import { ATLAS_URI } from '../../Constants'
