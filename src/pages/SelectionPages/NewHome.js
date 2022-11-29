@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import SlidingContent from "../../components/ContentWrapper/SlidingContent";
 
 const NewHome = () => {
@@ -10,6 +12,10 @@ const NewHome = () => {
     nextLink: "/property",
   };
 
-  return <SlidingContent content={content}></SlidingContent>;
+  return (
+    <Fragment>
+      <SlidingContent content={content}></SlidingContent>
+    </Fragment>
+  );
 };
 export default NewHome;

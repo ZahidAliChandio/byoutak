@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+
+import RightAngle from "../UI/RightAngle";
 
 const SlidingContent = (props) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -13,6 +15,7 @@ const SlidingContent = (props) => {
 
   return (
     <AnimatePresence>
+      <RightAngle/>
       <motion.div
         key="select"
         className={`flex flex-col items-center m-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
