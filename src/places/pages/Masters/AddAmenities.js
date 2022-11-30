@@ -14,7 +14,7 @@ import BoxHeader from "../../components/UI/BoxHeader";
 import Dialog from "../../components/UI/Dialog";
 import AdminCard from "../../components/UI/AdminCard";
 import MainHeader from "../../components/Navigation/MainHeader";
-import InputField from "../../components/UI/InputField";
+import Input from "../../components/UI/Input";
 import FormButton from "../../components/UI/FormButton";
 import DataTable from "../../components/UI/DataTable";
 import Paginator from "../../components/UI/paginator";
@@ -152,7 +152,7 @@ function AddAmenities() {
             <form onSubmit={undefined} className="pt-2 px-2">
               <div className="box-body bozero">
                 <div className="form-group">
-                  <InputField
+                  <Input
                     label={"Name"}
                     name={"AmenityName"}
                     // value={state.newTableRow.PropertyTitle}
