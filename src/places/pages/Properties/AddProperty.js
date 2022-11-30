@@ -1,40 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 
-// import axios from 'axios'
 import BoxHeader from "../../components/UI/BoxHeader";
-// import SelectBox from '../../../components/UI/SelectBox'
-
 import MainHeader from "../../components/Navigation/MainHeader";
 import AdminCard from "../../components/UI/AdminCard";
 import Input from "../../components/UI/Input";
 import { useForm } from "../../hooks/form-hook";
-// import { ATLAS_URI } from '../../Constants'
 
 function AddProperty(props) {
+  
+  const [formState, inputHandler] = useForm({
+    propertyTitle: "",
+    propertyType: "",
+    propertySize: "",
+    paymentMode: "",
+    propertyAge: "",
+    loanAvailability: "",
+    selectedFile: "",
+  });
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log(formState.inputs);
+    const inputs = formState.inputs;
+    console.log(...inputs, { selectedFile: e.target.files[0] });
   };
-  const [formState, inputHandler] = useForm({
-    propertyTitle: {
-      value: "",
-    },
-    propertyType: {
-      value: "",
-    },
-    propertySize: {
-      value: "",
-    },
-    paymentMode: {
-      value: "",
-    },
-    propertyAge: {
-      value: "",
-    },
-    loanAvailability: {
-      value: "",
-    },
-  });
 
   return (
     <section className="w-full">
@@ -140,6 +128,7 @@ function AddProperty(props) {
                     <div className="flex flex-col gap[0.18rem]">
                       <label className="font-semibold">Image</label>
                       <input
+                        id={"imageSelected"}
                         name="ImageSelected"
                         type="file"
                         accept=".png, .jpg, .jpeg"

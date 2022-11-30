@@ -57,7 +57,7 @@ const InputField = (props) => {
       <input
         name={props.name}
         type="text"
-        className="form-control py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
+        className="py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
         required={props.required}
         value={inputState.value}
         onChange={onChangeHandler}
