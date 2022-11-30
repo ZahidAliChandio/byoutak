@@ -42,7 +42,6 @@ const InputField = (props) => {
       />
     ) : props.type === "select" ? (
       <select
-        // required
         className="py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
         name="PropertyType"
         value={inputState.value}

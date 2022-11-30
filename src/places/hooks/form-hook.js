@@ -7,7 +7,7 @@ const formReducer = (state, action) => {
         ...state,
         inputs: {
           ...state.inputs,
-          [action.inputId]: { value: action.value },
+          [action.inputId]: action.value,
         },
       };
     case "SET_DATA":
@@ -31,12 +31,12 @@ export const useForm = (initialInputs) => {
     });
   }, []);
 
-  const setFormData=useCallback((inputData)=>{
+  const setFormData = useCallback((inputData) => {
     dispatch({
-        type:"SET_DATA",
-        inputs:inputData,
-    })
-  },[])
+      type: "SET_DATA",
+      inputData,
+    });
+  }, []);
 
-  return [formState,inputHandler,setFormData]
+  return [formState, inputHandler, setFormData];
 };

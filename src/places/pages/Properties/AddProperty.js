@@ -13,7 +13,7 @@ import { useForm } from "../../hooks/form-hook";
 function AddProperty(props) {
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log(formState);
+    console.log(formState.inputs);
   };
   const [formState, inputHandler] = useForm({
     propertyTitle: {
@@ -56,7 +56,7 @@ function AddProperty(props) {
                       name={"PropertyTitle"}
                       placeholder="property title"
                       onInput={inputHandler}
-                      required={true}
+                      required
                     />
                     <Input
                       type="select"
@@ -93,7 +93,7 @@ function AddProperty(props) {
                       label={"Property Age"}
                       name="PropertyAge"
                       placeholder="in Years"
-                      required={true}
+                      required
                       onInput={inputHandler}
                     />
                     <Input
