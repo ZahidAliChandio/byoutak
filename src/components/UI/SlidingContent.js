@@ -26,7 +26,7 @@ const SlidingContent = (props) => {
       >
         <div className="text-white text-center w-full">
           <div className="flex flex-col gap-8 w-full items-center">
-            <h2 className="font-bold  px-6 sm:p-0 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+            <h2 className="font-bold  px-6 sm:p-0 text-base sm:text-lg md:text-xl lg:text-2xl">
               {content.title}
             </h2>
             {content.input && (
@@ -58,13 +58,13 @@ const SlidingContent = (props) => {
             )}
           </div>
           {content.subtitle && (
-            <p className="mt-6 lg:mt-6 text-gray-300 text-lg md:text-xl">
+            <p className="mt-4 text-gray-300 text-lg md:text-xl">
               {content.subtitle}
             </p>
           )}
         </div>
 
-        <div className="w-3/4 sm:w-3/5 md:w-3/5 xl:w-2/6 my-8">
+        <div className={`w-[70%] sm:w-2/5 md:w-1/2 lg:w-2/5 ${!content.subtitle?'mt-10':'mt-6'} `}>
           <button
             id="dropdownDefault"
             data-dropdown-toggle="dropdown"
