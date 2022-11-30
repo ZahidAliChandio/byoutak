@@ -18,7 +18,7 @@ const SlidingContent = (props) => {
       <RightAngle/>
       <motion.div
         key="select"
-        className={`flex flex-col items-center justify-center mt-8 mx-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
+        className={`flex flex-col items-center justify-center ${!content.subtitle?'mt-16':'mt-6'} mx-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
         initial={{ transform: "translateX(100%)" }}
         animate={{ transform: "translateX(0%)" }}
         exit={{ transform: "translateX(100%)" }}
@@ -64,7 +64,7 @@ const SlidingContent = (props) => {
           )}
         </div>
 
-        <div className="w-3/4 sm:w-3/5 md:w-3/5 xl:w-2/6 mt-8">
+        <div className="w-3/5 sm:w-1/2 md:w-1/2 xl:w-[30%] mt-8">
           <button
             id="dropdownDefault"
             data-dropdown-toggle="dropdown"
@@ -107,7 +107,7 @@ const SlidingContent = (props) => {
                   <li key={index} className="my-1 md:my-2">
                     <Link
                       to={content.nextLink}
-                      className="block py-1 md:py-2 px-4 hover:text-red-600 cursor-pointer"
+                      className="block py-2 px-4 hover:text-red-600 cursor-pointer"
                     >
                       {item}
                     </Link>
