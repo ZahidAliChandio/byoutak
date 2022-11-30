@@ -18,7 +18,7 @@ const SlidingContent = (props) => {
       <RightAngle/>
       <motion.div
         key="select"
-        className={`flex flex-col items-center justify-center h-[70vh] m-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
+        className={`flex flex-col items-center justify-center ${!content.subtitle && 'mt-8'} m-auto w-10/12 md:w-[50%] text-center transition-all duration-300 z-0`}
         initial={{ transform: "translateX(100%)" }}
         animate={{ transform: "translateX(0%)" }}
         exit={{ transform: "translateX(100%)" }}

@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import SlidingContent from "../../components/ContentWrapper/SlidingContent";
+import SlidingContent from "../../components/UI/SlidingContent";
 const Unit = () => {
   const content = {
     id: 4,

@@ -1,15 +1,15 @@
 import { useRoutes } from "react-router-dom";
 
-import NewHome from "../pages/SelectionPages/NewHome";
-import Unit from "../pages/SelectionPages/Unit";
-import Price from "../pages/SelectionPages/Price";
+import NewHome from "../pages/Selectional/NewHome";
+import Unit from "../pages/Selectional/Unit";
+import Price from "../pages/Selectional/Price";
 import Projects from "../pages/Projects/Projects";
 import Slider from "../pages/Slider/Slider";
 import Meeting from "../pages/Meeting/Meeting";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import Search from "../pages/Search/Search";
 import PropertyPage from "../pages/Property/Property";
-import Property from "../pages/SelectionPages/Property";
+import Property from "../pages/Selectional/Property";
 import Login from "../places/pages/Login";
 
 import {
