@@ -84,8 +84,9 @@ function AddProperty(props) {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    const inputs = formState.inputs;
-    console.log(...inputs, { selectedFile: e.target.files[0] });
+    // const inputs = formState.inputs;
+    console.log(formState);
+    // console.log(...inputs, { selectedFile: e.target.files[0] });
   };
 
   return (
