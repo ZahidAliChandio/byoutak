@@ -36,13 +36,13 @@ const InputField = (props) => {
       <textarea
         id={props.id}
         rows={props.rows || 4}
-        className="py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
+        className={`${props.className} py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full`}
         value={inputState.value}
         onChange={onChangeHandler}
       />
     ) : props.type === "select" ? (
       <select
-        className="py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full"
+        className={`${props.className} py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)] w-full`}
         name="PropertyType"
         value={inputState.value}
         onChange={onChangeHandler}
@@ -57,7 +57,7 @@ const InputField = (props) => {
       <input
         name={props.name}
         type="text"
-        className="py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]"
+        className={`${props.className} py-[0.18rem] px-2 outline-none border border-gray-300 focus:border-[color:var(--red-color)] active:border-[color:var(--red-color)]`}
         required={props.required}
         value={inputState.value}
         onChange={onChangeHandler}
@@ -66,7 +66,7 @@ const InputField = (props) => {
     );
 
   return (
-    <div className="flex flex-col gap-[0.18rem] text-[0.7rem]">
+    <div className={`${props.containerClass} flex flex-col gap-[0.18rem] text-[0.7rem]`}>
       {" "}
       <label
         className={`${
