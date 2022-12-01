@@ -66,13 +66,13 @@ const InputField = (props) => {
     );
 
   return (
-    <div className="flex flex-col gap-[0.18rem]">
+    <div className="flex flex-col gap-[0.18rem] text-[0.7rem]">
       {" "}
       <label
         className={`${
           props.required &&
           "after:content-['*'] after:ml-0.5 after:text-red-500"
-        } font-semibold text-[0.7rem]`}
+        } font-semibold`}
       >
         {props.label}
       </label>{" "}
