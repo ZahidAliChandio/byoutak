@@ -18,7 +18,7 @@ import {
 } from "../places/pages/Properties/Properties";
 import {
   AddLocation,
-  AddAmenities,
+  AddAmenities,  
   AddUnitType,
 } from "../places/pages/Masters/Masters";
 
@@ -57,7 +57,7 @@ export default function Router() {
         {
           path: "addAmenities",
           element: <AddAmenities />,
-        },
+        },        
         {
           path: "addUnitType",
           element: <AddUnitType />,
